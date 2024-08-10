@@ -1,4 +1,0 @@
-[submodule "examples/RISC-V/simulator"]
-	path = examples/RISC-V/simulator
-	url = https://github.com/zhanghongce/riscv-ila-sim.git
-

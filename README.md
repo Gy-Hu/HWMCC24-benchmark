@@ -1,8 +1,5 @@
 # HWMCC24-benchmark
 
-
-- [MCM](https://github.com/zhanghongce/ila-mcm-fmcad18)
-  - [paper](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=C0Fiv5oAAAAJ&citation_for_view=C0Fiv5oAAAAJ:UeHWp8X0CEIC)
 - R-map ([paper](https://ieeexplore.ieee.org/document/10178019))
   - [ILA_AES](https://github.com/zhanghongce/ILA_AES)
   - [ILA_Flute](https://github.com/zhanghongce/ILA_Flute)
