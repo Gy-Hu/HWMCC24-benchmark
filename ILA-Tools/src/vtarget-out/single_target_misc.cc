@@ -394,7 +394,7 @@ void VlgSglTgtGen::ConstructWrapper_add_direct_aux_vars() {
   for (const auto & n_expr : refinement_map.direct_aux_vars) {
     const auto & n = n_expr.first;
     auto w = n_expr.second.width;
-    ILA_CHECK(w!=0); // aux var should have its width
+    ILA_CHECK(w!=0);
     vlg_wrapper.add_wire(n,w,true);
     vlg_wrapper.add_output(n,w);
     add_wire_assign_assumption(n, n_expr.second.val, "direct_aux_var");
@@ -443,7 +443,7 @@ void VlgSglTgtGen::ConstructWrapper_add_vlg_monitor() {
       auto vref_node = rfmap::VerilogRefinementMap::ParseRfExprFromString(vref);
       auto new_name = mname + "_auxvar" + std::to_string(idx++);
 
-      auto tp = refinement_map.TypeInferTravserRfExpr(vref_node, {});
+      auto tp = refinement_map.TypeInferTravserRfExpr(vref_node);
 
       ILA_ERROR_IF(tp.is_unknown())
           << "Cannot determine width of " << vref << " in monitor " << mname;
@@ -476,11 +476,7 @@ VlgSglTgtGen::get_current_instruction_rf() {
   ILA_NOT_NULL(_instr_ptr);
   const auto& inst_name = _instr_ptr->name().str();
   auto pos = refinement_map.inst_complete_cond.find(inst_name);
-  if(pos == refinement_map.inst_complete_cond.end() &&
-     refinement_map.global_inst_complete_set)
-    return refinement_map.global_inst_complete_cond;
-  ILA_ERROR_IF(pos == refinement_map.inst_complete_cond.end() &&
-              !refinement_map.global_inst_complete_set)
+  ILA_ERROR_IF(pos == refinement_map.inst_complete_cond.end())
       << "Cannot find the completion condition for " << inst_name;
   return pos->second;
 } // get_current_instruction_rf

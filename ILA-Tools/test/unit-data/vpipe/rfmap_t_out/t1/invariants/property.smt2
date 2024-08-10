@@ -1,0 +1,1 @@
+(define-fun assumption.0 ((|delay_wb_write_auxvar3| (_ BitVec 8)) (|RTL.registers| (Array (_ BitVec 2) (_ BitVec 8))) (|RTL__DOT__ex_wb_rd| (_ BitVec 2))) Bool (= |delay_wb_write_auxvar3| (select |RTL.registers| |RTL__DOT__ex_wb_rd|)))

@@ -226,8 +226,6 @@ struct VerilogRefinementMap {
 
   // ---------------------- inst-cond ------------------------------- //
   std::map<std::string, InstructionCompleteCondition> inst_complete_cond;
-  bool global_inst_complete_set;
-  InstructionCompleteCondition global_inst_complete_cond;
   std::vector<RfExpr> global_invariants;
 
   // ---------------------- supplementary_info -------------------------------

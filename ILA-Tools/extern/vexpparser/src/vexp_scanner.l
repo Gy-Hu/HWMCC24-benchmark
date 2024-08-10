@@ -36,8 +36,6 @@ HASH                "#"
 DELAY               "##"
 DOT                 "."
 EQ                  "="
-STORE1              ":<"
-STORE2              ">:"
 COLON               ":"
 IDX_PRT_SEL_PLUS    "+:"
 IDX_PRT_SEL_MINUS   "-:"
@@ -166,8 +164,6 @@ IMPLY_NEXT          "|=>"
 {DELAY}                { return Vexp::Parser::make_DELAY            ( Vexp::location()                      ) ;}
 {HASH}                 { return Vexp::Parser::make_HASH             ( Vexp::location()                      ) ;}
 {DOT}                  { return Vexp::Parser::make_DOT              ( Vexp::location()                      ) ;}
-{STORE1}               { return Vexp::Parser::make_STORE1           ( Vexp::location()                      ) ;}
-{STORE2}               { return Vexp::Parser::make_STORE2           ( Vexp::location()                      ) ;}
 {COLON}                { return Vexp::Parser::make_COLON            ( Vexp::location()                      ) ;}
 {IDX_PRT_SEL_PLUS}     { return Vexp::Parser::make_IDX_PRT_SEL_PLUS ( Vexp::location()                      ) ;}
 {IDX_PRT_SEL_MINUS}    { return Vexp::Parser::make_IDX_PRT_SEL_MINUS( Vexp::location()                      ) ;}
@@ -231,10 +227,6 @@ IMPLY_NEXT          "|=>"
     return Vexp::Parser::make_ESCAPED_ID(yytext, Vexp::location());
 }
 {SIMPLE_ID}|{SYSTEM_ID} {        
-    if(!strcmp(yytext, "$forall"))
-        return Vexp::Parser::make_FORALL(Vexp::location());
-    if(!strcmp(yytext, "$exist"))
-        return Vexp::Parser::make_EXIST(Vexp::location());
     return Vexp::Parser::make_SIMPLE_ID(yytext, Vexp::location());
 }
 

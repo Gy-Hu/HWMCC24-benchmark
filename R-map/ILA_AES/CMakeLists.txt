@@ -55,7 +55,6 @@ add_library(${AES_TARGET}
 )
 
 target_include_directories(${AES_TARGET} PRIVATE include)
-
 target_link_libraries(${AES_TARGET} PUBLIC ilang::ilang)
 
 

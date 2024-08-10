@@ -107,10 +107,6 @@
 %token IMPLY
 %token IMPLY_NEXT
 %token DOLLAR
-%token FORALL
-%token EXIST
-%token STORE1
-%token STORE2
 
 %token <std::string> SIMPLE_ID
 %token <std::string> ESCAPED_ID
@@ -123,7 +119,7 @@
 %token <std::string> STRING
 
 
-%nterm<verilog_expr::VExprAst::VExprAstPtr> astroot expression delay_expression next_sequence primary conditional_expression number function_call store_expression
+%nterm<verilog_expr::VExprAst::VExprAstPtr> astroot expression delay_expression next_sequence primary conditional_expression number function_call
 %nterm<verilog_expr::VExprAst::VExprAstPtr> concatenation multiple_concatenation
 %nterm<verilog_expr::voperator> unary_operator
 %nterm<verilog_expr::Attribute> attribute_instances list_of_attribute_instances attr_specs
@@ -140,8 +136,6 @@
 %right  IMPLY IMPLY_NEXT
 %precedence  COLON                 /* Lowest Precedence. */
 %right  TERNARY
-%left   STORE1
-%left   STORE2
 %left   L_OR
 %left   L_AND
 %left   B_OR B_NOR
@@ -282,7 +276,7 @@ expression :
     $$ = verilog_expr::VExprAst::MakeBinaryAst(verilog_expr::voperator::ASL, $1, $4);
   }
 | conditional_expression {$$=$1;}
-| store_expression {$$=$1;}
+
 | function_call {
       $$ = $1;
   }
@@ -473,10 +467,6 @@ conditional_expression :
   }
 ;
 
-store_expression :
-  expression STORE1 expression STORE2 expression {
-    $$ = verilog_expr::VExprAst::MakeTernaryAst( verilog_expr::voperator::STORE_OP, $1,$3,$5);
-  }
 
 primary :
   number{
@@ -590,16 +580,6 @@ function_call : hierarchical_identifier
    verilog_expr::VExprAst::VExprAstPtrVec tmp;
    tmp.push_back(verilog_expr::VExprAst::MakeVar($1));
    $$ = verilog_expr::VExprAst::MakeNaryAst(verilog_expr::voperator::FUNCTION_APP, tmp );
- }
- | FORALL OPEN_BRACKET SIMPLE_ID COLON SIMPLE_ID COMMA expression CLOSE_BRACKET {
-   /*1111 222222222222 333333333 44444 555555555 66666 7777777777 888888888888*/ 
-   $$ = verilog_expr::VExprAst::MakeQuantifiedExpr(
-     verilog_expr::voperator::FORALL, $3, verilog_expr::extract_width($5), $7 );
- }
- | EXIST OPEN_BRACKET SIMPLE_ID COLON SIMPLE_ID COMMA expression CLOSE_BRACKET {
-   /*1111 222222222222 333333333 44444 555555555 66666 7777777777 888888888888*/ 
-   $$ = verilog_expr::VExprAst::MakeQuantifiedExpr(
-     verilog_expr::voperator::EXIST, $3, verilog_expr::extract_width($5), $7 );
  }
 ;
 

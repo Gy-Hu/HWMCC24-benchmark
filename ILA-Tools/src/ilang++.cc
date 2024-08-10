@@ -869,7 +869,7 @@ smt::Term ResetAndGetSmtTerm(smt::SmtSolver& solver, const ExprRef& expr,
 }
 #endif // SMTSWITCH_INTERFACE
 
-IlaVerilogRefinementChecker::IlaVerilogRefinementChecker(
+IlaVerilogRefinemetChecker::IlaVerilogRefinemetChecker(
       const Ila& ila,
       const std::vector<std::string>& implementation_include_path,
       const std::vector<std::string>& implementation_srcs,

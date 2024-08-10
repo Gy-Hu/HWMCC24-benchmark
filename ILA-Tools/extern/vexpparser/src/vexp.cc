@@ -57,18 +57,6 @@ VExprAst::VExprAstPtr VExprAst::MakeUnaryAst(voperator op, const VExprAstPtr & c
   return NULL;
 }
 
-VExprAst::VExprAstPtr VExprAst::MakeQuantifiedExpr(voperator op, const std::string & quantified_name, 
-    unsigned qwidth, const VExprAstPtr & quantified_expr) {
-  if(op == voperator::FORALL || op == voperator::EXIST ) {
-    VExprAstPtrVec tmp({quantified_expr});
-    const std::vector<int> param({int(qwidth)});
-    const std::vector<std::string> sparam ({quantified_name});
-    return std::make_shared<VExprAst>(op, tmp, param, sparam);
-  }
-  throw VexpException(ExceptionCause::OpNaryNotMatched, "expect forall or exist");
-  return NULL;
-}
-
 
 VExprAst::VExprAstPtr VExprAst::MakeUnaryParamAst(voperator op, const VExprAstPtr & c, const std::vector<int> & param, const std::vector<std::string> & sparam) {
   if (op == voperator::DELAY     // "^~"|"~^"
@@ -207,9 +195,7 @@ std::vector<std::string> voperator_str_vlg = {
   "MK_CONST",
   "MK_VAR",
 
-  "#notsupported", // delay
-  "#notsupported", // forall
-  "#notsupported"  // exist
+  "#notsupported"
 };
 
 
@@ -400,9 +386,7 @@ std::vector<std::string> voperator_str_vec = {
   "MK_CONST",
   "MK_VAR",
 
-  "DELAY",
-  "FORALL",
-  "EXIST"
+  "DELAY"
 };
 
 std::ostream & operator<<(std::ostream & os, const VExprAst::VExprAstPtr & obj) {
@@ -468,14 +452,8 @@ int width_to_int(const std::string & s) { // convert width to int
   try {
     return std::stoi(s, NULL, 10);
   } catch (const std::exception& e) {
-    throw VexpException(ExceptionCause::StrToInvFailed, s);
+    return 0;
   }
-}
-int extract_width(const std::string &s ) {
-  if(s.length() < 3 || s.find("bv") != 0) {
-    throw VexpException(ExceptionCause::ExpectBvXType, s);
-  }
-  return width_to_int(s.substr(2));
 }
 
 } // namespace verilog_expr

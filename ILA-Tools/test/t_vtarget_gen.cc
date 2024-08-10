@@ -84,9 +84,9 @@ TEST(TestVlgTargetGen, PipeExampleRfmapPostResetStart) {
       {os_portable_append_dir(dirName, "simple_pipe.v")}, // vlog files
       "pipeline_v",                                       // top_module_name
       os_portable_append_dir(rfDir,
-                             "vmap-rfmap-pvholder-reset.json"), // variable mapping
+                             "vmap-rfmap-pvholder.json"), // variable mapping
       os_portable_append_dir(rfDir,
-                             "cond-rfmap-pvholder-reset.json"), // instruction-mapping
+                             "cond-rfmap-pvholder.json"), // instruction-mapping
       os_portable_append_dir(dirName, "verify_pvholder_reset"), // verification dir
       ila_model.get(),                                    // ILA model
       ModelCheckerSelection::PONO, // engine
@@ -401,53 +401,6 @@ TEST(TestVlgTargetGen, MemoryReadAbsReadJasperGold) {
 
   vg.GenerateTargets();
 }
-
-
-TEST(TestVlgTargetGen, MemoryForallEqualPono) {
-  RtlVerifyConfig vtg_cfg;
-
-  auto ila_model = MemorySwap::BuildSimpleLargeArray();
-
-  auto dirName = std::string(ILANG_TEST_SRC_ROOT) + "/unit-data/vpipe/vmem/";
-  VerilogVerificationTargetGenerator vg(
-      {},                       // no include
-      {dirName + "smallarray.v"},     // vlog files
-      "top",                  // top_module_name
-      dirName + "vmap-forall.json", // variable mapping
-      dirName + "cond-forall.json", // cond path
-      dirName + "large_small_forall/",    // output path
-      ila_model.get(),
-      ModelCheckerSelection::PONO,
-      vtg_cfg);
-
-  EXPECT_FALSE(vg.in_bad_state());
-
-  vg.GenerateTargets();
-}
-
-
-TEST(TestVlgTargetGen, MemoryForallEqualJg) {
-  RtlVerifyConfig vtg_cfg;
-
-  auto ila_model = MemorySwap::BuildSimpleLargeArray();
-
-  auto dirName = std::string(ILANG_TEST_SRC_ROOT) + "/unit-data/vpipe/vmem/";
-  VerilogVerificationTargetGenerator vg(
-      {},                       // no include
-      {dirName + "smallarray.v"},     // vlog files
-      "top",                  // top_module_name
-      dirName + "vmap-forall.json", // variable mapping
-      dirName + "cond-forall.json", // cond path
-      dirName + "large_small_forall_jg/",    // output path
-      ila_model.get(),
-      ModelCheckerSelection::JASPERGOLD,
-      vtg_cfg);
-
-  EXPECT_FALSE(vg.in_bad_state());
-
-  vg.GenerateTargets();
-}
-
 
 TEST(TestVlgTargetGen, UndetValue) {
   auto ila_model = UndetVal::BuildModel();

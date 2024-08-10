@@ -152,54 +152,10 @@ int main(int argc, char ** argv) {
     cout << intp.str() << endl;
   }
 //-------------------------------------------
-  { // concat
+  { // imply
     Vexp::Interpreter intp;
     stringstream ss;
     ss << "{(a + b)[2:0], ({c,d})[1:0]}";
-    intp.switchInputStream(&ss);
-    try{
-      intp.parse();
-    } catch (verilog_expr::VexpException &e) {
-      cout << "AST constructor error:" << e.msg_ << endl;
-    }
-    cout << intp.str() << endl;
-  }
-//-------------------------------------------
-
-//-------------------------------------------
-  { // array
-    Vexp::Interpreter intp;
-    stringstream ss;
-    ss << "$forall(v:bv8, v<8 |-> a[v]==2)";
-    intp.switchInputStream(&ss);
-    try{
-      intp.parse();
-    } catch (verilog_expr::VexpException &e) {
-      cout << "AST constructor error:" << e.msg_ << endl;
-    }
-    cout << intp.str() << endl;
-  }
-//-------------------------------------------
-
-//-------------------------------------------
-  { // array store
-    Vexp::Interpreter intp;
-    stringstream ss;
-    ss << "array:<i1>:v1:<i2>:v2:<i3>:v3:<i4>:v4";
-    intp.switchInputStream(&ss);
-    try{
-      intp.parse();
-    } catch (verilog_expr::VexpException &e) {
-      cout << "AST constructor error:" << e.msg_ << endl;
-    }
-    cout << intp.str() << endl;
-  }
-//-------------------------------------------
-//-------------------------------------------
-  { // array store2
-    Vexp::Interpreter intp;
-    stringstream ss;
-    ss << "array:<i1>:v1+2"; // v1+2 is associated tighter
     intp.switchInputStream(&ss);
     try{
       intp.parse();

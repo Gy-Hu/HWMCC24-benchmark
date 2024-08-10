@@ -172,7 +172,7 @@ CexExtractor::CexExtractor(const std::string& vcd_file_name,
   parse_from(vcd_file_name, scope, is_reg, reg_only);
 }
 
-/// create from an existing file
+/// create from a existing file
 CexExtractor::CexExtractor(const std::string& fn) {
   std::ifstream fin(fn);
   if (!fin.is_open()) {
@@ -200,9 +200,10 @@ CexExtractor::CexExtractor(const std::string& fn) {
 std::string
 CexExtractor::GenInvAssert(const std::string& prefix,
                            const std::set<std::string>& focus_name) const {
-  std::string ret;
+
+  std::string ret = "(1'b1 == 1'b1)"; // true
   for (auto&& nv : cex) {
-    if (!cex_is_reg.at(nv.first)) // skipping those that are not registers
+    if (!cex_is_reg.at(nv.first))
       continue;
     auto fullname = prepend(prefix, ReplaceAll(nv.first, "[0:0]", ""));
     auto check_name = fullname; // remove further of [][:]
@@ -211,10 +212,7 @@ CexExtractor::GenInvAssert(const std::string& prefix,
       check_name = check_name.substr(0, pos);
     if (!focus_name.empty() && !IN(check_name, focus_name))
       continue;
-    if (ret.empty())
-      ret = "(" + fullname + " == " + nv.second + ")";
-    else
-      ret += "\n&& (" + fullname + " == " + nv.second + ")";
+    ret += "\n&& (" + fullname + " == " + nv.second + ")";
   }
   return ret;
 }
