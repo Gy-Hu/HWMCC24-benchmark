@@ -1,0 +1,9 @@
+*.pyc
+__pycache__/*
+.idea/*
+.run/*
+.vscode/*
+env.sh
+oss-cad-suite-linux-x64-20221027.tgz
+log
+output

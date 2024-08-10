@@ -1,0 +1,30 @@
+&r ../design/simple_MAC_no_stall.aig
+&put
+fold
+pdr -v
+
+&r ../design/simple_MAC_stall.aig
+&put
+fold
+pdr -v
+
+&r ../design/3_stage_pipe_nop.aig
+&put
+fold
+pdr -v
+
+&r ../design/3_stage_pipe_nand.aig
+&put
+fold
+pdr -v
+
+&r ../design/3_stage_pipe_set.aig
+&put
+fold
+pdr -v
+
+&r ../design/3_stage_pipe_add.aig
+&put
+fold
+pdr -v
+
