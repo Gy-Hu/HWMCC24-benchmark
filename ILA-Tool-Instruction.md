@@ -2,7 +2,7 @@
 
 ## Prerequisites 
 1. `git clone https://github.com/zhanghongce/ILA-Tools.git` - get the ILAng
-2. `cd ILA-Tools && git checkout d7e0df6b3a4ccf86883d3b6d6afab5cb5236c302` - checkout the version used in the paper
+2. `cd ILA-Tools && git checkout refinement-upgrade && git checkout d7e0df6b3a4ccf86883d3b6d6afab5cb5236c302` - checkout the version used in the paper
 3. `mkdir -p build && cd build` - create a build directory
 4. `cmake .. && make -j$(nproc)` - build the ILAng
 5. `make run_test` - make sure pass the run test
