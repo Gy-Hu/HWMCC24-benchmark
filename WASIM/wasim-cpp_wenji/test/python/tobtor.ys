@@ -1,0 +1,8 @@
+read_verilog -formal pipe.v
+prep -top pipe
+flatten
+memory -nomap
+hierarchy -check
+setundef -undriven -init -expose
+sim -clock clk -reset rst -rstlen 1 -n 1 -w pipe
+write_btor  -s pipe.btor2

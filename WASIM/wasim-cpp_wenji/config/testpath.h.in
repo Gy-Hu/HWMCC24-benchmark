@@ -1,0 +1,2 @@
+#cmakedefine PROJECT_SOURCE_DIR  "@PROJECT_SOURCE_DIR@"
+
