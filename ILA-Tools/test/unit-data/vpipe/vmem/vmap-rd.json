@@ -1,0 +1,20 @@
+{
+  "state mapping": {  
+    "mema":{
+      "ren" : "1'b1", // will always read
+      "raddr" : "RTL.mem_a_raddr@1",
+      "rdata" : "RTL.mem_a_rdata@1"
+    },
+    "membuf":"RTL.rdataa_buf"},
+
+  "RTL interface connection" : {
+    "CLOCK" : "clk",
+    "RESET" : "rst"
+  },
+
+  "input mapping" : {
+    "addra" : "RTL.addra",
+    "start" : "RTL.start"
+  }
+
+}

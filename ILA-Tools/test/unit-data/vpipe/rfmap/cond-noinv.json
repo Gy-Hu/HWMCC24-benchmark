@@ -1,0 +1,22 @@
+{
+
+  "instructions": [
+    {
+      "instruction": "NOP",
+      "ready bound": 1
+    },
+    {
+      "instruction": "ADD",
+      "ready bound": 1
+    },
+    {
+      "instruction": "SUB",
+      "ready bound": 1
+    },
+    {
+      "instruction": "AND",
+      "ready bound": 1
+    }
+  ]
+}
+

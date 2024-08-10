@@ -1,0 +1,12 @@
+{
+  "global invariants": [],
+
+  "instructions": [
+    {
+      "instruction": "Rd",
+      "start condition":["RTL.state == 0" , "$valid", "$decode" ],
+      "ready bound": 2
+    }
+  ]
+}
+

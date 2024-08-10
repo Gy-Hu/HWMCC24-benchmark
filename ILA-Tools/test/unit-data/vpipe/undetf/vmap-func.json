@@ -1,0 +1,23 @@
+{
+  "state mapping": {  
+    "r0":"RTL.r0",
+    "r1":"RTL.r1",
+    "r2":"RTL.r2",
+    "r3":"RTL.r3",
+    "r4":"RTL.r4"},
+
+  "RTL interface connection" : {
+    "CLOCK" : "clk",
+    "RESET" : "rst"
+  },  // d keep
+
+  "functions":{ "nondet8_1":[
+                  {"result": "RTL.res1@0", "arg":["RTL.r0@0"]},
+                  {"result": "RTL.res3@0", "arg":["RTL.r0@0"]}
+                ],
+                "nondet8_2":[
+                  {"result": "RTL.res4@0", "arg":["RTL.r1@0", "RTL.r2@0"]},
+                  {"result": "RTL.res5@0", "arg":["RTL.r3@0", "RTL.r4@0"]}
+                ]
+              }
+}

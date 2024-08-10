@@ -1,0 +1,12 @@
+{
+  "global invariants": [ "1==1"],
+
+  "instructions": [
+    {
+      "instruction": "SWAP",
+      "start condition":["RTL.state == 0" , "$valid", "$decode" ],
+      "ready bound": 3
+    }
+  ]
+}
+
