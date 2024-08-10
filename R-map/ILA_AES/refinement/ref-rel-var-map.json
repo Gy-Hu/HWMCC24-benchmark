@@ -1,0 +1,35 @@
+{
+  "state mapping": { 
+    "aes_address"        : "RTL.aes_reg_opaddr_i.reg_out",
+    "aes_length"         : "RTL.aes_reg_oplen_i.reg_out",
+    "aes_key"            : "RTL.aes_reg_key0_i.reg_out",
+    "aes_counter"        : "RTL.aes_reg_ctr_i.reg_out",
+    "aes_status"         : "RTL.aes_reg_state",
+    "XRAM"               : {
+      "wen"   : "RTL.xram_wr & RTL.xram_stb",
+      "waddr" : "RTL.xram_addr",
+      "wdata" : "RTL.xram_data_out",
+      "ren"   : "~RTL.xram_wr & RTL.xram_stb",
+      "raddr" : "RTL.xram_addr",
+      "rdata" : "RTL.xram_data_in"
+    },
+    "outdata"            : "RTL.data_out_reg"
+  },
+
+  "rtl interface-connection" : {
+    "CLOCK" : "clk",
+    "RESET" : "rst"
+  },
+
+  "input mapping" : {
+    "cmd"    : "RTL.wr == 1 ? 2'd2 : 2'd1",
+    "cmdaddr": "RTL.addr",
+    "cmddata": "RTL.data_in"
+  },
+
+  "functions":{
+      "unknown0":[ {"result" : "RTL.aes_reg_state @ commit ", "arg": []} ],
+      "unknown1":[ {"result" : "RTL.aes_reg_state @ commit ", "arg": []} ],
+      "unknown2":[ {"result" : "RTL.aes_reg_ctr_i.reg_out @ commit ", "arg": []} ]
+  }
+}

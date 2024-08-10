@@ -1,0 +1,36 @@
+(set-logic BV)
+
+
+(synth-fun FunNew 
+   ((v1 Bool)
+   ) 
+   Bool
+   ((Conj Bool) (Disj Bool) (Literal Bool) (Atom Bool))
+  (
+    (Conj Bool (Disj 
+                (and Disj Conj)))
+    (Disj Bool (Literal 
+                (and Literal Disj)))
+    (Literal Bool (Atom
+                (not Atom)))
+    (Atom Bool (true false v1))
+   ))
+
+
+
+(declare-var v1 Bool)
+(declare-var X Bool)
+
+(constraint (=> 
+    (= (and v1 (not X)) true)   ; assumptions (use `and` if there are multiple)  ; or `(=> v1 (not X))`
+    
+    (= 
+        (ite (and v1 (not X)) false v1)   ; function to be simplified
+        (FunNew v1)                       ; is equal to the new function
+    )))
+
+
+
+(check-synth)
+
+

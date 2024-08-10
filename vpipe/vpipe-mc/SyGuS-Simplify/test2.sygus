@@ -1,0 +1,28 @@
+(set-logic BV)
+
+
+(synth-fun FunNew 
+   ((v1 Bool)
+   ) 
+   Bool
+  )
+
+
+
+(declare-var v1 Bool)
+(declare-var X Bool)
+
+(constraint (=> 
+    (=> v1 (not X))   ; assumptions (use `and` if there are multiple)  ; or `(=> v1 (not X))`
+    
+    (= 
+        (ite (and v1 (not X)) false v1)   ; function to be simplified
+        (FunNew v1)                       ; is equal to the new function
+    )))
+
+
+; (=> (and () () ())  (=  () )
+
+(check-synth)
+
+

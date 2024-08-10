@@ -1,0 +1,41 @@
+(set-logic BV)
+
+
+(synth-fun FunNew 
+   (
+    (c (_ BitVec 4) )
+    (v2 (_ BitVec 1))
+    (b (_ BitVec 4) )
+   ) 
+   (_ BitVec 4)
+  )
+
+
+
+(declare-var c (_ BitVec 4))
+(declare-var v2 (_ BitVec 1))
+(declare-var b (_ BitVec 4))
+(declare-var stall3inX84 (_ BitVec 1))
+(declare-var stall2inX84 (_ BitVec 1))
+(declare-var stall1inX84 (_ BitVec 1))
+(declare-var v1 (_ BitVec 1))
+(declare-var reg_v1 (_ BitVec 4))
+(declare-var tag01 (_ BitVec 1))
+(declare-var tag11 (_ BitVec 1))
+(declare-var tag21 (_ BitVec 1))
+(declare-var tag31 (_ BitVec 1))
+
+(constraint (=> 
+    (let ((.def_0 (= v2 #b1))) (let ((.def_1 (ite .def_0 b c))) (let ((.def_2 (bvnot stall3inX84))) (let ((.def_3 (bvand .def_2 v2))) (let ((.def_4 (= .def_3 #b1))) (let ((.def_5 (ite .def_4 .def_1 c))) (let ((.def_6 (bvcomp reg_v1 .def_5))) (let ((.def_7 (ite .def_4 #b0 tag21))) (let ((.def_8 (ite .def_0 .def_2 #b1))) (let ((.def_9 (= stall2inX84 #b1))) (let ((.def_10 (ite .def_9 #b0 .def_8))) (let ((.def_11 (bvand v1 .def_10))) (let ((.def_12 (= .def_11 #b1))) (let ((.def_13 (ite .def_12 tag11 .def_7))) (let ((.def_14 (bvnot .def_13))) (let ((.def_15 (bvor .def_14 .def_6))) (let ((.def_16 (= .def_15 #b1))) (let ((.def_17 (= v1 #b1))) (let ((.def_18 (ite .def_17 .def_10 #b1))) (let ((.def_19 (= stall1inX84 #b1))) (let ((.def_20 (ite .def_19 #b0 .def_18))) (let ((.def_21 ((_ zero_extend 0) .def_20))) (let ((.def_22 (= .def_21 #b0))) (let ((.def_23 ((_ zero_extend 0) .def_11))) (let ((.def_24 (= .def_23 #b1))) (let ((.def_25 (bvcomp reg_v1 c))) (let ((.def_26 (bvnot tag21))) (let ((.def_27 (bvor .def_26 .def_25))) (let ((.def_28 (= .def_27 #b1))) (let ((.def_29 (= tag21 #b0))) (let ((.def_30 (= tag11 #b0))) (let ((.def_31 (= tag01 #b1))) (let ((.def_32 (= tag31 #b0))) (let ((.def_33 (and .def_32 .def_31 .def_30 .def_29))) (let ((.def_34 (and .def_33 .def_28 .def_22 .def_24 .def_22 .def_16))) .def_34)))))))))))))))))))))))))))))))))))    ;
+    
+    (= 
+        (let ((.def_0 (= v2 #b1))) (let ((.def_1 (ite .def_0 b c))) (let ((.def_2 (bvnot stall3inX84))) (let ((.def_3 (bvand .def_2 v2))) (let ((.def_4 (= .def_3 #b1))) (let ((.def_5 (ite .def_4 .def_1 c))) .def_5))))))  ; function to be simplified
+        (FunNew c v2 b)                       ; is equal to the new function
+    )))
+
+
+; (=> (and () () ())  (=  () )
+
+(check-synth)
+
+

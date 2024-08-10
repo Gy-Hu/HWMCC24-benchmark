@@ -1,0 +1,5 @@
+Go to https://github.com/cvc5/cvc5/releases
+Download cvc5
+
+./cvc5-Linux --lang=sygus2 test1.sygus
+

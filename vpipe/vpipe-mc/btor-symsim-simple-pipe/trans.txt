@@ -1,0 +1,84 @@
+((RTL_id_ex_valid_prime = ((dummy_reset = 1_1) ? 0_1 : (((__VLG_I_inst_valid & (((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (! RTL_ex_wb_valid))) | (! RTL_id_ex_valid))) = 1_1) ? __VLG_I_inst_valid : (((RTL_id_ex_valid & ((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (! RTL_ex_wb_valid)))) = 1_1) ? 0_1 : RTL_id_ex_valid)))) 
+& 
+(RTL_ex_wb_valid_prime = ((dummy_reset = 1_1) ? 0_1 : (((RTL_id_ex_valid & ((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (! RTL_ex_wb_valid)))) = 1_1) ? (RTL_id_ex_valid & (! __VLG_I_stallex)) : (((RTL_ex_wb_valid & (! __VLG_I_stallwb)) = 1_1) ? 0_1 : RTL_ex_wb_valid)))) 
+& 
+(RTL_ex_wb_rd_prime = ((dummy_reset = 1_1) ? 0_2 : (((RTL_id_ex_valid & ((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (! RTL_ex_wb_valid)))) = 1_1) ? RTL_id_ex_rd : RTL_ex_wb_rd))) 
+& 
+(RTL_ex_wb_reg_wen_prime = ((dummy_reset = 1_1) ? 0_1 : (((RTL_id_ex_valid & ((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (! RTL_ex_wb_valid)))) = 1_1) ? RTL_id_ex_reg_wen : RTL_ex_wb_reg_wen))) 
+& 
+(RTL_id_ex_rd_prime = ((dummy_reset = 1_1) ? RTL_id_ex_rd : (((__VLG_I_inst_valid & (((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (! RTL_ex_wb_valid))) | (! RTL_id_ex_valid))) = 1_1) ? __VLG_I_inst[0:1] : RTL_id_ex_rd))) 
+& 
+(RTL_id_ex_reg_wen_prime = ((dummy_reset = 1_1) ? 0_1 : (((__VLG_I_inst_valid & (((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (! RTL_ex_wb_valid))) | (! RTL_id_ex_valid))) = 1_1) ? (((__VLG_I_inst[6:7] bvcomp (1_1 ZEXT 1)) | (__VLG_I_inst[6:7] bvcomp 2_2)) | (__VLG_I_inst[6:7] bvcomp 3_2)) : RTL_id_ex_reg_wen))) 
+& 
+('RTL_registers[0]_prime' = ((((RTL_ex_wb_valid & (! __VLG_I_stallwb)) & RTL_ex_wb_reg_wen) = 1_1) ? (((! (! (RTL_ex_wb_rd bvcomp 0_2))) = 1_1) ? RTL_ex_wb_val : 'RTL_registers[0]') : 'RTL_registers[0]')) 
+& 
+('RTL_registers[1]_prime' = ((((RTL_ex_wb_valid & (! __VLG_I_stallwb)) & RTL_ex_wb_reg_wen) = 1_1) ? (((! (! (RTL_ex_wb_rd bvcomp 0_2))) = 1_1) ? 'RTL_registers[1]' : (((RTL_ex_wb_rd bvcomp (1_1 ZEXT 1)) = 1_1) ? RTL_ex_wb_val : 'RTL_registers[1]')) : 'RTL_registers[1]')) 
+& 
+('RTL_registers[2]_prime' = ((((RTL_ex_wb_valid & (! __VLG_I_stallwb)) & RTL_ex_wb_reg_wen) = 1_1) ? (((! (! (RTL_ex_wb_rd bvcomp 0_2))) = 1_1) ? 'RTL_registers[2]' : (((RTL_ex_wb_rd bvcomp (1_1 ZEXT 1)) = 1_1) ? 'RTL_registers[2]' : (((RTL_ex_wb_rd bvcomp 2_2) = 1_1) ? RTL_ex_wb_val : 'RTL_registers[2]'))) : 'RTL_registers[2]')) 
+& 
+('RTL_registers[3]_prime' = ((((RTL_ex_wb_valid & (! __VLG_I_stallwb)) & RTL_ex_wb_reg_wen) = 1_1) ? (((! (! (RTL_ex_wb_rd bvcomp 0_2))) = 1_1) ? 'RTL_registers[3]' : (((RTL_ex_wb_rd bvcomp (1_1 ZEXT 1)) = 1_1) ? 'RTL_registers[3]' : (((RTL_ex_wb_rd bvcomp 2_2) = 1_1) ? 'RTL_registers[3]' : (((RTL_ex_wb_rd bvcomp 3_2) = 1_1) ? RTL_ex_wb_val : 'RTL_registers[3]')))) : 'RTL_registers[3]')) 
+& 
+('RTL_scoreboard[0]_prime' = ((dummy_reset = 1_1) ? 0_2 : ((((__VLG_I_inst_valid & (((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (!    RTL_ex_wb_valid))) | (! RTL_id_ex_valid))) = 1_1) ? ((__VLG_I_inst_valid & (((__VLG_I_inst[6:7] bvcomp (1_1 ZEXT 1)) | (__VLG_I_inst[6:7] bvcomp 2_2)) | (__VLG_I_inst[6:7] bvcomp 3_2))) & (! (! (__VLG_I_inst[0:1] bvcomp 0_2)))) : (((RTL_id_ex_valid & ((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (! RTL_ex_wb_valid)))) = 1_1) ? 0_1 : 'RTL_scoreboard[0]'[1:1]))::(((RTL_id_ex_valid & ((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (! RTL_ex_wb_valid)))) = 1_1) ? ((RTL_id_ex_valid & RTL_id_ex_reg_wen) & (! (! (RTL_id_ex_rd bvcomp 0_2)))) : (((RTL_ex_wb_valid & (! __VLG_I_stallwb)) = 1_1) ? 0_1 : 'RTL_scoreboard[0]'[0:0]))))) 
+& 
+('RTL_scoreboard[1]_prime' = ((dummy_reset = 1_1) ? 0_2 : ((((__VLG_I_inst_valid & (((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (!            RTL_ex_wb_valid))) | (! RTL_id_ex_valid))) = 1_1) ? ((__VLG_I_inst_valid & (((__VLG_I_inst[6:7] bvcomp (1_1 ZEXT 1)) | (__VLG_I_inst[6:7] bvcomp 2_2)) | (__VLG_I_inst[6:7] bvcomp 3_2))) & (__VLG_I_inst[0:1] bvcomp (1_1 ZEXT 1))) : (((RTL_id_ex_valid & ((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (! RTL_ex_wb_valid)))) = 1_1) ? 0_1 : 'RTL_scoreboard[1]'[1:1]))::(((RTL_id_ex_valid & ((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (! RTL_ex_wb_valid)))) = 1_1) ? ((RTL_id_ex_valid & RTL_id_ex_reg_wen) & (RTL_id_ex_rd bvcomp (1_1 ZEXT 1))) : (((RTL_ex_wb_valid & (! __VLG_I_stallwb)) = 1_1) ? 0_1 : 'RTL_scoreboard[1]'[0:0]))))) 
+& 
+('RTL_scoreboard[2]_prime' = ((dummy_reset = 1_1) ? 0_2 : ((((__VLG_I_inst_valid & (((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (! RTL_ex_wb_valid))) | (! RTL_id_ex_valid))) = 1_1) ? ((__VLG_I_inst_valid & (((__VLG_I_inst[6:7] bvcomp (1_1 ZEXT 1)) | (__VLG_I_inst[6:7] bvcomp 2_2)) | (__VLG_I_inst[6:7] bvcomp 3_2))) & (__VLG_I_inst[0:1] bvcomp 2_2)) : (((RTL_id_ex_valid & ((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (! RTL_ex_wb_valid)))) = 1_1) ? 0_1 : 'RTL_scoreboard[2]'[1:1]))::(((RTL_id_ex_valid & ((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (! RTL_ex_wb_valid)))) = 1_1) ? ((RTL_id_ex_valid & RTL_id_ex_reg_wen) & (RTL_id_ex_rd bvcomp 2_2)) : (((RTL_ex_wb_valid & (! __VLG_I_stallwb)) = 1_1) ? 0_1 : 'RTL_scoreboard[2]'[0:0]))))) 
+& 
+('RTL_scoreboard[3]_prime' = ((dummy_reset = 1_1) ? 0_2 : ((((__VLG_I_inst_valid & (((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (! RTL_ex_wb_valid))) | (! RTL_id_ex_valid))) = 1_1) ? ((__VLG_I_inst_valid & (((__VLG_I_inst[6:7] bvcomp (1_1 ZEXT 1)) | (__VLG_I_inst[6:7] bvcomp 2_2)) | (__VLG_I_inst[6:7] bvcomp 3_2))) & (__VLG_I_inst[0:1] bvcomp 3_2)) : (((RTL_id_ex_valid & ((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (! RTL_ex_wb_valid)))) = 1_1) ? 0_1 : 'RTL_scoreboard[3]'[1:1]))::(((RTL_id_ex_valid & ((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (! RTL_ex_wb_valid)))) = 1_1) ? ((RTL_id_ex_valid & RTL_id_ex_reg_wen) & (RTL_id_ex_rd bvcomp 3_2)) : (((RTL_ex_wb_valid & (! __VLG_I_stallwb)) = 1_1) ? 0_1 : 'RTL_scoreboard[3]'[0:0]))))) 
+& 
+(__2ndENDED___prime = ((rst = 1_1) ? 0_1 : ((((__ENDED__ & (ppl_stage_finish & __STARTED__)) & (! __2ndENDED__)) = 1_1) ? 1_1 : __2ndENDED__))) & 
+(__CYCLE_CNT___prime = ((rst = 1_1) ? 0_8 : ((((__START__ | __STARTED__) & ((__CYCLE_CNT__ u< 137_8) ? 1_1 : 0_1)) = 1_1) ? (__CYCLE_CNT__ + (1_1 ZEXT 7)) : __CYCLE_CNT__)))
+& 
+(ppl_stage_finish_prime = ((rst = 1_1) ? 0_1 : (((ppl_stage_wb & (RTL_ex_wb_valid & (! __VLG_I_stallwb))) = 1_1) ? 1_1 : 0_1))) 
+& 
+(__STARTED___prime = ((rst = 1_1) ? 0_1 : ((__START__ = 1_1) ? 1_1 : __STARTED__))) 
+& 
+(__ENDED___prime = ((rst = 1_1) ? 0_1 : (((((ppl_stage_finish & __STARTED__) & __RESETED__) & (! __ENDED__)) = 1_1) ? 1_1 : __ENDED__))) 
+& 
+(__RESETED___prime = ((rst = 1_1) ? 1_1 : __RESETED__)) 
+& 
+(ILA_r0_prime = ((rst = 1_1) ? ILA_r0_randinit : ((__START__ = 1_1) ? (((__ILA_I_inst[6:7] bvcomp (1_1 ZEXT 1)) = 1_1) ? (((! (! (__ILA_I_inst[0:1] bvcomp 0_2))) = 1_1) ? ((((! (! (__ILA_I_inst[4:5] bvcomp 0_2))) = 1_1) ? ILA_r0 : (((__ILA_I_inst[4:5] bvcomp (1_1 ZEXT 1)) = 1_1) ? ILA_r1 : (((__ILA_I_inst[4:5] bvcomp 2_2) = 1_1) ? ILA_r2 : ILA_r3))) + (((! (! (__ILA_I_inst[2:3] bvcomp 0_2))) = 1_1) ? ILA_r0 : (((__ILA_I_inst[2:3] bvcomp (1_1 ZEXT 1)) = 1_1) ? ILA_r1 : (((__ILA_I_inst[2:3] bvcomp 2_2) = 1_1) ? ILA_r2 : ILA_r3)))) : ILA_r0) : ILA_r0) : ILA_r0))) 
+& 
+(ILA_r1_prime = ((rst = 1_1) ? ILA_r1_randinit : ((__START__ = 1_1) ? (((__ILA_I_inst[6:7] bvcomp (1_1 ZEXT 1)) = 1_1) ? (((__ILA_I_inst[0:1] bvcomp (1_1 ZEXT 1)) = 1_1) ? ((((! (! (__ILA_I_inst[4:5] bvcomp 0_2))) = 1_1) ? ILA_r0 : (((__ILA_I_inst[4:5] bvcomp (1_1 ZEXT 1)) = 1_1) ? ILA_r1 : (((__ILA_I_inst[4:5] bvcomp 2_2) = 1_1) ? ILA_r2 : ILA_r3))) + (((! (! (__ILA_I_inst[2:3] bvcomp 0_2))) = 1_1) ? ILA_r0 : (((__ILA_I_inst[2:3] bvcomp (1_1 ZEXT 1)) = 1_1) ? ILA_r1 : (((__ILA_I_inst[2:3] bvcomp 2_2) = 1_1) ? ILA_r2 : ILA_r3)))) : ILA_r1) : ILA_r1) : ILA_r1))) 
+& 
+(ILA_r2_prime = ((rst = 1_1) ? ILA_r2_randinit : ((__START__ = 1_1) ? (((__ILA_I_inst[6:7] bvcomp (1_1 ZEXT 1)) = 1_1) ? (((__ILA_I_inst[0:1] bvcomp 2_2) = 1_1) ? ((((! (! (__ILA_I_inst[4:5] bvcomp 0_2))) = 1_1) ? ILA_r0 : (((__ILA_I_inst[4:5] bvcomp (1_1 ZEXT 1)) = 1_1) ? ILA_r1 : (((__ILA_I_inst[4:5] bvcomp 2_2) = 1_1) ? ILA_r2 : ILA_r3))) + (((! (! (__ILA_I_inst[2:3] bvcomp 0_2))) = 1_1) ? ILA_r0 : (((__ILA_I_inst[2:3] bvcomp (1_1 ZEXT 1)) = 1_1) ? ILA_r1 : (((__ILA_I_inst[2:3] bvcomp 2_2) = 1_1) ? ILA_r2 : ILA_r3)))) : ILA_r2) : ILA_r2) : ILA_r2))) 
+& 
+(ILA_r3_prime = ((rst = 1_1) ? ILA_r3_randinit : ((__START__ = 1_1) ? (((__ILA_I_inst[6:7] bvcomp (1_1 ZEXT 1)) = 1_1) ? (((__ILA_I_inst[0:1] bvcomp 3_2) = 1_1) ? ((((! (! (__ILA_I_inst[4:5] bvcomp 0_2))) = 1_1) ? ILA_r0 : (((__ILA_I_inst[4:5] bvcomp (1_1 ZEXT 1)) = 1_1) ? ILA_r1 : (((__ILA_I_inst[4:5] bvcomp 2_2) = 1_1) ? ILA_r2 : ILA_r3))) + (((! (! (__ILA_I_inst[2:3] bvcomp 0_2))) = 1_1) ? ILA_r0 : (((__ILA_I_inst[2:3] bvcomp (1_1 ZEXT 1)) = 1_1) ? ILA_r1 : (((__ILA_I_inst[2:3] bvcomp 2_2) = 1_1) ? ILA_r2 : ILA_r3)))) : ILA_r3) : ILA_r3) : ILA_r3))) 
+& 
+(__START___prime = ((rst = 1_1) ? 1_1 : (((__START__ | __STARTED__) = 1_1) ? 0_1 : __START__))) 
+& 
+(__auxvar0__recorder_prime = ((rst = 1_1) ? ____auxvar0__recorder_init__ : __auxvar0__recorder)) 
+& 
+(__auxvar1__recorder_prime = ((rst = 1_1) ? ____auxvar1__recorder_init__ : __auxvar1__recorder)) 
+& 
+(__auxvar2__recorder_prime = ((rst = 1_1) ? ____auxvar2__recorder_init__ : __auxvar2__recorder)) 
+& 
+(__auxvar3__recorder_prime = ((rst = 1_1) ? ____auxvar3__recorder_init__ : __auxvar3__recorder)) 
+& 
+(__auxvar0__recorder_sn_condmet_prime = ((rst = 1_1) ? 0_1 : (((((ppl_stage_wb & (RTL_ex_wb_valid & (! __VLG_I_stallwb))) & (__START__ | __STARTED__)) & (! __ENDED__)) = 1_1) ? 1_1 : __auxvar0__recorder_sn_condmet))) 
+& 
+(ppl_stage_wb_prime = ((rst = 1_1) ? 0_1 : (((ppl_stage_ex & (RTL_id_ex_valid & ((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (! RTL_ex_wb_valid))))) = 1_1) ? 1_1 : (((RTL_ex_wb_valid & (! __VLG_I_stallwb)) = 1_1) ? 0_1 : ppl_stage_wb)))) 
+& 
+(__auxvar1__recorder_sn_condmet_prime = ((rst = 1_1) ? 0_1 : (((((ppl_stage_wb & (RTL_ex_wb_valid & (! __VLG_I_stallwb))) & (__START__ | __STARTED__)) & (! __ENDED__)) = 1_1) ? 1_1 : __auxvar1__recorder_sn_condmet))) 
+& 
+(__auxvar2__recorder_sn_condmet_prime = ((rst = 1_1) ? 0_1 : (((((ppl_stage_wb & (RTL_ex_wb_valid & (! __VLG_I_stallwb))) & (__START__ | __STARTED__)) & (! __ENDED__)) = 1_1) ? 1_1 : __auxvar2__recorder_sn_condmet))) 
+& 
+(__auxvar3__recorder_sn_condmet_prime = ((rst = 1_1) ? 0_1 : (((((ppl_stage_wb & (RTL_ex_wb_valid & (! __VLG_I_stallwb))) & (__START__ | __STARTED__)) & (! __ENDED__)) = 1_1) ? 1_1 : __auxvar3__recorder_sn_condmet))) 
+& 
+(__auxvar0__recorder_sn_vhold_prime = ((rst = 1_1) ? __auxvar0__recorder_sn_vhold : (((((ppl_stage_wb & (RTL_ex_wb_valid & (! __VLG_I_stallwb))) & (__START__ | __STARTED__)) & (! __ENDED__)) = 1_1) ? 'RTL_registers[0]' : __auxvar0__recorder_sn_vhold))) 
+& 
+(__auxvar1__recorder_sn_vhold_prime = ((rst = 1_1) ? __auxvar1__recorder_sn_vhold : (((((ppl_stage_wb & (RTL_ex_wb_valid & (! __VLG_I_stallwb))) & (__START__ | __STARTED__)) & (! __ENDED__)) = 1_1) ? 'RTL_registers[1]' : __auxvar1__recorder_sn_vhold))) 
+& 
+(__auxvar2__recorder_sn_vhold_prime = ((rst = 1_1) ? __auxvar2__recorder_sn_vhold : (((((ppl_stage_wb & (RTL_ex_wb_valid & (! __VLG_I_stallwb))) & (__START__ | __STARTED__)) & (! __ENDED__)) = 1_1) ? 'RTL_registers[2]' : __auxvar2__recorder_sn_vhold))) 
+& 
+(__auxvar3__recorder_sn_vhold_prime = ((rst = 1_1) ? __auxvar3__recorder_sn_vhold : (((((ppl_stage_wb & (RTL_ex_wb_valid & (! __VLG_I_stallwb))) & (__START__ | __STARTED__)) & (! __ENDED__)) = 1_1) ? 'RTL_registers[3]' : __auxvar3__recorder_sn_vhold))) & (ppl_stage_ex_prime = ((rst = 1_1) ? 0_1 : ((__START__ = 1_1) ? 1_1 : (((RTL_id_ex_valid & ((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (! RTL_ex_wb_valid)))) = 1_1) ? 0_1 : ppl_stage_ex)))) 
+& 
+(ILA___COUNTER_start__n3_prime = ((rst = 1_1) ? 0_8 : ((__START__ = 1_1) ? (((__ILA_I_inst[6:7] bvcomp (1_1 ZEXT 1)) = 1_1) ? 1_8 : ((((1_1 ZEXT 7) u<= ILA___COUNTER_start__n3) & (ILA___COUNTER_start__n3 u< 255_8)) ? (ILA___COUNTER_start__n3 + (1_1 ZEXT 7)) : ILA___COUNTER_start__n3)) : ILA___COUNTER_start__n3))) 
+& 
+(RTL_ex_wb_val_prime = ((dummy_reset = 1_1) ? 0_8 : (((RTL_id_ex_valid & ((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (! RTL_ex_wb_valid)))) = 1_1) ? (((RTL_id_ex_op bvcomp (1_1 ZEXT 1)) = 1_1) ? (RTL_id_ex_operand1 + RTL_id_ex_operand2) : (((RTL_id_ex_op bvcomp 2_2) = 1_1) ? RTL_id_ex_operand1 : (((RTL_id_ex_op bvcomp 3_2) = 1_1) ? (! (RTL_id_ex_operand1 & RTL_id_ex_operand2)) : 0_8))) : RTL_ex_wb_val))) 
+& 
+(RTL_id_ex_operand1_prime = ((dummy_reset = 1_1) ? RTL_id_ex_operand1 : (((__VLG_I_inst_valid & (((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (! RTL_ex_wb_valid))) | (! RTL_id_ex_valid))) = 1_1) ? (((__VLG_I_inst[6:7] bvcomp 2_2) = 1_1) ? (0_4::__VLG_I_inst[2:5]) : (((! (! ((((__VLG_I_inst[4:5] bvcomp 3_2) = 1_1) ? 'RTL_scoreboard[3]' : (((__VLG_I_inst[4:5] bvcomp 2_2) = 1_1) ? 'RTL_scoreboard[2]' : (((__VLG_I_inst[4:5] bvcomp (1_1 ZEXT 1)) = 1_1) ? 'RTL_scoreboard[1]' : (((! (! (__VLG_I_inst[4:5] bvcomp 0_2))) = 1_1) ? 'RTL_scoreboard[0]' : 0_2)))) bvcomp 0_2))) = 1_1) ? (((__VLG_I_inst[4:5] bvcomp 3_2) = 1_1) ? 'RTL_registers[3]' : (((__VLG_I_inst[4:5] bvcomp 2_2) = 1_1) ? 'RTL_registers[2]' : (((__VLG_I_inst[4:5] bvcomp (1_1 ZEXT 1)) = 1_1) ? 'RTL_registers[1]' : (((! (! (__VLG_I_inst[4:5] bvcomp 0_2))) = 1_1) ? 'RTL_registers[0]' : 0_8)))) : ((((((__VLG_I_inst[4:5] bvcomp 3_2) = 1_1) ? 'RTL_scoreboard[3]' : (((__VLG_I_inst[4:5] bvcomp 2_2) = 1_1) ? 'RTL_scoreboard[2]' : (((__VLG_I_inst[4:5] bvcomp (1_1 ZEXT 1)) = 1_1) ? 'RTL_scoreboard[1]' : (((! (! (__VLG_I_inst[4:5] bvcomp 0_2))) = 1_1) ? 'RTL_scoreboard[0]' : 0_2)))) bvcomp (1_1 ZEXT 1)) = 1_1) ? RTL_ex_wb_val : (((RTL_id_ex_op bvcomp (1_1 ZEXT 1)) = 1_1) ? (RTL_id_ex_operand1 + RTL_id_ex_operand2) : (((RTL_id_ex_op bvcomp 2_2) = 1_1) ? RTL_id_ex_operand1 : (((RTL_id_ex_op bvcomp 3_2) = 1_1) ? (! (RTL_id_ex_operand1 & RTL_id_ex_operand2)) : 0_8)))))) : RTL_id_ex_operand1))) 
+& 
+(RTL_id_ex_operand2_prime = ((dummy_reset = 1_1) ? RTL_id_ex_operand2 : (((__VLG_I_inst_valid & (((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (! RTL_ex_wb_valid))) | (! RTL_id_ex_valid))) = 1_1) ? (((! (! ((((__VLG_I_inst[2:3] bvcomp 3_2) = 1_1) ? 'RTL_scoreboard[3]' : (((__VLG_I_inst[2:3] bvcomp 2_2) = 1_1) ? 'RTL_scoreboard[2]' : (((__VLG_I_inst[2:3] bvcomp (1_1 ZEXT 1)) = 1_1) ? 'RTL_scoreboard[1]' : (((! (! (__VLG_I_inst[2:3] bvcomp 0_2))) = 1_1) ? 'RTL_scoreboard[0]' : 0_2)))) bvcomp 0_2))) = 1_1) ? (((__VLG_I_inst[2:3] bvcomp 3_2) = 1_1) ? 'RTL_registers[3]' : (((__VLG_I_inst[2:3] bvcomp 2_2) = 1_1) ? 'RTL_registers[2]' : (((__VLG_I_inst[2:3] bvcomp (1_1 ZEXT 1)) = 1_1) ? 'RTL_registers[1]' : (((! (! (__VLG_I_inst[2:3] bvcomp 0_2))) = 1_1) ? 'RTL_registers[0]' : 0_8)))) : ((((((__VLG_I_inst[2:3] bvcomp 3_2) = 1_1) ? 'RTL_scoreboard[3]' : (((__VLG_I_inst[2:3] bvcomp 2_2) = 1_1) ? 'RTL_scoreboard[2]' : (((__VLG_I_inst[2:3] bvcomp (1_1 ZEXT 1)) = 1_1) ? 'RTL_scoreboard[1]' : (((! (! (__VLG_I_inst[2:3] bvcomp 0_2))) = 1_1) ? 'RTL_scoreboard[0]' : 0_2)))) bvcomp (1_1 ZEXT 1)) = 1_1) ? RTL_ex_wb_val : (((RTL_id_ex_op bvcomp (1_1 ZEXT 1)) = 1_1) ? (RTL_id_ex_operand1 + RTL_id_ex_operand2) : (((RTL_id_ex_op bvcomp 2_2) = 1_1) ? RTL_id_ex_operand1 : (((RTL_id_ex_op bvcomp 3_2) = 1_1) ? (! (RTL_id_ex_operand1 & RTL_id_ex_operand2)) : 0_8))))) : RTL_id_ex_operand2))) 
+& 
+(RTL_id_ex_op_prime = ((dummy_reset = 1_1) ? RTL_id_ex_op : (((__VLG_I_inst_valid & (((! __VLG_I_stallex) & ((! __VLG_I_stallwb) | (! RTL_ex_wb_valid))) | (! RTL_id_ex_valid))) = 1_1) ? __VLG_I_inst[6:7] : RTL_id_ex_op))))

@@ -1,0 +1,21 @@
+read_verilog -sv wrapper.v
+prep -top wrapper
+
+hierarchy -check
+proc
+chformal -assume -early;
+
+select wrapper/sanitycheck
+chformal -remove
+select *
+
+memory ;
+flatten
+setundef -undriven -expose;
+sim -clock clk -reset rst -rstlen 1 -n 1 -w wrapper
+delete -output
+techmap
+abc -fast -g AND
+write_aiger -zinit problem.aig
+
+stat -top wrapper

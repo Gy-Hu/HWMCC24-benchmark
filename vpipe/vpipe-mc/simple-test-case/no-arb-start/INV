@@ -1,0 +1,51 @@
+INV: (let 
+(($e1 (bvmul reg_v #b0010))) (let 
+(($e2 (= $e1 (bvmul stage1 #b0010)))) 
+
+(bvand 
+	! ( tag3 && !tag4 && stage3 != reg_v_comp)
+(bvand 
+	! ( tag2 && !tag3 && stage2 != reg_v*2+1)  
+(bvand 
+	!(reg_v == stage2 && wen_stage2 && reg_v!=stage1)
+(bvand 
+	!(reg_v!=stage1 && !wen_stage2 && stage3 == reg_v && tag1)
+(bvand 
+	!(tag1 && !wen_stage1)
+(bvand 
+	wen_stage3 
+(bvand 
+	!( wen_stage2 && stage2==reg_v*2 )
+	!( tag2 && !wen_stage2 )
+	)))))))))
+	
+	
+	
+	INVAR: (let 
+(($e1 (= stage3 reg_v))) (let                            stage3 == reg_v
+(($e2 (bvmul reg_v #b0010))) (let 
+(($e3 (bvmul stage1 #b0010))) (let 
+(($e4 (= $e2 $e3))) 
+(bvand (bvnot 
+    (bvand (bvand tag3 (bvnot tag4)) (bvnot (ite (= stage3 reg_v_comp) #b1 #b0))))
+(bvand (bvnot 
+    (bvand (bvand (bvnot tag3) tag2) (bvnot (ite (= stage2 (bvadd $e2 #b0001)) #b1 #b0)))) 
+(bvand (bvnot 
+    (bvand (ite (= reg_v stage2) #b1 #b0) (bvand wen_stage2 (bvnot (ite $e4 #b1 #b0))))) 
+(bvand (bvnot 
+    (bvand wen_stage2 (ite (= stage2 $e3) #b1 #b0))) 
+(bvand (bvnot 
+    (bvand (bvnot (ite $e4 #b1 #b0)) (bvand (bvnot wen_stage2) (bvand (ite $e1 #b1 #b0) tag1)))) 
+(bvand (bvnot 
+    (bvand (ite (= #b0000 $e2) #b1 #b0) (bvand (bvnot (ite $e4 #b1 #b0)) (bvand (ite $e1 #b1 #b0) (bvnot wen_stage2))))) 
+(bvand (bvnot 
+    (ite (= stage2 #b0010) #b1 #b0)) 
+(bvand (bvnot 
+    (bvand tag1 (bvnot wen_stage1))) 
+(bvand wen_stage3 
+(bvand (bvnot 
+    (bvand tag2 (bvnot wen_stage2))) 
+(bvand (bvnot 
+    (bvand (ite (= #b0000 stage2) #b1 #b0) wen_stage2)) 
+(bvnot 
+    (bvand wen_stage2 (ite (= stage2 $e2) #b1 #b0))))))))))))))))))

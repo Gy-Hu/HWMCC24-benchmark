@@ -1,0 +1,10 @@
+*.pyc
+*.log
+log/*
+*~
+scratch.py
+*.out
+litmus/parsetab.py
+
+
+

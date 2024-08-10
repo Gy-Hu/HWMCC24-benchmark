@@ -1,0 +1,7 @@
+read_verilog -sv simple_pipe.v
+prep -top simple_pipe
+
+hierarchy -check
+setundef -undriven -init -expose
+sim -clock clk -reset rst -rstlen 1 -n 1 -w simple_pipe
+write_btor  -s simple_pipe.btor2

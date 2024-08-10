@@ -1,0 +1,20 @@
+{
+    __ILA_I_inst: __VLG_I_inst, 
+    'RTL_scoreboard[0]'[1:1]: ( (RTL_id_ex_valid & RTL_id_ex_reg_wen) & (! (! (RTL_id_ex_rd bvcomp 0_2)))),  
+    'RTL_scoreboard[0]'[0:0]: ((RTL_ex_wb_valid & RTL_ex_wb_reg_wen) & (! (! (RTL_ex_wb_rd bvcomp 0_2)))), 
+    'RTL_scoreboard[1]'[1:1]: ((RTL_id_ex_valid & RTL_id_ex_reg_wen) & (RTL_id_ex_rd bvcomp 1_2)), 
+    'RTL_scoreboard[1]'[0:0]: ((RTL_ex_wb_valid & RTL_ex_wb_reg_wen) & (RTL_ex_wb_rd bvcomp 1_2)), 
+    'RTL_scoreboard[2]'[1:1]: ((RTL_id_ex_valid & RTL_id_ex_reg_wen) & (RTL_id_ex_rd bvcomp 2_2)), 
+    'RTL_scoreboard[2]'[0:0]: ((RTL_ex_wb_valid & RTL_ex_wb_reg_wen) & (RTL_ex_wb_rd bvcomp 2_2)), 
+    'RTL_scoreboard[3]'[1:1]: ((RTL_id_ex_valid & RTL_id_ex_reg_wen) & (RTL_id_ex_rd bvcomp 3_2)), 
+    'RTL_scoreboard[3]'[0:0]: ((RTL_ex_wb_valid & RTL_ex_wb_reg_wen) & (RTL_ex_wb_rd bvcomp 3_2)), 
+    __ILA_I_inst[6:7]: 1_2, 
+    __auxvar0__recorder: 'RTL_registers[0]', 
+    __auxvar1__recorder: 'RTL_registers[1]', 
+    __auxvar2__recorder: 'RTL_registers[2]', 
+    __auxvar3__recorder: 'RTL_registers[3]', 
+    ILA_r0: 'RTL_registers[0]', 
+    ILA_r1: 'RTL_registers[1]', 
+    ILA_r2: 'RTL_registers[2]', 
+    ILA_r3: 'RTL_registers[3]'
+}

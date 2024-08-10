@@ -1,0 +1,120 @@
+{
+  "state mapping": { 
+    "pc"  : [["decode","RTL.near_mem$imem_pc"],
+             ["commit", "RTL.x_out_next_pc__h6552@pc_commit"]],
+
+    "x0"  : "ILA.x0 == 0"  ,
+    "x1"  : [["decode" , "RTL.gpr_regfile.regfile.arr[1] @monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[1]"]]  ,
+    "x2"  : [["decode" , "RTL.gpr_regfile.regfile.arr[2] @monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[2]"]]  ,
+    "x3"  : [["decode" , "RTL.gpr_regfile.regfile.arr[3] @monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[3]"]]  ,
+    "x4"  : [["decode" , "RTL.gpr_regfile.regfile.arr[4] @monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[4]"]]  ,
+    "x5"  : [["decode" , "RTL.gpr_regfile.regfile.arr[5] @monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[5]"]]  ,
+    "x6"  : [["decode" , "RTL.gpr_regfile.regfile.arr[6] @monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[6]"]]  ,
+    "x7"  : [["decode" , "RTL.gpr_regfile.regfile.arr[7] @monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[7]"]]  ,
+    "x8"  : [["decode" , "RTL.gpr_regfile.regfile.arr[8] @monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[8]"]]  ,
+    "x9"  : [["decode" , "RTL.gpr_regfile.regfile.arr[9] @monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[9]"]]  ,
+    "x10" : [["decode" , "RTL.gpr_regfile.regfile.arr[10]@monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[10]"]] ,
+    "x11" : [["decode" , "RTL.gpr_regfile.regfile.arr[11]@monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[11]"]] ,
+    "x12" : [["decode" , "RTL.gpr_regfile.regfile.arr[12]@monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[12]"]] ,
+    "x13" : [["decode" , "RTL.gpr_regfile.regfile.arr[13]@monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[13]"]] ,
+    "x14" : [["decode" , "RTL.gpr_regfile.regfile.arr[14]@monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[14]"]] ,
+    "x15" : [["decode" , "RTL.gpr_regfile.regfile.arr[15]@monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[15]"]] ,
+    "x16" : [["decode" , "RTL.gpr_regfile.regfile.arr[16]@monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[16]"]] ,
+    "x17" : [["decode" , "RTL.gpr_regfile.regfile.arr[17]@monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[17]"]] ,
+    "x18" : [["decode" , "RTL.gpr_regfile.regfile.arr[18]@monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[18]"]] ,
+    "x19" : [["decode" , "RTL.gpr_regfile.regfile.arr[19]@monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[19]"]] ,
+    "x20" : [["decode" , "RTL.gpr_regfile.regfile.arr[20]@monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[20]"]] ,
+    "x21" : [["decode" , "RTL.gpr_regfile.regfile.arr[21]@monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[21]"]] ,
+    "x22" : [["decode" , "RTL.gpr_regfile.regfile.arr[22]@monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[22]"]] ,
+    "x23" : [["decode" , "RTL.gpr_regfile.regfile.arr[23]@monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[23]"]] ,
+    "x24" : [["decode" , "RTL.gpr_regfile.regfile.arr[24]@monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[24]"]] ,
+    "x25" : [["decode" , "RTL.gpr_regfile.regfile.arr[25]@monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[25]"]] ,
+    "x26" : [["decode" , "RTL.gpr_regfile.regfile.arr[26]@monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[26]"]] ,
+    "x27" : [["decode" , "RTL.gpr_regfile.regfile.arr[27]@monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[27]"]] ,
+    "x28" : [["decode" , "RTL.gpr_regfile.regfile.arr[28]@monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[28]"]] ,
+    "x29" : [["decode" , "RTL.gpr_regfile.regfile.arr[29]@monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[29]"]] ,
+    "x30" : [["decode" , "RTL.gpr_regfile.regfile.arr[30]@monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[30]"]] ,
+    "x31" : [["decode" , "RTL.gpr_regfile.regfile.arr[31]@monitor_s3"] , ["commit" , "RTL.gpr_regfile.regfile.arr[31]"]] ,
+
+    // memory part
+    "load_en" : [["commit", "ILA.load_en == (#mem_req_en# == 1'b1 && #mem_req_op# == 1'b0)"]], // used in other state mapping // ? && valid == ?
+    "load_addr" : [["commit && ILA.load_en", "#mem_req_addr#" ]],
+    "load_data" : [["decode && (#mem_req_en# == 1'b1 && #mem_req_op# == 1'b0)", "#mem_req_rd_data#" ]], // size ??
+    "load_size" : [
+        ["commit && ILA.load_en && ILA.load_size == 1", "#mem_req_funct3# == 0 || #mem_req_funct3# == 4" ],
+        ["commit && ILA.load_en && ILA.load_size == 2", "#mem_req_funct3# == 1 || #mem_req_funct3# == 5" ],
+        ["commit && ILA.load_en && ILA.load_size == 4", "#mem_req_funct3# == 2 || #mem_req_funct3# == 6" ],
+        ["commit && ILA.load_en && ILA.load_size == 8", "#mem_req_funct3# == 3" ]
+      ], // map of the two ??
+
+    "store_en" : [["commit", "ILA.store_en == (#mem_req_en# == 1'b1 && #mem_req_op# == 1'b1)"]], // used in other state mapping
+    "store_addr" : [["commit && ILA.store_en", "#mem_req_addr#" ]],
+    "store_data" : [["commit && ILA.store_en", "#mem_req_wd_data#" ]], // size ??
+    "store_size" : [
+        ["commit && ILA.store_en && ILA.store_size == 1", "#mem_req_funct3# == 0 || #mem_req_funct3# == 4" ],
+        ["commit && ILA.store_en && ILA.store_size == 2", "#mem_req_funct3# == 1 || #mem_req_funct3# == 5" ],
+        ["commit && ILA.store_en && ILA.store_size == 4", "#mem_req_funct3# == 2 || #mem_req_funct3# == 6" ],
+        ["commit && ILA.store_en && ILA.store_size == 8", "#mem_req_funct3# == 3" ]
+        ]// map of the two ??
+// "mem"               : "**MEM**XRAM"
+  },
+
+  "input mapping" : {
+    "inst" : "RTL.near_mem$imem_instr"
+  },
+
+  "rtl interface connection" : {
+    "CLOCK" : "CLK",
+    "NRESET" : "RST_N",
+    "input-port" : {
+      "m_external_interrupt_req_set_not_clear" : "1'b0",
+      "s_external_interrupt_req_set_not_clear" : "1'b0",
+      "software_interrupt_req_set_not_clear"   : "1'b0",
+      "timer_interrupt_req_set_not_clear"      : "1'b0",
+      "nmi_req_set_not_clear"                  : "1'b0"
+    }
+  },
+  //  pc : assume   : stage1_rg_stage_input[305:274] @ monitor_s1 //   rg_stage_input.pc
+  //  pc stage 1 -> x_out_next_pc__h6552 @ (RTL.s1_to_s2$D_IN & RTL.s1_to_s2$EN & monitor_s1)
+
+  "monitors" : {
+    "monitor": {
+      "template" : "phase tracker",
+      "event-alias" : {
+        "monitor_sF" :  "RTL.stageF_rg_full & ~monitor_sF_already & decode",
+        "sD_enter" : "RTL.sF_to_sD$D_IN & RTL.sF_to_sD$EN & monitor_sF",
+        "sD_exit"  : "RTL.sD_to_s1$D_IN & RTL.sD_to_s1$EN",
+        "s1_enter" : "RTL.sD_to_s1$D_IN & RTL.sD_to_s1$EN & monitor_sD",
+        "s1_exit"  : "RTL.s1_to_s2$D_IN & RTL.s1_to_s2$EN",
+        "s2_enter" : "RTL.s1_to_s2$D_IN & RTL.s1_to_s2$EN & monitor_s1",
+        "s2_exit"  : "RTL.s2_to_s3$D_IN & RTL.s2_to_s3$EN",
+        "s3_enter" : "RTL.s2_to_s3$D_IN & RTL.s2_to_s3$EN & monitor_s2",
+        "s3_exit"  : "RTL.s3_deq$EN & RTL.s3_deq$D_IN",
+        "s4_enter" : "RTL.s3_deq$EN & RTL.s3_deq$D_IN & monitor_s3",
+        "end_of_pipeline" : "monitor_s4 && ~(monitor_s4 ##1)", // $rose(monitor_s4)
+        "pc_commit" : "RTL.s1_to_s2$D_IN & RTL.s1_to_s2$EN & monitor_s1"
+      },
+      "rules" : [
+        { "name" : "sF_already", "enter" : "monitor_sF && sD_enter"},
+        { "name" : "sD", "enter" : "sD_enter", "exit"  : "sD_exit" },
+        { "name" : "s1", "enter" : "s1_enter", "exit"  : "s1_exit" },
+        { "name" : "s2", "enter" : "s2_enter", "exit"  : "s2_exit" },
+        { "name" : "s3", "enter" : "s3_enter", "exit"  : "s3_exit" },
+        { "name" : "s4", "enter" : "s4_enter"}
+      ]
+    }, // end of main monitor
+
+    "mem_req_en"      : "RTL.near_mem$EN_dmem_req                @ ( monitor_s2) ",
+    "mem_req_op"      : "RTL.near_mem$dmem_req_op                @ ( monitor_s2) ",
+    "mem_req_addr"    : "RTL.near_mem$dmem_req_addr              @ ( monitor_s2) ",
+    "mem_req_rd_data" : "RTL.near_mem$dmem_word64[31:0]          @ ( monitor_s3) ",
+    "mem_req_wd_data" : "RTL.near_mem$dmem_req_store_value[31:0] @ ( monitor_s2) ",
+    "mem_req_funct3"  : "RTL.near_mem$dmem_req_f3                @ ( monitor_s2) "
+  },
+
+  "assumptions" : [
+    "ILA.pc[1:0] == 2'b00",
+    "RTL.near_mem$imem_pc[1:0] == 2'b00",
+    "(#monitor_s2# |-> (RTL.near_mem$dmem_exc == 0))" // no memory exception, not in this model
+  ]
+}

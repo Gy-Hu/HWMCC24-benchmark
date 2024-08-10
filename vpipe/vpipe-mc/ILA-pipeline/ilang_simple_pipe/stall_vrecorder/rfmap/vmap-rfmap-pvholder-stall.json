@@ -1,0 +1,50 @@
+{
+  "state mapping": {  
+  	"r0":[ ["#decode#", "RTL.registers[0] @ (#stage_tracker_ex_wb_iuv# && RTL.wb_go)"] , ["1'b1", "RTL.registers[0]"] ] ,
+    "r1":[ ["#decode#", "RTL.registers[1] @ (#stage_tracker_ex_wb_iuv# && RTL.wb_go)"] , ["1'b1", "RTL.registers[1]"] ] ,
+    "r2":[ ["#decode#", "RTL.registers[2] @ (#stage_tracker_ex_wb_iuv# && RTL.wb_go)"] , ["1'b1", "RTL.registers[2]"] ] ,
+    "r3":[ ["#decode#", "RTL.registers[3] @ (#stage_tracker_ex_wb_iuv# && RTL.wb_go)"] , ["1'b1", "RTL.registers[3]"] ] },
+
+  "input mapping": {
+     "inst":"RTL.inst"
+  },
+
+  "rtl-interface-connection" : {
+    "CLOCK" : "clk",
+    "RESET" : "rst"
+  },
+
+  "monitor" : {
+    "stage_tracker" : {
+      "template" : "phase tracker",
+      "rules" : [
+        { // 1
+          "name"  : "if_id_iuv",
+          "enter" : {"event" : "#decode#"},
+          "exit"  : {"event" : "RTL.id_go"}
+        },
+
+        { // 2
+          "name"  : "id_ex_iuv",
+          "enter" : {"event" : "#stage_tracker_if_id_iuv# && RTL.id_go"},
+          "exit"  : {"event" : "RTL.ex_go"}
+        },
+
+        { // 3
+          "name"  : "ex_wb_iuv",
+          "enter" : {"event" : "#stage_tracker_id_ex_iuv# && RTL.ex_go"},
+          "exit"  : {"event" : "RTL.wb_go"}
+        },
+
+        { // 4
+          "name"  : "wb_iuv",
+          "enter" : {"event" : "#stage_tracker_ex_wb_iuv# && RTL.wb_go"},
+          "exit"  : {"event" : "1"}
+        }
+      ]
+    } // end of stage tracker
+  }, // end of monitor
+  "additional mapping" : [
+    "#decode# |-> ( RTL.inst_ready && RTL.inst_valid)"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "state mapping": {  
+    "aes_address"        : "RTL.aes_reg_opaddr_i.reg_out",
+    "aes_length"         : "RTL.aes_reg_oplen_i.reg_out",
+    "aes_counter"        : "RTL.aes_reg_ctr_i.reg_out",
+    "aes_key"            : "RTL.aes_reg_key0_i.reg_out",
+    "aes_status"         : "RTL.aes_reg_state",
+    "XRAM"               : {
+      "wen"   : "RTL.xram_wr & RTL.xram_stb",
+      "waddr" : "RTL.xram_addr",
+      "wdata" : "RTL.xram_data_out",
+      "ren"   : "~RTL.xram_wr & RTL.xram_stb",
+      "raddr" : "RTL.xram_addr",
+      "rdata" : "RTL.xram_data_in"
+    },
+    "outdata"            : "RTL.data_out_reg",
+
+    "rd_data"            : "RTL.mem_data_buf",
+    "enc_data"           : "RTL.encrypted_data_buf",
+    "byte_cnt"           : "RTL.byte_counter",
+    "blk_cnt"            : "RTL.block_counter"
+  },
+
+
+  "input mapping": {
+    "cmd"    : "RTL.wr == 1 ? 2'd2 : 2'd1",
+    "cmdaddr": "RTL.addr",
+    "cmddata": "RTL.data_in"
+  },
+
+  "rtl-interface-connection" : {
+    "CLOCK" : "clk",
+    "RESET" : "rst"
+  },
+
+  // "monitor" :{
+  //   // monitor 1 : value recorder
+  //   // "r0_pvholder" : { // this is just a name
+  //   //   "template" : "value recorder",
+  //   //     "cond": "#stage_tracker# == 1",
+  //   //     "val":"RTL.registers[0]"
+  //   // }
+  // },    
+
+  "functions":{ // for uninterpreted functions 
+    "aes128":[
+      {
+        "result":"RTL.aes_128_i.out",
+        "arg":["RTL.uaes_ctr", "RTL.aes_curr_key"] }
+      ]
+  }
+  // "assumptions" : [
+  //   // "ILA.pc[1:0] == 2'b00",
+  //   // "RTL.near_mem$imem_pc[1:0] == 2'b00",
+  //   // "(#monitor_s2# |-> (RTL.near_mem$dmem_exc == 0))" // no memory exception, not in this model
+  // ]
+
+}
+
+
+

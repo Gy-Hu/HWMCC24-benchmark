@@ -1,0 +1,16 @@
+'RTL_registers[0]' := 64_8
+'RTL_registers[0]_prime' := 64_8
+'RTL_registers[1]' := 64_8
+'RTL_registers[1]_prime' := 64_8
+'RTL_registers[2]' := 64_8
+'RTL_registers[2]_prime' := 64_8
+'RTL_registers[3]' := 64_8
+'RTL_registers[3]_prime' := 64_8
+__ILA_I_inst := 77_8
+__ILA_I_inst_prime := 64_8
+__VLG_I_inst_valid := 1_1
+__VLG_I_inst_valid_prime := 0_1
+__VLG_I_stallex := 0_1
+__VLG_I_stallex_prime := 0_1
+__VLG_I_stallwb := 1_1
+__VLG_I_stallwb_prime := 0_1

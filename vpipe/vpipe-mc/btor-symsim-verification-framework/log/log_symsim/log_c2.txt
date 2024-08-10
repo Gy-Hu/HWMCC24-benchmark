@@ -1,0 +1,407 @@
+Warning: will not rename state: RTL_ex_wb_rd  to output name:  RTL__DOT__ex_wb_rd
+Warning: will not rename state: RTL_ex_wb_reg_wen  to output name:  RTL__DOT__ex_wb_reg_wen
+Warning: will not rename state: RTL_ex_wb_valid  to output name:  RTL__DOT__ex_wb_valid
+Warning: will not rename state: RTL_id_ex_rd  to output name:  RTL__DOT__id_ex_rd
+Warning: will not rename state: RTL_id_ex_reg_wen  to output name:  RTL__DOT__id_ex_reg_wen
+Warning: will not rename state: RTL_id_ex_valid  to output name:  RTL__DOT__id_ex_valid
+Warning: will not rename state: RTL_registers[0]  to output name:  RTL__DOT__registers_0_
+Warning: will not rename state: RTL_registers[1]  to output name:  RTL__DOT__registers_1_
+Warning: will not rename state: RTL_registers[2]  to output name:  RTL__DOT__registers_2_
+Warning: will not rename state: RTL_registers[3]  to output name:  RTL__DOT__registers_3_
+Warning: will not rename state: RTL_scoreboard[0]  to output name:  RTL__DOT__scoreboard_0_
+Warning: will not rename state: RTL_scoreboard[1]  to output name:  RTL__DOT__scoreboard_1_
+Warning: will not rename state: RTL_scoreboard[2]  to output name:  RTL__DOT__scoreboard_2_
+Warning: will not rename state: RTL_scoreboard[3]  to output name:  RTL__DOT__scoreboard_3_
+Warning: will not rename state: ILA_r0  to output name:  __ILA_SO_r0
+Warning: will not rename state: ILA_r1  to output name:  __ILA_SO_r1
+Warning: will not rename state: ILA_r2  to output name:  __ILA_SO_r2
+Warning: will not rename state: ILA_r3  to output name:  __ILA_SO_r3
+Warning: will not rename state: __START__  to output name:  ppl_stage_ex_enter_cond
+Warning: ignore output:  RTL__DOT__ex_go
+Warning: ignore output:  RTL__DOT__ex_wb_rd
+Warning: ignore output:  RTL__DOT__ex_wb_reg_wen
+Warning: ignore output:  RTL__DOT__ex_wb_valid
+Warning: ignore output:  RTL__DOT__id_ex_rd
+Warning: ignore output:  RTL__DOT__id_ex_reg_wen
+Warning: ignore output:  RTL__DOT__id_ex_valid
+Warning: ignore output:  RTL__DOT__inst
+Warning: ignore output:  RTL__DOT__inst_ready
+Warning: ignore output:  RTL__DOT__inst_valid
+Warning: ignore output:  RTL__DOT__registers_0_
+Warning: ignore output:  RTL__DOT__registers_1_
+Warning: ignore output:  RTL__DOT__registers_2_
+Warning: ignore output:  RTL__DOT__registers_3_
+Warning: ignore output:  RTL__DOT__scoreboard_0_
+Warning: ignore output:  RTL__DOT__scoreboard_1_
+Warning: ignore output:  RTL__DOT__scoreboard_2_
+Warning: ignore output:  RTL__DOT__scoreboard_3_
+Warning: ignore output:  RTL__DOT__wb_go
+Warning: ignore output:  __EDCOND__
+Warning: ignore output:  __IEND__
+Warning: ignore output:  __ILA_SO_r0
+Warning: ignore output:  __ILA_SO_r1
+Warning: ignore output:  __ILA_SO_r2
+Warning: ignore output:  __ILA_SO_r3
+Warning: has unnamed input!
+Warning: ignore output:  __VLG_O_dummy_rf_data
+Warning: ignore output:  __VLG_O_inst_ready
+Warning: ignore output:  __all_assert_wire__
+Warning: ignore output:  __all_assume_wire__
+Warning: ignore output:  __sanitycheck_wire__
+Warning: ignore output:  additional_mapping_control_assume__p0__
+Warning: ignore output:  input_map_assume___p1__
+Warning: ignore output:  invariant_assume__p2__
+Warning: ignore output:  invariant_assume__p3__
+Warning: ignore output:  invariant_assume__p4__
+Warning: ignore output:  invariant_assume__p5__
+Warning: ignore output:  invariant_assume__p6__
+Warning: ignore output:  invariant_assume__p7__
+Warning: ignore output:  invariant_assume__p8__
+Warning: ignore output:  invariant_assume__p9__
+Warning: ignore output:  issue_decode__p10__
+Warning: ignore output:  issue_valid__p11__
+Warning: ignore output:  noreset__p12__
+Warning: ignore output:  post_value_holder__p13__
+Warning: ignore output:  post_value_holder__p14__
+Warning: ignore output:  post_value_holder__p15__
+Warning: ignore output:  post_value_holder__p16__
+Warning: ignore output:  post_value_holder_overly_constrained__p25__
+Warning: ignore output:  post_value_holder_overly_constrained__p26__
+Warning: ignore output:  post_value_holder_overly_constrained__p27__
+Warning: ignore output:  post_value_holder_overly_constrained__p28__
+Warning: ignore output:  post_value_holder_triggered__p29__
+Warning: ignore output:  post_value_holder_triggered__p30__
+Warning: ignore output:  post_value_holder_triggered__p31__
+Warning: ignore output:  post_value_holder_triggered__p32__
+Warning: ignore output:  ppl_stage_ex_enter_cond
+Warning: ignore output:  ppl_stage_ex_exit_cond
+Warning: ignore output:  ppl_stage_finish_enter_cond
+Warning: ignore output:  ppl_stage_finish_exit_cond
+Warning: ignore output:  ppl_stage_wb_enter_cond
+Warning: ignore output:  ppl_stage_wb_exit_cond
+Warning: ignore output:  variable_map_assert__p21__
+Warning: ignore output:  variable_map_assert__p22__
+Warning: ignore output:  variable_map_assert__p23__
+Warning: ignore output:  variable_map_assert__p24__
+Warning: ignore output:  variable_map_assume___p17__
+Warning: ignore output:  variable_map_assume___p18__
+Warning: ignore output:  variable_map_assume___p19__
+Warning: ignore output:  variable_map_assume___p20__
+Unlinked nodes "360,364,367,368,372,373,390,391,394,395,399,400,402,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,424,426,427,428,429,432,434,435,436,437,438,459,469,481,493,494,506,511,512,524,529,530,531,532,533,534,535,537,538,539,540,560,567,568,573,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607,608,609,610,611,612,613,614,615,616"
+Step: start
+WARNING: ignore input assignment as assigned by prev-state, __ILA_I_inst
+WARNING: ignore input assignment as assigned by prev-state, __VLG_I_inst
+WARNING: ignore input assignment as assigned by prev-state, __VLG_I_inst_valid
+RTL_id_ex_operand1
+RTL_id_ex_operand2
+RTL_id_ex_op
+RTL_id_ex_rd
+RTL_id_ex_reg_wen
+RTL_ex_wb_val
+RTL_ex_wb_rd
+RTL_ex_wb_reg_wen
+RTL_id_ex_valid
+RTL_ex_wb_valid
+'RTL_registers[0]'
+'RTL_registers[1]'
+'RTL_registers[2]'
+'RTL_registers[3]'
+'RTL_scoreboard[0]'
+'RTL_scoreboard[1]'
+'RTL_scoreboard[2]'
+'RTL_scoreboard[3]'
+__VLG_I_inst
+__VLG_I_inst_valid
+__ILA_I_inst
+__auxvar0__recorder_sn_condmet
+__auxvar1__recorder_sn_condmet
+__auxvar2__recorder_sn_condmet
+__auxvar3__recorder_sn_condmet
+ppl_stage_ex
+__2ndENDED__
+__CYCLE_CNT__
+ppl_stage_finish
+__STARTED__
+__ENDED__
+__RESETED__
+ppl_stage_wb
+ILA_r0
+ILA_r1
+ILA_r2
+ILA_r3
+__START__
+__auxvar0__recorder
+ILA___COUNTER_start__n3
+__auxvar1__recorder
+__auxvar0__recorder_sn_vhold
+__auxvar1__recorder_sn_vhold
+__auxvar2__recorder_sn_vhold
+__auxvar2__recorder
+__auxvar3__recorder_sn_vhold
+__auxvar3__recorder
+True
+[__ILA_I_inst, __auxvar0__recorder_sn_condmet, __auxvar1__recorder_sn_condmet, __auxvar2__recorder_sn_condmet, __auxvar3__recorder_sn_condmet, ppl_stage_ex, __2ndENDED__, __CYCLE_CNT__, ppl_stage_finish, __STARTED__, __ENDED__, __RESETED__, ppl_stage_wb, ILA_r0, ILA_r1, ILA_r2, ILA_r3, __START__, __auxvar0__recorder, ILA___COUNTER_start__n3, __auxvar1__recorder, __auxvar0__recorder_sn_vhold, __auxvar1__recorder_sn_vhold, __auxvar2__recorder_sn_vhold, __auxvar2__recorder, __auxvar3__recorder_sn_vhold, __auxvar3__recorder]
+|      sv  | rhs
+|----------|---------------------
+|RTL_id_ex_operand1| oper1
+|RTL_id_ex_operand2| oper2
+|RTL_id_ex_op| op
+|RTL_id_ex_rd| rd1
+|RTL_id_ex_reg_wen| w1
+|RTL_ex_wb_val| ex_val
+|RTL_ex_wb_rd| rd2
+|RTL_ex_wb_reg_wen| w2
+|RTL_id_ex_valid| v1
+|RTL_ex_wb_valid| v2
+|'RTL_registers[0]'| reg0
+|'RTL_registers[1]'| reg1
+|'RTL_registers[2]'| reg2
+|'RTL_registers[3]'| reg3
+|'RTL_scoreboard[0]'| s0
+|'RTL_scoreboard[1]'| s1
+|'RTL_scoreboard[2]'| s2
+|'RTL_scoreboard[3]'| s3
+|__VLG_I_inst| inst
+|__VLG_I_inst_valid| inst_v
+Step: start-ex
+WARNING: ignore input assignment as assigned by prev-state, __VLG_I_inst
+WARNING: ignore input assignment as assigned by prev-state, __VLG_I_inst_valid
+[] ptr: 0WARNING: ignore input assignment as assigned by prev-state, __VLG_I_inst
+WARNING: ignore input assignment as assigned by prev-state, __VLG_I_inst_valid
+ not concrete. Retry with deeper choice.
+[rst==0] ptr: 1WARNING: ignore input assignment as assigned by prev-state, __VLG_I_inst
+WARNING: ignore input assignment as assigned by prev-state, __VLG_I_inst_valid
+ not concrete. Retry with deeper choice.
+[rst==0, RTL_ex_go==0] ptr: 2WARNING: ignore input assignment as assigned by prev-state, __VLG_I_inst
+WARNING: ignore input assignment as assigned by prev-state, __VLG_I_inst_valid
+ not concrete. Retry with deeper choice.
+[rst==0, RTL_ex_go==0, RTL_wb_go==0] ptr: 3WARNING: ignore input assignment as assigned by prev-state, __VLG_I_inst
+WARNING: ignore input assignment as assigned by prev-state, __VLG_I_inst_valid
+New state!
+[rst==0, RTL_ex_go==0, RTL_wb_go==1] ptr: 3WARNING: ignore input assignment as assigned by prev-state, __VLG_I_inst
+WARNING: ignore input assignment as assigned by prev-state, __VLG_I_inst_valid
+New state!
+[rst==0, RTL_ex_go==1] ptr: 2WARNING: ignore input assignment as assigned by prev-state, __VLG_I_inst
+WARNING: ignore input assignment as assigned by prev-state, __VLG_I_inst_valid
+New state!
+[rst==1] ptr: 1WARNING: ignore input assignment as assigned by prev-state, __VLG_I_inst
+WARNING: ignore input assignment as assigned by prev-state, __VLG_I_inst_valid
+ not reachable.
+================================
+Finished!
+Get #state: 3
+number of state (start-ex): 1 --> 3
+number of state (start-ex) in total: 1 --> 3
+
+
+
+Step: ex-->ex
+init stack per state: [] ptr: 0
+init tracelen: 1
+Trace: 1 Stack: 1
+>>  [[] ptr: 0] :  not concrete. Retry with deeper choice.
+Trace: 1 Stack: 1
+>>  [[rst==0] ptr: 1] :  not concrete. Retry with deeper choice.
+Trace: 1 Stack: 1
+>>  [[rst==0, RTL_ex_go==0] ptr: 2] :  not concrete. Retry with deeper choice.
+Trace: 1 Stack: 1
+>>  [[rst==0, RTL_ex_go==0, RTL_wb_go==0] ptr: 3] :  not new state. Go back. Try next.
+Trace: 1 Stack: 1
+>>  [[rst==0, RTL_ex_go==0, RTL_wb_go==1] ptr: 3] : A new state!
+Trace: 2 Stack: 2
+>>  [[rst==0, RTL_ex_go==0, RTL_wb_go==1] ptr: 3, [] ptr: 0] :  not new state. Go back. Try next.
+Trace: 2 Stack: 2
+>>  [[rst==0, RTL_ex_go==0, RTL_wb_go==1] ptr: 3, [] ptr: 0  (END)] :  no new choices, back to prev state
+Trace: 1 Stack: 1
+>>  [[rst==0, RTL_ex_go==0, RTL_wb_go==1] ptr: 3] :  not new state. Go back. Try next.
+Trace: 1 Stack: 1
+>>  [[rst==0, RTL_ex_go==1] ptr: 2] :  not reachable.
+Trace: 1 Stack: 1
+>>  [[rst==1] ptr: 1] :  not reachable.
+Trace: 1 Stack: 1
+>>  [[] ptr: 0  (END)] :  no new choices, back to prev state
+================================
+Finished!
+Get #state: 2
+number of state (ex-ex): 1 --> 2
+init stack per state: [] ptr: 0
+init tracelen: 1
+Trace: 1 Stack: 1
+>>  [[] ptr: 0] :  not new state. Go back. Try next.
+Trace: 1 Stack: 1
+>>  [[] ptr: 0  (END)] :  no new choices, back to prev state
+================================
+Finished!
+Get #state: 1
+number of state (ex-ex): 1 --> 1
+init stack per state: [] ptr: 0
+init tracelen: 1
+Trace: 1 Stack: 1
+>>  [[] ptr: 0] :  not concrete. Retry with deeper choice.
+Trace: 1 Stack: 1
+>>  [[rst==0] ptr: 1] :  not concrete. Retry with deeper choice.
+Trace: 1 Stack: 1
+>>  [[rst==0, RTL_ex_go==0] ptr: 2] :  not concrete. Retry with deeper choice.
+Trace: 1 Stack: 1
+>>  [[rst==0, RTL_ex_go==0, RTL_wb_go==0] ptr: 3] :  not new state. Go back. Try next.
+Trace: 1 Stack: 1
+>>  [[rst==0, RTL_ex_go==0, RTL_wb_go==1] ptr: 3] : A new state!
+Trace: 2 Stack: 2
+>>  [[rst==0, RTL_ex_go==0, RTL_wb_go==1] ptr: 3, [] ptr: 0] :  not new state. Go back. Try next.
+Trace: 2 Stack: 2
+>>  [[rst==0, RTL_ex_go==0, RTL_wb_go==1] ptr: 3, [] ptr: 0  (END)] :  no new choices, back to prev state
+Trace: 1 Stack: 1
+>>  [[rst==0, RTL_ex_go==0, RTL_wb_go==1] ptr: 3] :  not new state. Go back. Try next.
+Trace: 1 Stack: 1
+>>  [[rst==0, RTL_ex_go==1] ptr: 2] :  not reachable.
+Trace: 1 Stack: 1
+>>  [[rst==1] ptr: 1] :  not reachable.
+Trace: 1 Stack: 1
+>>  [[] ptr: 0  (END)] :  no new choices, back to prev state
+================================
+Finished!
+Get #state: 2
+number of state (ex-ex): 1 --> 2
+number of state (ex-ex) in total: 3 --> 5
+
+
+
+Step: ex-->wb
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (ex-wb): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (ex-wb): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (ex-wb): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (ex-wb): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (ex-wb): 1 --> 1
+number of state (ex-wb) in total: 5 --> 5
+
+
+
+Step: wb-->wb
+init stack per state: [] ptr: 0
+init tracelen: 1
+Trace: 1 Stack: 1
+>>  [[] ptr: 0] :  not new state. Go back. Try next.
+Trace: 1 Stack: 1
+>>  [[] ptr: 0  (END)] :  no new choices, back to prev state
+================================
+Finished!
+Get #state: 1
+number of state (wb-wb): 1 --> 1
+init stack per state: [] ptr: 0
+init tracelen: 1
+Trace: 1 Stack: 1
+>>  [[] ptr: 0] :  not new state. Go back. Try next.
+Trace: 1 Stack: 1
+>>  [[] ptr: 0  (END)] :  no new choices, back to prev state
+================================
+Finished!
+Get #state: 1
+number of state (wb-wb): 1 --> 1
+init stack per state: [] ptr: 0
+init tracelen: 1
+Trace: 1 Stack: 1
+>>  [[] ptr: 0] :  not new state. Go back. Try next.
+Trace: 1 Stack: 1
+>>  [[] ptr: 0  (END)] :  no new choices, back to prev state
+================================
+Finished!
+Get #state: 1
+number of state (wb-wb): 1 --> 1
+init stack per state: [] ptr: 0
+init tracelen: 1
+Trace: 1 Stack: 1
+>>  [[] ptr: 0] :  not new state. Go back. Try next.
+Trace: 1 Stack: 1
+>>  [[] ptr: 0  (END)] :  no new choices, back to prev state
+================================
+Finished!
+Get #state: 1
+number of state (wb-wb): 1 --> 1
+init stack per state: [] ptr: 0
+init tracelen: 1
+Trace: 1 Stack: 1
+>>  [[] ptr: 0] :  not new state. Go back. Try next.
+Trace: 1 Stack: 1
+>>  [[] ptr: 0  (END)] :  no new choices, back to prev state
+================================
+Finished!
+Get #state: 1
+number of state (wb-wb): 1 --> 1
+number of state (wb-wb) in total: 5 --> 5
+
+
+
+Step: wb-->finish
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+number of state (wb-finish) in total: 5 --> 5
+
+
+
+
+
+--------------------------RESULT--------------------------
+
+---------------
+number of state (start-ex) in total: 1 --> 3
+program running time: 6(s):  
+program running time: 0(min):
+---------------
+number of state (ex-ex) in total: 3 --> 5
+program running time: 46(s):  
+program running time: 0(min):
+---------------
+number of state (ex-wb) in total: 5 --> 5
+program running time: 63(s):  
+program running time: 1(min):
+---------------
+number of state (wb-wb) in total: 5 --> 5
+program running time: 83(s):  
+program running time: 1(min):
+---------------
+number of state (wb-finish) in total: 5 --> 5
+program running time: 181(s):  
+program running time: 3(min):

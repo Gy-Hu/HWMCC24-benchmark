@@ -1,0 +1,10 @@
+&r /data/wenjifang/vpipe-mc/simple-test-case/arb-start/test.aig
+&put
+fold
+pdr -v
+
+&r /data/wenjifang/vpipe-mc/simple-test-case/arb-start-stall/test.aig
+&put
+fold
+pdr -v
+

@@ -1,0 +1,694 @@
+Warning: will not rename state: RTL_ex_wb_rd  to output name:  RTL__DOT__ex_wb_rd
+Warning: will not rename state: RTL_ex_wb_reg_wen  to output name:  RTL__DOT__ex_wb_reg_wen
+Warning: will not rename state: RTL_ex_wb_valid  to output name:  RTL__DOT__ex_wb_valid
+Warning: will not rename state: RTL_id_ex_rd  to output name:  RTL__DOT__id_ex_rd
+Warning: will not rename state: RTL_id_ex_reg_wen  to output name:  RTL__DOT__id_ex_reg_wen
+Warning: will not rename state: RTL_id_ex_valid  to output name:  RTL__DOT__id_ex_valid
+Warning: will not rename state: RTL_registers[0]  to output name:  RTL__DOT__registers_0_
+Warning: will not rename state: RTL_registers[1]  to output name:  RTL__DOT__registers_1_
+Warning: will not rename state: RTL_registers[2]  to output name:  RTL__DOT__registers_2_
+Warning: will not rename state: RTL_registers[3]  to output name:  RTL__DOT__registers_3_
+Warning: will not rename state: RTL_scoreboard[0]  to output name:  RTL__DOT__scoreboard_0_
+Warning: will not rename state: RTL_scoreboard[1]  to output name:  RTL__DOT__scoreboard_1_
+Warning: will not rename state: RTL_scoreboard[2]  to output name:  RTL__DOT__scoreboard_2_
+Warning: will not rename state: RTL_scoreboard[3]  to output name:  RTL__DOT__scoreboard_3_
+Warning: will not rename state: ILA_r0  to output name:  __ILA_SO_r0
+Warning: will not rename state: ILA_r1  to output name:  __ILA_SO_r1
+Warning: will not rename state: ILA_r2  to output name:  __ILA_SO_r2
+Warning: will not rename state: ILA_r3  to output name:  __ILA_SO_r3
+Warning: will not rename state: __START__  to output name:  ppl_stage_ex_enter_cond
+Warning: ignore output:  RTL__DOT__ex_go
+Warning: ignore output:  RTL__DOT__ex_wb_rd
+Warning: ignore output:  RTL__DOT__ex_wb_reg_wen
+Warning: ignore output:  RTL__DOT__ex_wb_valid
+Warning: ignore output:  RTL__DOT__id_ex_rd
+Warning: ignore output:  RTL__DOT__id_ex_reg_wen
+Warning: ignore output:  RTL__DOT__id_ex_valid
+Warning: ignore output:  RTL__DOT__inst
+Warning: ignore output:  RTL__DOT__inst_ready
+Warning: ignore output:  RTL__DOT__inst_valid
+Warning: ignore output:  RTL__DOT__registers_0_
+Warning: ignore output:  RTL__DOT__registers_1_
+Warning: ignore output:  RTL__DOT__registers_2_
+Warning: ignore output:  RTL__DOT__registers_3_
+Warning: ignore output:  RTL__DOT__scoreboard_0_
+Warning: ignore output:  RTL__DOT__scoreboard_1_
+Warning: ignore output:  RTL__DOT__scoreboard_2_
+Warning: ignore output:  RTL__DOT__scoreboard_3_
+Warning: ignore output:  RTL__DOT__wb_go
+Warning: ignore output:  __EDCOND__
+Warning: ignore output:  __IEND__
+Warning: ignore output:  __ILA_SO_r0
+Warning: ignore output:  __ILA_SO_r1
+Warning: ignore output:  __ILA_SO_r2
+Warning: ignore output:  __ILA_SO_r3
+Warning: has unnamed input!
+Warning: ignore output:  __VLG_O_dummy_rf_data
+Warning: ignore output:  __VLG_O_inst_ready
+Warning: ignore output:  __all_assert_wire__
+Warning: ignore output:  __all_assume_wire__
+Warning: ignore output:  __sanitycheck_wire__
+Warning: ignore output:  additional_mapping_control_assume__p0__
+Warning: ignore output:  input_map_assume___p1__
+Warning: ignore output:  invariant_assume__p2__
+Warning: ignore output:  invariant_assume__p3__
+Warning: ignore output:  invariant_assume__p4__
+Warning: ignore output:  invariant_assume__p5__
+Warning: ignore output:  invariant_assume__p6__
+Warning: ignore output:  invariant_assume__p7__
+Warning: ignore output:  invariant_assume__p8__
+Warning: ignore output:  invariant_assume__p9__
+Warning: ignore output:  issue_decode__p10__
+Warning: ignore output:  issue_valid__p11__
+Warning: ignore output:  noreset__p12__
+Warning: ignore output:  post_value_holder__p13__
+Warning: ignore output:  post_value_holder__p14__
+Warning: ignore output:  post_value_holder__p15__
+Warning: ignore output:  post_value_holder__p16__
+Warning: ignore output:  post_value_holder_overly_constrained__p25__
+Warning: ignore output:  post_value_holder_overly_constrained__p26__
+Warning: ignore output:  post_value_holder_overly_constrained__p27__
+Warning: ignore output:  post_value_holder_overly_constrained__p28__
+Warning: ignore output:  post_value_holder_triggered__p29__
+Warning: ignore output:  post_value_holder_triggered__p30__
+Warning: ignore output:  post_value_holder_triggered__p31__
+Warning: ignore output:  post_value_holder_triggered__p32__
+Warning: ignore output:  ppl_stage_ex_enter_cond
+Warning: ignore output:  ppl_stage_ex_exit_cond
+Warning: ignore output:  ppl_stage_finish_enter_cond
+Warning: ignore output:  ppl_stage_finish_exit_cond
+Warning: ignore output:  ppl_stage_wb_enter_cond
+Warning: ignore output:  ppl_stage_wb_exit_cond
+Warning: ignore output:  variable_map_assert__p21__
+Warning: ignore output:  variable_map_assert__p22__
+Warning: ignore output:  variable_map_assert__p23__
+Warning: ignore output:  variable_map_assert__p24__
+Warning: ignore output:  variable_map_assume___p17__
+Warning: ignore output:  variable_map_assume___p18__
+Warning: ignore output:  variable_map_assume___p19__
+Warning: ignore output:  variable_map_assume___p20__
+Unlinked nodes "359,363,364,368,369,389,390,393,394,398,399,401,402,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,425,427,428,429,430,433,435,436,437,438,439,460,470,482,494,495,507,512,513,525,530,531,532,533,534,535,536,538,539,540,541,561,568,569,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607,608,609,610,611,612,613,614,615,616,617"
+Warning: will not rename state: RTL_ex_wb_rd  to output name:  RTL__DOT__ex_wb_rd
+Warning: will not rename state: RTL_ex_wb_reg_wen  to output name:  RTL__DOT__ex_wb_reg_wen
+Warning: will not rename state: RTL_ex_wb_valid  to output name:  RTL__DOT__ex_wb_valid
+Warning: will not rename state: RTL_id_ex_rd  to output name:  RTL__DOT__id_ex_rd
+Warning: will not rename state: RTL_id_ex_reg_wen  to output name:  RTL__DOT__id_ex_reg_wen
+Warning: will not rename state: RTL_id_ex_valid  to output name:  RTL__DOT__id_ex_valid
+Warning: will not rename state: RTL_registers[0]  to output name:  RTL__DOT__registers_0_
+Warning: will not rename state: RTL_registers[1]  to output name:  RTL__DOT__registers_1_
+Warning: will not rename state: RTL_registers[2]  to output name:  RTL__DOT__registers_2_
+Warning: will not rename state: RTL_registers[3]  to output name:  RTL__DOT__registers_3_
+Warning: will not rename state: RTL_scoreboard[0]  to output name:  RTL__DOT__scoreboard_0_
+Warning: will not rename state: RTL_scoreboard[1]  to output name:  RTL__DOT__scoreboard_1_
+Warning: will not rename state: RTL_scoreboard[2]  to output name:  RTL__DOT__scoreboard_2_
+Warning: will not rename state: RTL_scoreboard[3]  to output name:  RTL__DOT__scoreboard_3_
+Warning: will not rename state: ILA_r0  to output name:  __ILA_SO_r0
+Warning: will not rename state: ILA_r1  to output name:  __ILA_SO_r1
+Warning: will not rename state: ILA_r2  to output name:  __ILA_SO_r2
+Warning: will not rename state: ILA_r3  to output name:  __ILA_SO_r3
+Warning: will not rename state: __START__  to output name:  ppl_stage_ex_enter_cond
+Warning: ignore output:  RTL__DOT__ex_go
+Warning: ignore output:  RTL__DOT__ex_wb_rd
+Warning: ignore output:  RTL__DOT__ex_wb_reg_wen
+Warning: ignore output:  RTL__DOT__ex_wb_valid
+Warning: ignore output:  RTL__DOT__id_ex_rd
+Warning: ignore output:  RTL__DOT__id_ex_reg_wen
+Warning: ignore output:  RTL__DOT__id_ex_valid
+Warning: ignore output:  RTL__DOT__inst
+Warning: ignore output:  RTL__DOT__inst_ready
+Warning: ignore output:  RTL__DOT__inst_valid
+Warning: ignore output:  RTL__DOT__registers_0_
+Warning: ignore output:  RTL__DOT__registers_1_
+Warning: ignore output:  RTL__DOT__registers_2_
+Warning: ignore output:  RTL__DOT__registers_3_
+Warning: ignore output:  RTL__DOT__scoreboard_0_
+Warning: ignore output:  RTL__DOT__scoreboard_1_
+Warning: ignore output:  RTL__DOT__scoreboard_2_
+Warning: ignore output:  RTL__DOT__scoreboard_3_
+Warning: ignore output:  RTL__DOT__wb_go
+Warning: ignore output:  __EDCOND__
+Warning: ignore output:  __IEND__
+Warning: ignore output:  __ILA_SO_r0
+Warning: ignore output:  __ILA_SO_r1
+Warning: ignore output:  __ILA_SO_r2
+Warning: ignore output:  __ILA_SO_r3
+Warning: has unnamed input!
+Warning: ignore output:  __VLG_O_dummy_rf_data
+Warning: ignore output:  __VLG_O_inst_ready
+Warning: ignore output:  __all_assert_wire__
+Warning: ignore output:  __all_assume_wire__
+Warning: ignore output:  __sanitycheck_wire__
+Warning: ignore output:  additional_mapping_control_assume__p0__
+Warning: ignore output:  input_map_assume___p1__
+Warning: ignore output:  invariant_assume__p2__
+Warning: ignore output:  invariant_assume__p3__
+Warning: ignore output:  invariant_assume__p4__
+Warning: ignore output:  invariant_assume__p5__
+Warning: ignore output:  invariant_assume__p6__
+Warning: ignore output:  invariant_assume__p7__
+Warning: ignore output:  invariant_assume__p8__
+Warning: ignore output:  invariant_assume__p9__
+Warning: ignore output:  issue_decode__p10__
+Warning: ignore output:  issue_valid__p11__
+Warning: ignore output:  noreset__p12__
+Warning: ignore output:  post_value_holder__p13__
+Warning: ignore output:  post_value_holder__p14__
+Warning: ignore output:  post_value_holder__p15__
+Warning: ignore output:  post_value_holder__p16__
+Warning: ignore output:  post_value_holder_overly_constrained__p25__
+Warning: ignore output:  post_value_holder_overly_constrained__p26__
+Warning: ignore output:  post_value_holder_overly_constrained__p27__
+Warning: ignore output:  post_value_holder_overly_constrained__p28__
+Warning: ignore output:  post_value_holder_triggered__p29__
+Warning: ignore output:  post_value_holder_triggered__p30__
+Warning: ignore output:  post_value_holder_triggered__p31__
+Warning: ignore output:  post_value_holder_triggered__p32__
+Warning: ignore output:  ppl_stage_ex_enter_cond
+Warning: ignore output:  ppl_stage_ex_exit_cond
+Warning: ignore output:  ppl_stage_finish_enter_cond
+Warning: ignore output:  ppl_stage_finish_exit_cond
+Warning: ignore output:  ppl_stage_wb_enter_cond
+Warning: ignore output:  ppl_stage_wb_exit_cond
+Warning: ignore output:  variable_map_assert__p21__
+Warning: ignore output:  variable_map_assert__p22__
+Warning: ignore output:  variable_map_assert__p23__
+Warning: ignore output:  variable_map_assert__p24__
+Warning: ignore output:  variable_map_assume___p17__
+Warning: ignore output:  variable_map_assume___p18__
+Warning: ignore output:  variable_map_assume___p19__
+Warning: ignore output:  variable_map_assume___p20__
+Unlinked nodes "359,363,364,368,369,389,390,393,394,398,399,401,402,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,425,427,428,429,430,433,435,436,437,438,439,460,470,482,494,495,507,512,513,525,530,531,532,533,534,535,536,538,539,540,541,561,568,569,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607,608,609,610,611,612,613,614,615,616,617"
+|      sv  | rhs
+|----------|---------------------
+|RTL_id_ex_operand1| oper1
+|RTL_id_ex_operand2| oper2
+|RTL_id_ex_op| op
+|RTL_id_ex_rd| rd1
+|RTL_id_ex_reg_wen| w1
+|RTL_ex_wb_val| ex_val
+|RTL_ex_wb_rd| rd2
+|RTL_ex_wb_reg_wen| w2
+|RTL_id_ex_valid| v1
+|RTL_ex_wb_valid| v2
+|'RTL_registers[0]'| reg0
+|'RTL_registers[1]'| reg1
+|'RTL_registers[2]'| reg2
+|'RTL_registers[3]'| reg3
+|'RTL_scoreboard[0]'| s0
+|'RTL_scoreboard[1]'| s1
+|'RTL_scoreboard[2]'| s2
+|'RTL_scoreboard[3]'| s3
+|__VLG_I_inst| inst
+|__VLG_I_inst_valid| inst_v
+A0 :init
+A0 :((ppl_stage_wb1 = 0_1) & (__RESETED__1 = 1_1) & (__ENDED__1 = 0_1) & (__STARTED__1 = 0_1) & (ppl_stage_finish1 = 0_1) & (__CYCLE_CNT__1 = 0_8) & (__2ndENDED__1 = 0_1) & (ppl_stage_ex1 = 0_1) & (__START__1 = 1_1) & (ILA___COUNTER_start__n31 = 0_8))
+A1 :ts.asmpt @ 0
+A1 :((((((((((((((((((((((! __START__1) | ((((! __VLG_I_stallexX1) & ((! __VLG_I_stallwbX1) | (! v2))) | (! v1)) & inst_v)) & ((! __START__1) | (ila_inst bvcomp inst))) & (s0[1:1] bvcomp ((v1 & w1) & (! (! (rd1 bvcomp 0_2)))))) & (s0[0:0] bvcomp ((v2 & w2) & (! (! (rd2 bvcomp 0_2)))))) & (s1[1:1] bvcomp ((v1 & w1) & (rd1 bvcomp 1_2)))) & (s1[0:0] bvcomp ((v2 & w2) & (rd2 bvcomp 1_2)))) & (s2[1:1] bvcomp ((v1 & w1) & (rd1 bvcomp 2_2)))) & (s2[0:0] bvcomp ((v2 & w2) & (rd2 bvcomp 2_2)))) & (s3[1:1] bvcomp ((v1 & w1) & (rd1 bvcomp 3_2)))) & (s3[0:0] bvcomp ((v2 & w2) & (rd2 bvcomp 3_2)))) & ((! __START__1) | (ila_inst[6:7] bvcomp 3_2))) & ((! __RESETED__1) | (! dummy_resetX1))) & ((! ((__START__1 | __STARTED__1) & (ppl_stage_wb1 & (v2 & (! __VLG_I_stallwbX1))))) | (__auxvar0__recorder1 bvcomp reg0))) & ((! ((__START__1 | __STARTED__1) & (ppl_stage_wb1 & (v2 & (! __VLG_I_stallwbX1))))) | (__auxvar1__recorder1 bvcomp reg1))) & ((! ((__START__1 | __STARTED__1) & (ppl_stage_wb1 & (v2 & (! __VLG_I_stallwbX1))))) | (__auxvar2__recorder1 bvcomp reg2))) & ((! ((__START__1 | __STARTED__1) & (ppl_stage_wb1 & (v2 & (! __VLG_I_stallwbX1))))) | (__auxvar3__recorder1 bvcomp reg3))) & ((! __START__1) | (((! __START__1) | (ILA_r01 bvcomp __auxvar0__recorder1)) & (__START__1 | (ILA_r01 bvcomp reg0))))) & ((! __START__1) | (((! __START__1) | (ILA_r11 bvcomp __auxvar1__recorder1)) & (__START__1 | (ILA_r11 bvcomp reg1))))) & ((! __START__1) | (((! __START__1) | (ILA_r21 bvcomp __auxvar2__recorder1)) & (__START__1 | (ILA_r21 bvcomp reg2))))) & ((! __START__1) | (((! __START__1) | (ILA_r31 bvcomp __auxvar3__recorder1)) & (__START__1 | (ILA_r31 bvcomp reg3))))) = 1_1)
+
+
+ ((((((((((((((((((((((! __START___prime) | ((((! __VLG_I_stallex_prime) & ((! __VLG_I_stallwb_prime) | (! RTL_ex_wb_valid_prime))) | (! RTL_id_ex_valid_prime)) & __VLG_I_inst_valid_prime)) & ((! __START___prime) | (__ILA_I_inst_prime bvcomp __VLG_I_inst_prime))) & ('RTL_scoreboard[0]_prime'[1:1] bvcomp ((RTL_id_ex_valid_prime & RTL_id_ex_reg_wen_prime) & (! (! (RTL_id_ex_rd_prime bvcomp 0_2)))))) & ('RTL_scoreboard[0]_prime'[0:0] bvcomp ((RTL_ex_wb_valid_prime & RTL_ex_wb_reg_wen_prime) & (! (! (RTL_ex_wb_rd_prime bvcomp 0_2)))))) & ('RTL_scoreboard[1]_prime'[1:1] bvcomp ((RTL_id_ex_valid_prime & RTL_id_ex_reg_wen_prime) & (RTL_id_ex_rd_prime bvcomp 1_2)))) & ('RTL_scoreboard[1]_prime'[0:0] bvcomp ((RTL_ex_wb_valid_prime & RTL_ex_wb_reg_wen_prime) & (RTL_ex_wb_rd_prime bvcomp 1_2)))) & ('RTL_scoreboard[2]_prime'[1:1] bvcomp ((RTL_id_ex_valid_prime & RTL_id_ex_reg_wen_prime) & (RTL_id_ex_rd_prime bvcomp 2_2)))) & ('RTL_scoreboard[2]_prime'[0:0] bvcomp ((RTL_ex_wb_valid_prime & RTL_ex_wb_reg_wen_prime) & (RTL_ex_wb_rd_prime bvcomp 2_2)))) & ('RTL_scoreboard[3]_prime'[1:1] bvcomp ((RTL_id_ex_valid_prime & RTL_id_ex_reg_wen_prime) & (RTL_id_ex_rd_prime bvcomp 3_2)))) & ('RTL_scoreboard[3]_prime'[0:0] bvcomp ((RTL_ex_wb_valid_prime & RTL_ex_wb_reg_wen_prime) & (RTL_ex_wb_rd_prime bvcomp 3_2)))) & ((! __START___prime) | (__ILA_I_inst_prime[6:7] bvcomp 3_2))) & ((! __RESETED___prime) | (! dummy_reset_prime))) & ((! (((__START___prime | __STARTED___prime) & (! __auxvar0__recorder_sn_condmet_prime)) & (ppl_stage_wb_prime & (RTL_ex_wb_valid_prime & (! __VLG_I_stallwb_prime))))) | (__auxvar0__recorder_prime bvcomp 'RTL_registers[0]_prime'))) & ((! (((__START___prime | __STARTED___prime) & (! __auxvar1__recorder_sn_condmet_prime)) & (ppl_stage_wb_prime & (RTL_ex_wb_valid_prime & (! __VLG_I_stallwb_prime))))) | (__auxvar1__recorder_prime bvcomp 'RTL_registers[1]_prime'))) & ((! (((__START___prime | __STARTED___prime) & (! __auxvar2__recorder_sn_condmet_prime)) & (ppl_stage_wb_prime & (RTL_ex_wb_valid_prime & (! __VLG_I_stallwb_prime))))) | (__auxvar2__recorder_prime bvcomp 'RTL_registers[2]_prime'))) & ((! (((__START___prime | __STARTED___prime) & (! __auxvar3__recorder_sn_condmet_prime)) & (ppl_stage_wb_prime & (RTL_ex_wb_valid_prime & (! __VLG_I_stallwb_prime))))) | (__auxvar3__recorder_prime bvcomp 'RTL_registers[3]_prime'))) & ((! __START___prime) | (((! __START___prime) | (ILA_r0_prime bvcomp __auxvar0__recorder_prime)) & (__START___prime | (ILA_r0_prime bvcomp 'RTL_registers[0]_prime'))))) & ((! __START___prime) | (((! __START___prime) | (ILA_r1_prime bvcomp __auxvar1__recorder_prime)) & (__START___prime | (ILA_r1_prime bvcomp 'RTL_registers[1]_prime'))))) & ((! __START___prime) | (((! __START___prime) | (ILA_r2_prime bvcomp __auxvar2__recorder_prime)) & (__START___prime | (ILA_r2_prime bvcomp 'RTL_registers[2]_prime'))))) & ((! __START___prime) | (((! __START___prime) | (ILA_r3_prime bvcomp __auxvar3__recorder_prime)) & (__START___prime | (ILA_r3_prime bvcomp 'RTL_registers[3]_prime'))))) = 1_1)
+inv-check !!!
+((((((((((((((((((((((! __START__1) | ((((! __VLG_I_stallexX1) & ((! __VLG_I_stallwbX1) | (! v2))) | (! v1)) & inst_v)) & ((! __START__1) | (ila_inst bvcomp inst))) & (s0[1:1] bvcomp ((v1 & w1) & (! (! (rd1 bvcomp 0_2)))))) & (s0[0:0] bvcomp ((v2 & w2) & (! (! (rd2 bvcomp 0_2)))))) & (s1[1:1] bvcomp ((v1 & w1) & (rd1 bvcomp 1_2)))) & (s1[0:0] bvcomp ((v2 & w2) & (rd2 bvcomp 1_2)))) & (s2[1:1] bvcomp ((v1 & w1) & (rd1 bvcomp 2_2)))) & (s2[0:0] bvcomp ((v2 & w2) & (rd2 bvcomp 2_2)))) & (s3[1:1] bvcomp ((v1 & w1) & (rd1 bvcomp 3_2)))) & (s3[0:0] bvcomp ((v2 & w2) & (rd2 bvcomp 3_2)))) & ((! __START__1) | (ila_inst[6:7] bvcomp 3_2))) & ((! __RESETED__1) | (! dummy_resetX1))) & ((! ((__START__1 | __STARTED__1) & (ppl_stage_wb1 & (v2 & (! __VLG_I_stallwbX1))))) | (__auxvar0__recorder1 bvcomp reg0))) & ((! ((__START__1 | __STARTED__1) & (ppl_stage_wb1 & (v2 & (! __VLG_I_stallwbX1))))) | (__auxvar1__recorder1 bvcomp reg1))) & ((! ((__START__1 | __STARTED__1) & (ppl_stage_wb1 & (v2 & (! __VLG_I_stallwbX1))))) | (__auxvar2__recorder1 bvcomp reg2))) & ((! ((__START__1 | __STARTED__1) & (ppl_stage_wb1 & (v2 & (! __VLG_I_stallwbX1))))) | (__auxvar3__recorder1 bvcomp reg3))) & ((! __START__1) | (((! __START__1) | (ILA_r01 bvcomp __auxvar0__recorder1)) & (__START__1 | (ILA_r01 bvcomp reg0))))) & ((! __START__1) | (((! __START__1) | (ILA_r11 bvcomp __auxvar1__recorder1)) & (__START__1 | (ILA_r11 bvcomp reg1))))) & ((! __START__1) | (((! __START__1) | (ILA_r21 bvcomp __auxvar2__recorder1)) & (__START__1 | (ILA_r21 bvcomp reg2))))) & ((! __START__1) | (((! __START__1) | (ILA_r31 bvcomp __auxvar3__recorder1)) & (__START__1 | (ILA_r31 bvcomp reg3))))) = 1_1)
+
+
+init_check: True
+counter example (inv check)
+ None
+
+
+inv_check: False
+counter example (inv check)
+ '0_1_next' := 0_1
+'RTL_registers[0]' := 0_8
+'RTL_registers[0]_prime' := 0_8
+'RTL_registers[1]' := 0_8
+'RTL_registers[1]_prime' := 0_8
+'RTL_registers[2]' := 0_8
+'RTL_registers[2]_prime' := 0_8
+'RTL_registers[3]' := 128_8
+'RTL_registers[3]_prime' := 255_8
+'RTL_scoreboard[0]' := 0_2
+'RTL_scoreboard[0]_prime' := 0_2
+'RTL_scoreboard[1]' := 0_2
+'RTL_scoreboard[1]_prime' := 0_2
+'RTL_scoreboard[2]' := 0_2
+'RTL_scoreboard[2]_prime' := 0_2
+'RTL_scoreboard[3]' := 1_2
+'RTL_scoreboard[3]_prime' := 0_2
+ILA___COUNTER_start__n3 := 0_8
+ILA___COUNTER_start__n3_prime := 0_8
+ILA_r0 := 0_8
+ILA_r01 := 0_8
+ILA_r0_prime := 0_8
+ILA_r0_randinit := 128_8
+ILA_r1 := 0_8
+ILA_r11 := 0_8
+ILA_r1_prime := 0_8
+ILA_r1_randinit := 128_8
+ILA_r2 := 0_8
+ILA_r21 := 0_8
+ILA_r2_prime := 0_8
+ILA_r2_randinit := 128_8
+ILA_r3 := 127_8
+ILA_r31 := 0_8
+ILA_r3_prime := 127_8
+ILA_r3_randinit := 0_8
+RTL_ex_wb_rd := 3_2
+RTL_ex_wb_rd_prime := 3_2
+RTL_ex_wb_reg_wen := 1_1
+RTL_ex_wb_reg_wen_prime := 1_1
+RTL_ex_wb_val := 255_8
+RTL_ex_wb_val_prime := 255_8
+RTL_ex_wb_valid := 1_1
+RTL_ex_wb_valid_prime := 0_1
+RTL_id_ex_op := 0_2
+RTL_id_ex_op_prime := 0_2
+RTL_id_ex_operand1 := 128_8
+RTL_id_ex_operand1_prime := 128_8
+RTL_id_ex_operand2 := 128_8
+RTL_id_ex_operand2_prime := 128_8
+RTL_id_ex_rd := 0_2
+RTL_id_ex_rd_prime := 0_2
+RTL_id_ex_reg_wen := 0_1
+RTL_id_ex_reg_wen_prime := 0_1
+RTL_id_ex_valid := 0_1
+RTL_id_ex_valid_prime := 0_1
+__2ndENDED__ := 0_1
+__2ndENDED___prime := 0_1
+__CYCLE_CNT__ := 127_8
+__CYCLE_CNT___prime := 128_8
+__ENDED__ := 0_1
+__ENDED___prime := 0_1
+__ILA_I_inst := 0_8
+__ILA_I_inst_prime := 192_8
+__RESETED__ := 1_1
+__RESETED__1 := 1_1
+__RESETED___prime := 1_1
+__STARTED__ := 1_1
+__STARTED__1 := 0_1
+__STARTED___prime := 1_1
+__START__ := 0_1
+__START__1 := 1_1
+__START___prime := 0_1
+__VLG_I_inst := 0_8
+__VLG_I_inst_prime := 192_8
+__VLG_I_inst_valid := 0_1
+__VLG_I_inst_valid_prime := 1_1
+__VLG_I_stallex := 0_1
+__VLG_I_stallexX1 := 0_1
+__VLG_I_stallex_prime := 0_1
+__VLG_I_stallwb := 0_1
+__VLG_I_stallwbX1 := 0_1
+__VLG_I_stallwb_prime := 0_1
+____auxvar0__recorder_init__ := 128_8
+____auxvar1__recorder_init__ := 128_8
+____auxvar2__recorder_init__ := 128_8
+____auxvar3__recorder_init__ := 0_8
+__auxvar0__recorder := 0_8
+__auxvar0__recorder1 := 0_8
+__auxvar0__recorder_prime := 0_8
+__auxvar0__recorder_sn_condmet := 0_1
+__auxvar0__recorder_sn_condmet_prime := 1_1
+__auxvar0__recorder_sn_vhold := 0_8
+__auxvar0__recorder_sn_vhold_prime := 0_8
+__auxvar1__recorder := 0_8
+__auxvar1__recorder1 := 0_8
+__auxvar1__recorder_prime := 0_8
+__auxvar1__recorder_sn_condmet := 0_1
+__auxvar1__recorder_sn_condmet_prime := 1_1
+__auxvar1__recorder_sn_vhold := 0_8
+__auxvar1__recorder_sn_vhold_prime := 0_8
+__auxvar2__recorder := 0_8
+__auxvar2__recorder1 := 0_8
+__auxvar2__recorder_prime := 0_8
+__auxvar2__recorder_sn_condmet := 0_1
+__auxvar2__recorder_sn_condmet_prime := 1_1
+__auxvar2__recorder_sn_vhold := 0_8
+__auxvar2__recorder_sn_vhold_prime := 0_8
+__auxvar3__recorder := 128_8
+__auxvar3__recorder1 := 0_8
+__auxvar3__recorder_prime := 128_8
+__auxvar3__recorder_sn_condmet := 0_1
+__auxvar3__recorder_sn_condmet_prime := 1_1
+__auxvar3__recorder_sn_vhold := 128_8
+__auxvar3__recorder_sn_vhold_prime := 128_8
+aux0 := 0_8
+aux1 := 0_8
+aux2 := 0_8
+aux3 := 128_8
+dummy_reset := 0_1
+dummy_resetX1 := 0_1
+dummy_reset_prime := 0_1
+ex_val := 128_8
+ex_val_next := 128_8
+ila_inst := 255_8
+ila_inst_next := 255_8
+inst := 255_8
+inst_next := 255_8
+inst_v := 1_1
+inst_v_next := 1_1
+op := 2_2
+op_next := 2_2
+oper1 := 0_8
+oper1_next := 0_8
+oper2 := 0_8
+oper2_next := 0_8
+ppl_stage_ex := 0_1
+ppl_stage_ex_prime := 0_1
+ppl_stage_finish := 0_1
+ppl_stage_finish_prime := 1_1
+ppl_stage_wb := 1_1
+ppl_stage_wb1 := 0_1
+ppl_stage_wb_prime := 0_1
+rd1 := 3_2
+rd1_next := 3_2
+rd2 := 3_2
+rd2_next := 3_2
+reg0 := 0_8
+reg0_next := 0_8
+reg1 := 0_8
+reg1_next := 0_8
+reg2 := 0_8
+reg2_next := 0_8
+reg3 := 128_8
+reg3_next := 128_8
+rst := 0_1
+s0 := 0_2
+s0_next := 0_2
+s1 := 0_2
+s1_next := 0_2
+s2 := 0_2
+s2_next := 0_2
+s3 := 2_2
+s3_next := 2_2
+v1 := 1_1
+v1_next := 1_1
+v2 := 0_1
+v2_next := 0_1
+w1 := 1_1
+w1_next := 1_1
+w2 := 1_1
+w2_next := 1_1
+x0 := 0_8
+x1 := 0_8
+x2 := 0_8
+x3 := 128_8
+
+
+prop_check: True
+counter example (inv check)
+ None
+[(v1 = 1_1), (v2 = 0_1)]
+ppl_stage_wb: 1
+0
+((ppl_stage_wb = 1_1) -> ((((... & ...) & (... = ...)) & ('RTL_registers[3]' = (... ? ... : ...))) & (RTL_ex_wb_val = (! (... & ...)))))
+---------> True 
+
+1
+((ppl_stage_wb = 1_1) -> ((((... & ...) & (... = ...)) & ('RTL_registers[3]' = (... ? ... : ...))) & (RTL_ex_wb_val = (! (... & ...)))))
+---------> True 
+
+2
+((ppl_stage_wb = 1_1) -> ((((... & ...) & (... = ...)) & ('RTL_registers[3]' = (... ? ... : ...))) & (RTL_ex_wb_val = (! (... & ...)))))
+---------> True 
+
+3
+((ppl_stage_wb = 1_1) -> ((((... & ...) & (... = ...)) & ('RTL_registers[3]' = (... ? ... : ...))) & (RTL_ex_wb_val = (! (... & ...)))))
+---------> False 
+
+4
+((ppl_stage_wb = 1_1) -> ((((... & ...) & (... = ...)) & ('RTL_registers[3]' = (... ? ... : ...))) & (RTL_ex_wb_val = (! (... & ...)))))
+---------> False 
+
+[0, 1, 2]
+0
+((ppl_stage_wb = 1_1) -> ((((... & ...) & (... = ...)) & ('RTL_registers[3]' = (... ? ... : ...))) & (RTL_ex_wb_val = (! (... & ...)))))
+---------> True 
+
+1
+((ppl_stage_wb = 1_1) -> ((((... & ...) & (... = ...)) & ('RTL_registers[3]' = (... ? ... : ...))) & (RTL_ex_wb_val = (! (... & ...)))))
+---------> True 
+
+2
+((ppl_stage_wb = 1_1) -> ((((... & ...) & (... = ...)) & ('RTL_registers[3]' = (... ? ... : ...))) & (RTL_ex_wb_val = (! (... & ...)))))
+---------> True 
+
+3
+((ppl_stage_wb = 1_1) -> ((((... & ...) & (... = ...)) & ('RTL_registers[3]' = (... ? ... : ...))) & (RTL_ex_wb_val = (! (... & ...)))))
+---------> False 
+
+4
+((ppl_stage_wb = 1_1) -> ((((... & ...) & (... = ...)) & ('RTL_registers[3]' = (... ? ... : ...))) & (RTL_ex_wb_val = (! (... & ...)))))
+---------> False 
+
+[0, 1, 2]
+
+
+inv_check: False
+counter example (inv check)
+ '0_1_next' := 0_1
+'RTL_registers[0]' := 226_8
+'RTL_registers[0]_prime' := 29_8
+'RTL_registers[1]' := 225_8
+'RTL_registers[1]_prime' := 225_8
+'RTL_registers[2]' := 226_8
+'RTL_registers[2]_prime' := 226_8
+'RTL_registers[3]' := 62_8
+'RTL_registers[3]_prime' := 62_8
+'RTL_scoreboard[0]' := 1_2
+'RTL_scoreboard[0]_prime' := 0_2
+'RTL_scoreboard[1]' := 2_2
+'RTL_scoreboard[1]_prime' := 1_2
+'RTL_scoreboard[2]' := 0_2
+'RTL_scoreboard[2]_prime' := 0_2
+'RTL_scoreboard[3]' := 0_2
+'RTL_scoreboard[3]_prime' := 0_2
+ILA___COUNTER_start__n3 := 1_8
+ILA___COUNTER_start__n3_prime := 1_8
+ILA_r0 := 31_8
+ILA_r01 := 0_8
+ILA_r0_prime := 31_8
+ILA_r0_randinit := 0_8
+ILA_r1 := 225_8
+ILA_r11 := 0_8
+ILA_r1_prime := 225_8
+ILA_r1_randinit := 0_8
+ILA_r2 := 226_8
+ILA_r21 := 0_8
+ILA_r2_prime := 226_8
+ILA_r2_randinit := 0_8
+ILA_r3 := 62_8
+ILA_r31 := 0_8
+ILA_r3_prime := 62_8
+ILA_r3_randinit := 0_8
+RTL_ex_wb_rd := 0_2
+RTL_ex_wb_rd_prime := 1_2
+RTL_ex_wb_reg_wen := 1_1
+RTL_ex_wb_reg_wen_prime := 1_1
+RTL_ex_wb_val := 29_8
+RTL_ex_wb_val_prime := 29_8
+RTL_ex_wb_valid := 1_1
+RTL_ex_wb_valid_prime := 1_1
+RTL_id_ex_op := 2_2
+RTL_id_ex_op_prime := 2_2
+RTL_id_ex_operand1 := 29_8
+RTL_id_ex_operand1_prime := 29_8
+RTL_id_ex_operand2 := 226_8
+RTL_id_ex_operand2_prime := 226_8
+RTL_id_ex_rd := 1_2
+RTL_id_ex_rd_prime := 1_2
+RTL_id_ex_reg_wen := 1_1
+RTL_id_ex_reg_wen_prime := 1_1
+RTL_id_ex_valid := 1_1
+RTL_id_ex_valid_prime := 0_1
+__2ndENDED__ := 0_1
+__2ndENDED___prime := 0_1
+__CYCLE_CNT__ := 127_8
+__CYCLE_CNT___prime := 128_8
+__ENDED__ := 0_1
+__ENDED___prime := 0_1
+__ILA_I_inst := 196_8
+__ILA_I_inst_prime := 192_8
+__RESETED__ := 1_1
+__RESETED__1 := 1_1
+__RESETED___prime := 1_1
+__STARTED__ := 1_1
+__STARTED__1 := 0_1
+__STARTED___prime := 1_1
+__START__ := 0_1
+__START__1 := 1_1
+__START___prime := 0_1
+__VLG_I_inst := 196_8
+__VLG_I_inst_prime := 192_8
+__VLG_I_inst_valid := 0_1
+__VLG_I_inst_valid_prime := 1_1
+__VLG_I_stallex := 0_1
+__VLG_I_stallexX1 := 0_1
+__VLG_I_stallex_prime := 0_1
+__VLG_I_stallwb := 0_1
+__VLG_I_stallwbX1 := 0_1
+__VLG_I_stallwb_prime := 1_1
+____auxvar0__recorder_init__ := 0_8
+____auxvar1__recorder_init__ := 0_8
+____auxvar2__recorder_init__ := 0_8
+____auxvar3__recorder_init__ := 0_8
+__auxvar0__recorder := 226_8
+__auxvar0__recorder1 := 0_8
+__auxvar0__recorder_prime := 226_8
+__auxvar0__recorder_sn_condmet := 0_1
+__auxvar0__recorder_sn_condmet_prime := 1_1
+__auxvar0__recorder_sn_vhold := 226_8
+__auxvar0__recorder_sn_vhold_prime := 226_8
+__auxvar1__recorder := 225_8
+__auxvar1__recorder1 := 0_8
+__auxvar1__recorder_prime := 225_8
+__auxvar1__recorder_sn_condmet := 0_1
+__auxvar1__recorder_sn_condmet_prime := 1_1
+__auxvar1__recorder_sn_vhold := 225_8
+__auxvar1__recorder_sn_vhold_prime := 225_8
+__auxvar2__recorder := 226_8
+__auxvar2__recorder1 := 0_8
+__auxvar2__recorder_prime := 226_8
+__auxvar2__recorder_sn_condmet := 0_1
+__auxvar2__recorder_sn_condmet_prime := 1_1
+__auxvar2__recorder_sn_vhold := 226_8
+__auxvar2__recorder_sn_vhold_prime := 226_8
+__auxvar3__recorder := 62_8
+__auxvar3__recorder1 := 0_8
+__auxvar3__recorder_prime := 62_8
+__auxvar3__recorder_sn_condmet := 0_1
+__auxvar3__recorder_sn_condmet_prime := 1_1
+__auxvar3__recorder_sn_vhold := 62_8
+__auxvar3__recorder_sn_vhold_prime := 62_8
+aux0 := 226_8
+aux1 := 225_8
+aux2 := 226_8
+aux3 := 62_8
+dummy_reset := 0_1
+dummy_resetX1 := 0_1
+dummy_reset_prime := 0_1
+ex_val := 225_8
+ex_val_next := 225_8
+ila_inst := 196_8
+ila_inst_next := 196_8
+inst := 196_8
+inst_next := 196_8
+inst_v := 1_1
+inst_v_next := 1_1
+op := 1_2
+op_next := 1_2
+oper1 := 127_8
+oper1_next := 127_8
+oper2 := 99_8
+oper2_next := 99_8
+ppl_stage_ex := 0_1
+ppl_stage_ex_prime := 0_1
+ppl_stage_finish := 0_1
+ppl_stage_finish_prime := 1_1
+ppl_stage_wb := 1_1
+ppl_stage_wb1 := 0_1
+ppl_stage_wb_prime := 0_1
+rd1 := 1_2
+rd1_next := 1_2
+rd2 := 1_2
+rd2_next := 1_2
+reg0 := 226_8
+reg0_next := 226_8
+reg1 := 226_8
+reg1_next := 226_8
+reg2 := 226_8
+reg2_next := 226_8
+reg3 := 62_8
+reg3_next := 62_8
+rst := 0_1
+s0 := 0_2
+s0_next := 0_2
+s1 := 3_2
+s1_next := 3_2
+s2 := 0_2
+s2_next := 0_2
+s3 := 0_2
+s3_next := 0_2
+v1 := 1_1
+v1_next := 1_1
+v2 := 1_1
+v2_next := 1_1
+w1 := 1_1
+w1_next := 1_1
+w2 := 1_1
+w2_next := 1_1
+x0 := 226_8
+x1 := 225_8
+x2 := 226_8
+x3 := 62_8
+[(v1 = 1_1), (v2 = 1_1)]
+ppl_stage_wb: 1
+0
+((ppl_stage_wb = 1_1) -> ((((... & ...) & (... = ...)) & (! (... & ...))) & (! ((... = ...) & (... = ...)))))
+---------> True 
+
+1
+((ppl_stage_wb = 1_1) -> ((((... & ...) & (... = ...)) & (! (... & ...))) & (! ((... = ...) & (... = ...)))))
+---------> True 
+
+2
+((ppl_stage_wb = 1_1) -> ((((... & ...) & (... = ...)) & (! (... & ...))) & (! ((... = ...) & (... = ...)))))
+---------> True 
+
+3
+((ppl_stage_wb = 1_1) -> ((((... & ...) & (... = ...)) & ('RTL_registers[3]' = (... ? ... : ...))) & (RTL_ex_wb_val = (! (... & ...)))))
+---------> False 
+
+4
+((ppl_stage_wb = 1_1) -> ((((... & ...) & (... = ...)) & ('RTL_registers[3]' = (... ? ... : ...))) & (RTL_ex_wb_val = (! (... & ...)))))
+---------> False 
+
+[0, 1, 2]
+0
+((ppl_stage_wb = 1_1) -> ((((... & ...) & (... = ...)) & (! (... & ...))) & (! ((... = ...) & (... = ...)))))
+---------> True 
+
+1
+((ppl_stage_wb = 1_1) -> ((((... & ...) & (... = ...)) & (! (... & ...))) & (! ((... = ...) & (... = ...)))))
+---------> True 
+
+2
+((ppl_stage_wb = 1_1) -> ((((... & ...) & (... = ...)) & (! (... & ...))) & (! ((... = ...) & (... = ...)))))
+---------> True 
+
+3
+((ppl_stage_wb = 1_1) -> ((((... & ...) & (... = ...)) & ('RTL_registers[3]' = (... ? ... : ...))) & (RTL_ex_wb_val = (! (... & ...)))))
+---------> False 
+
+4
+((ppl_stage_wb = 1_1) -> ((((... & ...) & (... = ...)) & ('RTL_registers[3]' = (... ? ... : ...))) & (RTL_ex_wb_val = (! (... & ...)))))
+---------> False 
+
+[0, 1, 2]
+
+
+inv_check: True
+counter example (inv check)
+ None
+num of iteration: 5
+tag record list ['ppl_stage_wb', 'ppl_stage_wb']
+
+
+
+
+--------------- CHECK RESULT ---------------
+
+
+init_check: True
+counter example (inv check)
+ None
+
+
+inv_check: True
+counter example (inv check)
+ None
+
+
+prop_check: True
+counter example (inv check)
+ None

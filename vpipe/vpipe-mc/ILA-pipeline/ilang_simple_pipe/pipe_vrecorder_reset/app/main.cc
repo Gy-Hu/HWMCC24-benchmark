@@ -1,0 +1,34 @@
+// main.cc
+// Synopsis: Entry point for the executable
+
+#include <iostream>
+
+#include <instr_set.h>
+
+using namespace ilang;
+
+int main() {
+  
+  RtlVerifyConfig cfg;
+  cfg.PonoOtherOptions = " -k 50 -v 1 ";
+  cfg.PonoEngine = "ic3ia";
+  cfg.ForceInstCheckReset = true;
+  cfg.CheckInstrCommitSatisfiable = true;
+  cfg.YosysSmtArrayForRegFile = false;
+
+  std::string rfDir = "../rfmap/";
+
+  IlaVerilogRefinemetChecker(
+    SimplePipe::BuildModel(),
+    {},                            // include
+    {"../verilog/simple_pipe.v"}, // vlog files
+    "pipeline_v",                  // top_module_name
+    "../rfmap/vmap-pvholder.json",         // variable mapping
+    "../rfmap/cond-pvholder.json",         // instruction-mapping
+    "../verify",          // verification dir
+    ModelCheckerSelection::PONO,
+    cfg
+  );
+
+  return 0;
+}

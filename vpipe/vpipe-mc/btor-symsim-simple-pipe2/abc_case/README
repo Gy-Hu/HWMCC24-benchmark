@@ -1,0 +1,5 @@
+C0: simple pipeline without stall                           --> time = 0.03s
+C1: simple pipeline with stall                              --> time = 0.03s
+C2: 3-pipeline(start-ex-wb-finish)                          --> time (start:2020/6/14/23:00, end:?)
+C3: 4-pipeline(start-id-ex-wb-finish) with 2 stall signals  --> time (start:2020/6/14/23:00, end:?)
+C4: 4-pipeline(start-id-ex-wb-finish) with 3 stall signals  --> time (start:2020/6/14/23:00, end:?)

@@ -1,0 +1,2173 @@
+Warning: will not rename state: RTL_ex_wb_rd  to output name:  RTL__DOT__ex_wb_rd
+Warning: will not rename state: RTL_ex_wb_reg_wen  to output name:  RTL__DOT__ex_wb_reg_wen
+Warning: will not rename state: RTL_ex_wb_valid  to output name:  RTL__DOT__ex_wb_valid
+Warning: will not rename state: RTL_id_ex_rd  to output name:  RTL__DOT__id_ex_rd
+Warning: will not rename state: RTL_id_ex_reg_wen  to output name:  RTL__DOT__id_ex_reg_wen
+Warning: will not rename state: RTL_id_ex_valid  to output name:  RTL__DOT__id_ex_valid
+Warning: will not rename state: RTL_registers[0]  to output name:  RTL__DOT__registers_0_
+Warning: will not rename state: RTL_registers[1]  to output name:  RTL__DOT__registers_1_
+Warning: will not rename state: RTL_registers[2]  to output name:  RTL__DOT__registers_2_
+Warning: will not rename state: RTL_registers[3]  to output name:  RTL__DOT__registers_3_
+Warning: will not rename state: RTL_scoreboard[0]  to output name:  RTL__DOT__scoreboard_0_
+Warning: will not rename state: RTL_scoreboard[1]  to output name:  RTL__DOT__scoreboard_1_
+Warning: will not rename state: RTL_scoreboard[2]  to output name:  RTL__DOT__scoreboard_2_
+Warning: will not rename state: RTL_scoreboard[3]  to output name:  RTL__DOT__scoreboard_3_
+Warning: will not rename state: ILA_r0  to output name:  __ILA_SO_r0
+Warning: will not rename state: ILA_r1  to output name:  __ILA_SO_r1
+Warning: will not rename state: ILA_r2  to output name:  __ILA_SO_r2
+Warning: will not rename state: ILA_r3  to output name:  __ILA_SO_r3
+Warning: will not rename state: __START__  to output name:  stage_tracker_if_id_iuv_enter_cond
+Warning: ignore output:  RTL__DOT__ex_go
+Warning: ignore output:  RTL__DOT__ex_wb_rd
+Warning: ignore output:  RTL__DOT__ex_wb_reg_wen
+Warning: ignore output:  RTL__DOT__ex_wb_valid
+Warning: ignore output:  RTL__DOT__id_ex_rd
+Warning: ignore output:  RTL__DOT__id_ex_reg_wen
+Warning: ignore output:  RTL__DOT__id_ex_valid
+Warning: ignore output:  RTL__DOT__id_go
+Warning: ignore output:  RTL__DOT__inst
+Warning: ignore output:  RTL__DOT__inst_ready
+Warning: ignore output:  RTL__DOT__inst_valid
+Warning: ignore output:  RTL__DOT__registers_0_
+Warning: ignore output:  RTL__DOT__registers_1_
+Warning: ignore output:  RTL__DOT__registers_2_
+Warning: ignore output:  RTL__DOT__registers_3_
+Warning: ignore output:  RTL__DOT__scoreboard_0_
+Warning: ignore output:  RTL__DOT__scoreboard_1_
+Warning: ignore output:  RTL__DOT__scoreboard_2_
+Warning: ignore output:  RTL__DOT__scoreboard_3_
+Warning: ignore output:  RTL__DOT__wb_go
+Warning: ignore output:  __EDCOND__
+Warning: ignore output:  __IEND__
+Warning: ignore output:  __ILA_SO_r0
+Warning: ignore output:  __ILA_SO_r1
+Warning: ignore output:  __ILA_SO_r2
+Warning: ignore output:  __ILA_SO_r3
+Warning: has unnamed input!
+Warning: ignore output:  __VLG_O_dummy_rf_data
+Warning: ignore output:  __VLG_O_inst_ready
+Warning: ignore output:  __all_assert_wire__
+Warning: ignore output:  __all_assume_wire__
+Warning: ignore output:  __sanitycheck_wire__
+Warning: ignore output:  additional_mapping_control_assume__p0__
+Warning: ignore output:  input_map_assume___p1__
+Warning: ignore output:  invariant_assume__p2__
+Warning: ignore output:  invariant_assume__p3__
+Warning: ignore output:  invariant_assume__p4__
+Warning: ignore output:  invariant_assume__p5__
+Warning: ignore output:  invariant_assume__p6__
+Warning: ignore output:  invariant_assume__p7__
+Warning: ignore output:  invariant_assume__p8__
+Warning: ignore output:  invariant_assume__p9__
+Warning: ignore output:  issue_decode__p10__
+Warning: ignore output:  issue_valid__p11__
+Warning: ignore output:  noreset__p12__
+Warning: ignore output:  post_value_holder__p13__
+Warning: ignore output:  post_value_holder__p14__
+Warning: ignore output:  post_value_holder__p15__
+Warning: ignore output:  post_value_holder__p16__
+Warning: ignore output:  post_value_holder_overly_constrained__p25__
+Warning: ignore output:  post_value_holder_overly_constrained__p26__
+Warning: ignore output:  post_value_holder_overly_constrained__p27__
+Warning: ignore output:  post_value_holder_overly_constrained__p28__
+Warning: ignore output:  post_value_holder_triggered__p29__
+Warning: ignore output:  post_value_holder_triggered__p30__
+Warning: ignore output:  post_value_holder_triggered__p31__
+Warning: ignore output:  post_value_holder_triggered__p32__
+Warning: ignore output:  stage_tracker_ex_wb_iuv_enter_cond
+Warning: ignore output:  stage_tracker_ex_wb_iuv_exit_cond
+Warning: ignore output:  stage_tracker_id_ex_iuv_enter_cond
+Warning: ignore output:  stage_tracker_id_ex_iuv_exit_cond
+Warning: ignore output:  stage_tracker_if_id_iuv_enter_cond
+Warning: ignore output:  stage_tracker_if_id_iuv_exit_cond
+Warning: ignore output:  stage_tracker_wb_iuv_enter_cond
+Warning: ignore output:  stage_tracker_wb_iuv_exit_cond
+Warning: ignore output:  variable_map_assert__p21__
+Warning: ignore output:  variable_map_assert__p22__
+Warning: ignore output:  variable_map_assert__p23__
+Warning: ignore output:  variable_map_assert__p24__
+Warning: ignore output:  variable_map_assume___p17__
+Warning: ignore output:  variable_map_assume___p18__
+Warning: ignore output:  variable_map_assume___p19__
+Warning: ignore output:  variable_map_assume___p20__
+Unlinked nodes "373,382,383,385,386,387,388,391,392,395,396,400,401,402,403,404,405,406,408,410,411,412,413,416,418,419,420,421,422,423,444,454,466,478,479,491,496,497,509,514,515,516,517,518,519,520,522,524,525,545,552,553,557,558,559,560,561,562,563,564,565,566,567,568,569,570,571,572,573,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601"
+Warning: will not rename state: RTL_ex_wb_rd  to output name:  RTL__DOT__ex_wb_rd
+Warning: will not rename state: RTL_ex_wb_reg_wen  to output name:  RTL__DOT__ex_wb_reg_wen
+Warning: will not rename state: RTL_ex_wb_valid  to output name:  RTL__DOT__ex_wb_valid
+Warning: will not rename state: RTL_id_ex_rd  to output name:  RTL__DOT__id_ex_rd
+Warning: will not rename state: RTL_id_ex_reg_wen  to output name:  RTL__DOT__id_ex_reg_wen
+Warning: will not rename state: RTL_id_ex_valid  to output name:  RTL__DOT__id_ex_valid
+Warning: will not rename state: RTL_registers[0]  to output name:  RTL__DOT__registers_0_
+Warning: will not rename state: RTL_registers[1]  to output name:  RTL__DOT__registers_1_
+Warning: will not rename state: RTL_registers[2]  to output name:  RTL__DOT__registers_2_
+Warning: will not rename state: RTL_registers[3]  to output name:  RTL__DOT__registers_3_
+Warning: will not rename state: RTL_scoreboard[0]  to output name:  RTL__DOT__scoreboard_0_
+Warning: will not rename state: RTL_scoreboard[1]  to output name:  RTL__DOT__scoreboard_1_
+Warning: will not rename state: RTL_scoreboard[2]  to output name:  RTL__DOT__scoreboard_2_
+Warning: will not rename state: RTL_scoreboard[3]  to output name:  RTL__DOT__scoreboard_3_
+Warning: will not rename state: ILA_r0  to output name:  __ILA_SO_r0
+Warning: will not rename state: ILA_r1  to output name:  __ILA_SO_r1
+Warning: will not rename state: ILA_r2  to output name:  __ILA_SO_r2
+Warning: will not rename state: ILA_r3  to output name:  __ILA_SO_r3
+Warning: will not rename state: __START__  to output name:  stage_tracker_if_id_iuv_enter_cond
+Warning: ignore output:  RTL__DOT__ex_go
+Warning: ignore output:  RTL__DOT__ex_wb_rd
+Warning: ignore output:  RTL__DOT__ex_wb_reg_wen
+Warning: ignore output:  RTL__DOT__ex_wb_valid
+Warning: ignore output:  RTL__DOT__id_ex_rd
+Warning: ignore output:  RTL__DOT__id_ex_reg_wen
+Warning: ignore output:  RTL__DOT__id_ex_valid
+Warning: ignore output:  RTL__DOT__id_go
+Warning: ignore output:  RTL__DOT__inst
+Warning: ignore output:  RTL__DOT__inst_ready
+Warning: ignore output:  RTL__DOT__inst_valid
+Warning: ignore output:  RTL__DOT__registers_0_
+Warning: ignore output:  RTL__DOT__registers_1_
+Warning: ignore output:  RTL__DOT__registers_2_
+Warning: ignore output:  RTL__DOT__registers_3_
+Warning: ignore output:  RTL__DOT__scoreboard_0_
+Warning: ignore output:  RTL__DOT__scoreboard_1_
+Warning: ignore output:  RTL__DOT__scoreboard_2_
+Warning: ignore output:  RTL__DOT__scoreboard_3_
+Warning: ignore output:  RTL__DOT__wb_go
+Warning: ignore output:  __EDCOND__
+Warning: ignore output:  __IEND__
+Warning: ignore output:  __ILA_SO_r0
+Warning: ignore output:  __ILA_SO_r1
+Warning: ignore output:  __ILA_SO_r2
+Warning: ignore output:  __ILA_SO_r3
+Warning: has unnamed input!
+Warning: ignore output:  __VLG_O_dummy_rf_data
+Warning: ignore output:  __VLG_O_inst_ready
+Warning: ignore output:  __all_assert_wire__
+Warning: ignore output:  __all_assume_wire__
+Warning: ignore output:  __sanitycheck_wire__
+Warning: ignore output:  additional_mapping_control_assume__p0__
+Warning: ignore output:  input_map_assume___p1__
+Warning: ignore output:  invariant_assume__p2__
+Warning: ignore output:  invariant_assume__p3__
+Warning: ignore output:  invariant_assume__p4__
+Warning: ignore output:  invariant_assume__p5__
+Warning: ignore output:  invariant_assume__p6__
+Warning: ignore output:  invariant_assume__p7__
+Warning: ignore output:  invariant_assume__p8__
+Warning: ignore output:  invariant_assume__p9__
+Warning: ignore output:  issue_decode__p10__
+Warning: ignore output:  issue_valid__p11__
+Warning: ignore output:  noreset__p12__
+Warning: ignore output:  post_value_holder__p13__
+Warning: ignore output:  post_value_holder__p14__
+Warning: ignore output:  post_value_holder__p15__
+Warning: ignore output:  post_value_holder__p16__
+Warning: ignore output:  post_value_holder_overly_constrained__p25__
+Warning: ignore output:  post_value_holder_overly_constrained__p26__
+Warning: ignore output:  post_value_holder_overly_constrained__p27__
+Warning: ignore output:  post_value_holder_overly_constrained__p28__
+Warning: ignore output:  post_value_holder_triggered__p29__
+Warning: ignore output:  post_value_holder_triggered__p30__
+Warning: ignore output:  post_value_holder_triggered__p31__
+Warning: ignore output:  post_value_holder_triggered__p32__
+Warning: ignore output:  stage_tracker_ex_wb_iuv_enter_cond
+Warning: ignore output:  stage_tracker_ex_wb_iuv_exit_cond
+Warning: ignore output:  stage_tracker_id_ex_iuv_enter_cond
+Warning: ignore output:  stage_tracker_id_ex_iuv_exit_cond
+Warning: ignore output:  stage_tracker_if_id_iuv_enter_cond
+Warning: ignore output:  stage_tracker_if_id_iuv_exit_cond
+Warning: ignore output:  stage_tracker_wb_iuv_enter_cond
+Warning: ignore output:  stage_tracker_wb_iuv_exit_cond
+Warning: ignore output:  variable_map_assert__p21__
+Warning: ignore output:  variable_map_assert__p22__
+Warning: ignore output:  variable_map_assert__p23__
+Warning: ignore output:  variable_map_assert__p24__
+Warning: ignore output:  variable_map_assume___p17__
+Warning: ignore output:  variable_map_assume___p18__
+Warning: ignore output:  variable_map_assume___p19__
+Warning: ignore output:  variable_map_assume___p20__
+Unlinked nodes "373,382,383,385,386,387,388,391,392,395,396,400,401,402,403,404,405,406,408,410,411,412,413,416,418,419,420,421,422,423,444,454,466,478,479,491,496,497,509,514,515,516,517,518,519,520,522,524,525,545,552,553,557,558,559,560,561,562,563,564,565,566,567,568,569,570,571,572,573,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601"
+|      sv  | rhs
+|----------|---------------------
+|RTL_if_id_inst| inst_id
+|RTL_id_ex_operand1| oper1
+|RTL_id_ex_operand2| oper2
+|RTL_id_ex_op| op
+|RTL_id_ex_rd| rd1
+|RTL_id_ex_reg_wen| w1
+|RTL_ex_wb_val| ex_val
+|RTL_ex_wb_rd| rd2
+|RTL_ex_wb_reg_wen| w2
+|RTL_if_id_valid| v0
+|RTL_id_ex_valid| v1
+|RTL_ex_wb_valid| v2
+|'RTL_registers[0]'| reg0
+|'RTL_registers[1]'| reg1
+|'RTL_registers[2]'| reg2
+|'RTL_registers[3]'| reg3
+|'RTL_scoreboard[0]'| s0
+|'RTL_scoreboard[1]'| s1
+|'RTL_scoreboard[2]'| s2
+|'RTL_scoreboard[3]'| s3
+|__VLG_I_inst| inst
+|__VLG_I_inst_valid| inst_v
+A0 :init
+A0 :((__ENDED__1 = 0_1) & (__auxvar0__recorder_sn_condmet1 = 0_1) & (__STARTED__1 = 0_1) & (stage_tracker_wb_iuv1 = 0_1) & (__CYCLE_CNT__1 = 0_8) & (stage_tracker_if_id_iuv1 = 0_1) & (__auxvar3__recorder_sn_condmet1 = 0_1) & (__2ndENDED__1 = 0_1) & (__auxvar2__recorder_sn_condmet1 = 0_1) & (stage_tracker_id_ex_iuv1 = 0_1) & (__auxvar1__recorder_sn_condmet1 = 0_1) & (__START__1 = 1_1) & (ILA___COUNTER_start__n31 = 0_8) & (stage_tracker_ex_wb_iuv1 = 0_1) & (__RESETED__1 = 1_1))
+A1 :ts.asmpt @ 0
+A1 :((((((((((((((((((((((! __START__1) | ((((! __VLG_I_stallidX1) & (((! __VLG_I_stallexX1) & ((! __VLG_I_stallwbX1) | (! v2))) | (! v1))) | (! v0)) & inst_v)) & ((! __START__1) | (ila_inst bvcomp inst))) & (s0[1:1] bvcomp ((v1 & w1) & (! (! (rd1 bvcomp 0_2)))))) & (s0[0:0] bvcomp ((v2 & w2) & (! (! (rd2 bvcomp 0_2)))))) & (s1[1:1] bvcomp ((v1 & w1) & (rd1 bvcomp 1_2)))) & (s1[0:0] bvcomp ((v2 & w2) & (rd2 bvcomp 1_2)))) & (s2[1:1] bvcomp ((v1 & w1) & (rd1 bvcomp 2_2)))) & (s2[0:0] bvcomp ((v2 & w2) & (rd2 bvcomp 2_2)))) & (s3[1:1] bvcomp ((v1 & w1) & (rd1 bvcomp 3_2)))) & (s3[0:0] bvcomp ((v2 & w2) & (rd2 bvcomp 3_2)))) & ((! __START__1) | (ila_inst[6:7] bvcomp 2_2))) & ((! __RESETED__1) | (! dummy_resetX1))) & ((! (((__START__1 | __STARTED__1) & (! __auxvar0__recorder_sn_condmet1)) & (stage_tracker_ex_wb_iuv1 & (v2 & (! __VLG_I_stallwbX1))))) | (__auxvar0__recorder1 bvcomp reg0))) & ((! (((__START__1 | __STARTED__1) & (! __auxvar1__recorder_sn_condmet1)) & (stage_tracker_ex_wb_iuv1 & (v2 & (! __VLG_I_stallwbX1))))) | (__auxvar1__recorder1 bvcomp reg1))) & ((! (((__START__1 | __STARTED__1) & (! __auxvar2__recorder_sn_condmet1)) & (stage_tracker_ex_wb_iuv1 & (v2 & (! __VLG_I_stallwbX1))))) | (__auxvar2__recorder1 bvcomp reg2))) & ((! (((__START__1 | __STARTED__1) & (! __auxvar3__recorder_sn_condmet1)) & (stage_tracker_ex_wb_iuv1 & (v2 & (! __VLG_I_stallwbX1))))) | (__auxvar3__recorder1 bvcomp reg3))) & ((! __START__1) | (((! __START__1) | (ILA_r01 bvcomp __auxvar0__recorder1)) & (__START__1 | (ILA_r01 bvcomp reg0))))) & ((! __START__1) | (((! __START__1) | (ILA_r11 bvcomp __auxvar1__recorder1)) & (__START__1 | (ILA_r11 bvcomp reg1))))) & ((! __START__1) | (((! __START__1) | (ILA_r21 bvcomp __auxvar2__recorder1)) & (__START__1 | (ILA_r21 bvcomp reg2))))) & ((! __START__1) | (((! __START__1) | (ILA_r31 bvcomp __auxvar3__recorder1)) & (__START__1 | (ILA_r31 bvcomp reg3))))) = 1_1)
+
+
+ ((((((((((((((((((((((! __START___prime) | ((((! __VLG_I_stallid_prime) & (((! __VLG_I_stallex_prime) & ((! __VLG_I_stallwb_prime) | (! RTL_ex_wb_valid_prime))) | (! RTL_id_ex_valid_prime))) | (! RTL_if_id_valid_prime)) & __VLG_I_inst_valid_prime)) & ((! __START___prime) | (__ILA_I_inst_prime bvcomp __VLG_I_inst_prime))) & ('RTL_scoreboard[0]_prime'[1:1] bvcomp ((RTL_id_ex_valid_prime & RTL_id_ex_reg_wen_prime) & (! (! (RTL_id_ex_rd_prime bvcomp 0_2)))))) & ('RTL_scoreboard[0]_prime'[0:0] bvcomp ((RTL_ex_wb_valid_prime & RTL_ex_wb_reg_wen_prime) & (! (! (RTL_ex_wb_rd_prime bvcomp 0_2)))))) & ('RTL_scoreboard[1]_prime'[1:1] bvcomp ((RTL_id_ex_valid_prime & RTL_id_ex_reg_wen_prime) & (RTL_id_ex_rd_prime bvcomp 1_2)))) & ('RTL_scoreboard[1]_prime'[0:0] bvcomp ((RTL_ex_wb_valid_prime & RTL_ex_wb_reg_wen_prime) & (RTL_ex_wb_rd_prime bvcomp 1_2)))) & ('RTL_scoreboard[2]_prime'[1:1] bvcomp ((RTL_id_ex_valid_prime & RTL_id_ex_reg_wen_prime) & (RTL_id_ex_rd_prime bvcomp 2_2)))) & ('RTL_scoreboard[2]_prime'[0:0] bvcomp ((RTL_ex_wb_valid_prime & RTL_ex_wb_reg_wen_prime) & (RTL_ex_wb_rd_prime bvcomp 2_2)))) & ('RTL_scoreboard[3]_prime'[1:1] bvcomp ((RTL_id_ex_valid_prime & RTL_id_ex_reg_wen_prime) & (RTL_id_ex_rd_prime bvcomp 3_2)))) & ('RTL_scoreboard[3]_prime'[0:0] bvcomp ((RTL_ex_wb_valid_prime & RTL_ex_wb_reg_wen_prime) & (RTL_ex_wb_rd_prime bvcomp 3_2)))) & ((! __START___prime) | (__ILA_I_inst_prime[6:7] bvcomp 2_2))) & ((! __RESETED___prime) | (! dummy_reset_prime))) & ((! (((__START___prime | __STARTED___prime) & (! __auxvar0__recorder_sn_condmet_prime)) & (stage_tracker_ex_wb_iuv_prime & (RTL_ex_wb_valid_prime & (! __VLG_I_stallwb_prime))))) | (__auxvar0__recorder_prime bvcomp 'RTL_registers[0]_prime'))) & ((! (((__START___prime | __STARTED___prime) & (! __auxvar1__recorder_sn_condmet_prime)) & (stage_tracker_ex_wb_iuv_prime & (RTL_ex_wb_valid_prime & (! __VLG_I_stallwb_prime))))) | (__auxvar1__recorder_prime bvcomp 'RTL_registers[1]_prime'))) & ((! (((__START___prime | __STARTED___prime) & (! __auxvar2__recorder_sn_condmet_prime)) & (stage_tracker_ex_wb_iuv_prime & (RTL_ex_wb_valid_prime & (! __VLG_I_stallwb_prime))))) | (__auxvar2__recorder_prime bvcomp 'RTL_registers[2]_prime'))) & ((! (((__START___prime | __STARTED___prime) & (! __auxvar3__recorder_sn_condmet_prime)) & (stage_tracker_ex_wb_iuv_prime & (RTL_ex_wb_valid_prime & (! __VLG_I_stallwb_prime))))) | (__auxvar3__recorder_prime bvcomp 'RTL_registers[3]_prime'))) & ((! __START___prime) | (((! __START___prime) | (ILA_r0_prime bvcomp __auxvar0__recorder_prime)) & (__START___prime | (ILA_r0_prime bvcomp 'RTL_registers[0]_prime'))))) & ((! __START___prime) | (((! __START___prime) | (ILA_r1_prime bvcomp __auxvar1__recorder_prime)) & (__START___prime | (ILA_r1_prime bvcomp 'RTL_registers[1]_prime'))))) & ((! __START___prime) | (((! __START___prime) | (ILA_r2_prime bvcomp __auxvar2__recorder_prime)) & (__START___prime | (ILA_r2_prime bvcomp 'RTL_registers[2]_prime'))))) & ((! __START___prime) | (((! __START___prime) | (ILA_r3_prime bvcomp __auxvar3__recorder_prime)) & (__START___prime | (ILA_r3_prime bvcomp 'RTL_registers[3]_prime'))))) = 1_1)
+inv-check !!!
+((((((((((((((((((((((! __START__1) | ((((! __VLG_I_stallidX1) & (((! __VLG_I_stallexX1) & ((! __VLG_I_stallwbX1) | (! v2))) | (! v1))) | (! v0)) & inst_v)) & ((! __START__1) | (ila_inst bvcomp inst))) & (s0[1:1] bvcomp ((v1 & w1) & (! (! (rd1 bvcomp 0_2)))))) & (s0[0:0] bvcomp ((v2 & w2) & (! (! (rd2 bvcomp 0_2)))))) & (s1[1:1] bvcomp ((v1 & w1) & (rd1 bvcomp 1_2)))) & (s1[0:0] bvcomp ((v2 & w2) & (rd2 bvcomp 1_2)))) & (s2[1:1] bvcomp ((v1 & w1) & (rd1 bvcomp 2_2)))) & (s2[0:0] bvcomp ((v2 & w2) & (rd2 bvcomp 2_2)))) & (s3[1:1] bvcomp ((v1 & w1) & (rd1 bvcomp 3_2)))) & (s3[0:0] bvcomp ((v2 & w2) & (rd2 bvcomp 3_2)))) & ((! __START__1) | (ila_inst[6:7] bvcomp 2_2))) & ((! __RESETED__1) | (! dummy_resetX1))) & ((! (((__START__1 | __STARTED__1) & (! __auxvar0__recorder_sn_condmet1)) & (stage_tracker_ex_wb_iuv1 & (v2 & (! __VLG_I_stallwbX1))))) | (__auxvar0__recorder1 bvcomp reg0))) & ((! (((__START__1 | __STARTED__1) & (! __auxvar1__recorder_sn_condmet1)) & (stage_tracker_ex_wb_iuv1 & (v2 & (! __VLG_I_stallwbX1))))) | (__auxvar1__recorder1 bvcomp reg1))) & ((! (((__START__1 | __STARTED__1) & (! __auxvar2__recorder_sn_condmet1)) & (stage_tracker_ex_wb_iuv1 & (v2 & (! __VLG_I_stallwbX1))))) | (__auxvar2__recorder1 bvcomp reg2))) & ((! (((__START__1 | __STARTED__1) & (! __auxvar3__recorder_sn_condmet1)) & (stage_tracker_ex_wb_iuv1 & (v2 & (! __VLG_I_stallwbX1))))) | (__auxvar3__recorder1 bvcomp reg3))) & ((! __START__1) | (((! __START__1) | (ILA_r01 bvcomp __auxvar0__recorder1)) & (__START__1 | (ILA_r01 bvcomp reg0))))) & ((! __START__1) | (((! __START__1) | (ILA_r11 bvcomp __auxvar1__recorder1)) & (__START__1 | (ILA_r11 bvcomp reg1))))) & ((! __START__1) | (((! __START__1) | (ILA_r21 bvcomp __auxvar2__recorder1)) & (__START__1 | (ILA_r21 bvcomp reg2))))) & ((! __START__1) | (((! __START__1) | (ILA_r31 bvcomp __auxvar3__recorder1)) & (__START__1 | (ILA_r31 bvcomp reg3))))) = 1_1)
+
+
+init_check: True
+counter example (inv check)
+ None
+
+
+inv_check: False
+counter example (inv check)
+ 'RTL_registers[0]' := 0_8
+'RTL_registers[0]_prime' := 0_8
+'RTL_registers[1]' := 0_8
+'RTL_registers[1]_prime' := 0_8
+'RTL_registers[2]' := 1_8
+'RTL_registers[2]_prime' := 1_8
+'RTL_registers[3]' := 1_8
+'RTL_registers[3]_prime' := 1_8
+'RTL_scoreboard[0]' := 0_2
+'RTL_scoreboard[0]_prime' := 0_2
+'RTL_scoreboard[1]' := 0_2
+'RTL_scoreboard[1]_prime' := 2_2
+'RTL_scoreboard[2]' := 0_2
+'RTL_scoreboard[2]_prime' := 0_2
+'RTL_scoreboard[3]' := 1_2
+'RTL_scoreboard[3]_prime' := 1_2
+ILA___COUNTER_start__n3 := 1_8
+ILA___COUNTER_start__n3_prime := 1_8
+ILA_r0 := 0_8
+ILA_r01 := 0_8
+ILA_r0_prime := 0_8
+ILA_r0_randinit := 128_8
+ILA_r1 := 1_8
+ILA_r11 := 0_8
+ILA_r1_prime := 1_8
+ILA_r1_randinit := 0_8
+ILA_r2 := 1_8
+ILA_r21 := 0_8
+ILA_r2_prime := 1_8
+ILA_r2_randinit := 0_8
+ILA_r3 := 1_8
+ILA_r31 := 4_8
+ILA_r3_prime := 1_8
+ILA_r3_randinit := 0_8
+RTL_ex_wb_rd := 3_2
+RTL_ex_wb_rd_prime := 3_2
+RTL_ex_wb_reg_wen := 1_1
+RTL_ex_wb_reg_wen_prime := 1_1
+RTL_ex_wb_val := 1_8
+RTL_ex_wb_val_prime := 1_8
+RTL_ex_wb_valid := 1_1
+RTL_ex_wb_valid_prime := 1_1
+RTL_id_ex_op := 2_2
+RTL_id_ex_op_prime := 2_2
+RTL_id_ex_operand1 := 1_8
+RTL_id_ex_operand1_prime := 1_8
+RTL_id_ex_operand2 := 1_8
+RTL_id_ex_operand2_prime := 0_8
+RTL_id_ex_rd := 1_2
+RTL_id_ex_rd_prime := 1_2
+RTL_id_ex_reg_wen := 1_1
+RTL_id_ex_reg_wen_prime := 1_1
+RTL_id_ex_valid := 0_1
+RTL_id_ex_valid_prime := 1_1
+RTL_if_id_inst := 133_8
+RTL_if_id_inst_prime := 133_8
+RTL_if_id_valid := 1_1
+RTL_if_id_valid_prime := 1_1
+__2ndENDED__ := 0_1
+__2ndENDED___prime := 0_1
+__CYCLE_CNT__ := 127_8
+__CYCLE_CNT___prime := 128_8
+__ENDED__ := 0_1
+__ENDED___prime := 0_1
+__ILA_I_inst := 40_8
+__ILA_I_inst_prime := 128_8
+__RESETED__ := 1_1
+__RESETED__1 := 1_1
+__RESETED___prime := 1_1
+__STARTED__ := 1_1
+__STARTED__1 := 0_1
+__STARTED___prime := 1_1
+__START__ := 0_1
+__START__1 := 1_1
+__START___prime := 0_1
+__VLG_I_inst := 133_8
+__VLG_I_inst_prime := 128_8
+__VLG_I_inst_valid := 1_1
+__VLG_I_inst_valid_prime := 1_1
+__VLG_I_stallex := 0_1
+__VLG_I_stallexX1 := 0_1
+__VLG_I_stallex_prime := 0_1
+__VLG_I_stallid := 0_1
+__VLG_I_stallidX1 := 0_1
+__VLG_I_stallid_prime := 0_1
+__VLG_I_stallwb := 1_1
+__VLG_I_stallwbX1 := 0_1
+__VLG_I_stallwb_prime := 1_1
+____auxvar0__recorder_init__ := 128_8
+____auxvar1__recorder_init__ := 128_8
+____auxvar2__recorder_init__ := 0_8
+____auxvar3__recorder_init__ := 0_8
+__auxvar0__recorder := 0_8
+__auxvar0__recorder1 := 0_8
+__auxvar0__recorder_prime := 0_8
+__auxvar0__recorder_sn_condmet := 0_1
+__auxvar0__recorder_sn_condmet1 := 0_1
+__auxvar0__recorder_sn_condmet_prime := 0_1
+__auxvar0__recorder_sn_vhold := 10_8
+__auxvar0__recorder_sn_vhold_prime := 10_8
+__auxvar1__recorder := 0_8
+__auxvar1__recorder1 := 0_8
+__auxvar1__recorder_prime := 0_8
+__auxvar1__recorder_sn_condmet := 0_1
+__auxvar1__recorder_sn_condmet1 := 0_1
+__auxvar1__recorder_sn_condmet_prime := 0_1
+__auxvar1__recorder_sn_vhold := 200_8
+__auxvar1__recorder_sn_vhold_prime := 200_8
+__auxvar2__recorder := 1_8
+__auxvar2__recorder1 := 0_8
+__auxvar2__recorder_prime := 1_8
+__auxvar2__recorder_sn_condmet := 0_1
+__auxvar2__recorder_sn_condmet1 := 0_1
+__auxvar2__recorder_sn_condmet_prime := 0_1
+__auxvar2__recorder_sn_vhold := 11_8
+__auxvar2__recorder_sn_vhold_prime := 11_8
+__auxvar3__recorder := 1_8
+__auxvar3__recorder1 := 4_8
+__auxvar3__recorder_prime := 1_8
+__auxvar3__recorder_sn_condmet := 0_1
+__auxvar3__recorder_sn_condmet1 := 0_1
+__auxvar3__recorder_sn_condmet_prime := 0_1
+__auxvar3__recorder_sn_vhold := 14_8
+__auxvar3__recorder_sn_vhold_prime := 14_8
+aux0 := 0_8
+aux1 := 0_8
+aux2 := 1_8
+aux3 := 1_8
+dummy_reset := 0_1
+dummy_resetX1 := 0_1
+dummy_reset_prime := 0_1
+ex_val := 1_8
+ex_val_next := 1_8
+ila_inst := 133_8
+ila_inst_next := 133_8
+inst := 133_8
+inst_id := 133_8
+inst_id_next := 133_8
+inst_next := 133_8
+inst_v := 1_1
+inst_v_next := 1_1
+op := 2_2
+op_next := 2_2
+oper1 := 1_8
+oper1_next := 1_8
+oper2 := 1_8
+oper2_next := 1_8
+rd1 := 1_2
+rd1_next := 1_2
+rd2 := 3_2
+rd2_next := 3_2
+reg0 := 0_8
+reg0_next := 0_8
+reg1 := 0_8
+reg1_next := 0_8
+reg2 := 1_8
+reg2_next := 1_8
+reg3 := 1_8
+reg3_next := 1_8
+rst := 0_1
+s0 := 0_2
+s0_next := 0_2
+s1 := 2_2
+s1_next := 2_2
+s2 := 0_2
+s2_next := 0_2
+s3 := 1_2
+s3_next := 1_2
+stage_tracker_ex_wb_iuv := 0_1
+stage_tracker_ex_wb_iuv1 := 0_1
+stage_tracker_ex_wb_iuv_prime := 0_1
+stage_tracker_id_ex_iuv := 0_1
+stage_tracker_id_ex_iuv_prime := 1_1
+stage_tracker_if_id_iuv := 1_1
+stage_tracker_if_id_iuv_prime := 0_1
+stage_tracker_wb_iuv := 0_1
+stage_tracker_wb_iuv_prime := 0_1
+v0 := 0_1
+v0_next := 0_1
+v1 := 1_1
+v1_next := 1_1
+v2 := 1_1
+v2_next := 1_1
+w1 := 1_1
+w1_next := 1_1
+w2 := 1_1
+w2_next := 1_1
+x0 := 0_8
+x1 := 0_8
+x2 := 1_8
+x3 := 1_8
+
+
+prop_check: True
+counter example (inv check)
+ None
+[(v0 = 0_1), (v1 = 1_1), (v2 = 1_1)]
+ppl_stage_id: 1
+0
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+1
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+2
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+3
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+4
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+5
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+6
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+7
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+8
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+9
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+10
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+11
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+12
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+13
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+14
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+15
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+16
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+17
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+18
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+19
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+20
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+21
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+22
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+23
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+24
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+25
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> True 
+
+26
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> True 
+
+27
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> True 
+
+28
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> True 
+
+29
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> True 
+
+30
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> True 
+
+31
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> True 
+
+32
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> True 
+
+33
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> True 
+
+34
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> True 
+
+35
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> True 
+
+36
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> True 
+
+37
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+38
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+39
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+40
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+41
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+42
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+43
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+44
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+45
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+46
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+47
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+48
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+49
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+50
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+51
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+52
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+53
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+54
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+[25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]
+0
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+1
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+2
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+3
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+4
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+5
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+6
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+7
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+8
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+9
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+10
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+11
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+12
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+13
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+14
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+15
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+16
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+17
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+18
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+19
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+20
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+21
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+22
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+23
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+24
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+25
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> True 
+
+26
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> True 
+
+27
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+28
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+29
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+30
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+31
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+32
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+33
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+34
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+35
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+36
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+37
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+38
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+39
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+40
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+41
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+42
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+43
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+44
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+45
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+46
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+47
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+48
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+49
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+50
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+51
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+52
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+53
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+54
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+[25, 26]
+
+
+inv_check: False
+counter example (inv check)
+ 'RTL_registers[0]' := 0_8
+'RTL_registers[0]_prime' := 0_8
+'RTL_registers[1]' := 0_8
+'RTL_registers[1]_prime' := 0_8
+'RTL_registers[2]' := 8_8
+'RTL_registers[2]_prime' := 8_8
+'RTL_registers[3]' := 0_8
+'RTL_registers[3]_prime' := 0_8
+'RTL_scoreboard[0]' := 0_2
+'RTL_scoreboard[0]_prime' := 0_2
+'RTL_scoreboard[1]' := 0_2
+'RTL_scoreboard[1]_prime' := 0_2
+'RTL_scoreboard[2]' := 0_2
+'RTL_scoreboard[2]_prime' := 2_2
+'RTL_scoreboard[3]' := 0_2
+'RTL_scoreboard[3]_prime' := 0_2
+ILA___COUNTER_start__n3 := 1_8
+ILA___COUNTER_start__n3_prime := 1_8
+ILA_r0 := 8_8
+ILA_r01 := 0_8
+ILA_r0_prime := 8_8
+ILA_r0_randinit := 0_8
+ILA_r1 := 4_8
+ILA_r11 := 0_8
+ILA_r1_prime := 4_8
+ILA_r1_randinit := 0_8
+ILA_r2 := 8_8
+ILA_r21 := 0_8
+ILA_r2_prime := 8_8
+ILA_r2_randinit := 0_8
+ILA_r3 := 0_8
+ILA_r31 := 0_8
+ILA_r3_prime := 0_8
+ILA_r3_randinit := 128_8
+RTL_ex_wb_rd := 2_2
+RTL_ex_wb_rd_prime := 2_2
+RTL_ex_wb_reg_wen := 1_1
+RTL_ex_wb_reg_wen_prime := 1_1
+RTL_ex_wb_val := 8_8
+RTL_ex_wb_val_prime := 8_8
+RTL_ex_wb_valid := 0_1
+RTL_ex_wb_valid_prime := 0_1
+RTL_id_ex_op := 1_2
+RTL_id_ex_op_prime := 2_2
+RTL_id_ex_operand1 := 8_8
+RTL_id_ex_operand1_prime := 8_8
+RTL_id_ex_operand2 := 0_8
+RTL_id_ex_operand2_prime := 0_8
+RTL_id_ex_rd := 3_2
+RTL_id_ex_rd_prime := 2_2
+RTL_id_ex_reg_wen := 1_1
+RTL_id_ex_reg_wen_prime := 1_1
+RTL_id_ex_valid := 0_1
+RTL_id_ex_valid_prime := 1_1
+RTL_if_id_inst := 162_8
+RTL_if_id_inst_prime := 162_8
+RTL_if_id_valid := 1_1
+RTL_if_id_valid_prime := 1_1
+__2ndENDED__ := 0_1
+__2ndENDED___prime := 0_1
+__CYCLE_CNT__ := 127_8
+__CYCLE_CNT___prime := 128_8
+__ENDED__ := 0_1
+__ENDED___prime := 0_1
+__ILA_I_inst := 162_8
+__ILA_I_inst_prime := 128_8
+__RESETED__ := 1_1
+__RESETED__1 := 1_1
+__RESETED___prime := 1_1
+__STARTED__ := 1_1
+__STARTED__1 := 0_1
+__STARTED___prime := 1_1
+__START__ := 0_1
+__START__1 := 1_1
+__START___prime := 0_1
+__VLG_I_inst := 162_8
+__VLG_I_inst_prime := 128_8
+__VLG_I_inst_valid := 1_1
+__VLG_I_inst_valid_prime := 1_1
+__VLG_I_stallex := 1_1
+__VLG_I_stallexX1 := 0_1
+__VLG_I_stallex_prime := 0_1
+__VLG_I_stallid := 0_1
+__VLG_I_stallidX1 := 0_1
+__VLG_I_stallid_prime := 0_1
+__VLG_I_stallwb := 0_1
+__VLG_I_stallwbX1 := 0_1
+__VLG_I_stallwb_prime := 1_1
+____auxvar0__recorder_init__ := 0_8
+____auxvar1__recorder_init__ := 0_8
+____auxvar2__recorder_init__ := 0_8
+____auxvar3__recorder_init__ := 128_8
+__auxvar0__recorder := 8_8
+__auxvar0__recorder1 := 0_8
+__auxvar0__recorder_prime := 8_8
+__auxvar0__recorder_sn_condmet := 0_1
+__auxvar0__recorder_sn_condmet1 := 0_1
+__auxvar0__recorder_sn_condmet_prime := 0_1
+__auxvar0__recorder_sn_vhold := 44_8
+__auxvar0__recorder_sn_vhold_prime := 44_8
+__auxvar1__recorder := 4_8
+__auxvar1__recorder1 := 0_8
+__auxvar1__recorder_prime := 4_8
+__auxvar1__recorder_sn_condmet := 0_1
+__auxvar1__recorder_sn_condmet1 := 0_1
+__auxvar1__recorder_sn_condmet_prime := 0_1
+__auxvar1__recorder_sn_vhold := 140_8
+__auxvar1__recorder_sn_vhold_prime := 140_8
+__auxvar2__recorder := 8_8
+__auxvar2__recorder1 := 0_8
+__auxvar2__recorder_prime := 8_8
+__auxvar2__recorder_sn_condmet := 0_1
+__auxvar2__recorder_sn_condmet1 := 0_1
+__auxvar2__recorder_sn_condmet_prime := 0_1
+__auxvar2__recorder_sn_vhold := 15_8
+__auxvar2__recorder_sn_vhold_prime := 15_8
+__auxvar3__recorder := 0_8
+__auxvar3__recorder1 := 0_8
+__auxvar3__recorder_prime := 0_8
+__auxvar3__recorder_sn_condmet := 0_1
+__auxvar3__recorder_sn_condmet1 := 0_1
+__auxvar3__recorder_sn_condmet_prime := 0_1
+__auxvar3__recorder_sn_vhold := 132_8
+__auxvar3__recorder_sn_vhold_prime := 132_8
+aux0 := 8_8
+aux1 := 4_8
+aux2 := 8_8
+aux3 := 0_8
+dummy_reset := 0_1
+dummy_resetX1 := 0_1
+dummy_reset_prime := 0_1
+ex_val := 8_8
+ex_val_next := 8_8
+ila_inst := 162_8
+ila_inst_next := 162_8
+inst := 162_8
+inst_id := 79_8
+inst_id_next := 79_8
+inst_next := 162_8
+inst_v := 1_1
+inst_v_next := 1_1
+op := 1_2
+op_next := 1_2
+oper1 := 8_8
+oper1_next := 8_8
+oper2 := 0_8
+oper2_next := 0_8
+rd1 := 0_2
+rd1_next := 0_2
+rd2 := 2_2
+rd2_next := 2_2
+reg0 := 0_8
+reg0_next := 0_8
+reg1 := 0_8
+reg1_next := 0_8
+reg2 := 0_8
+reg2_next := 0_8
+reg3 := 0_8
+reg3_next := 0_8
+rst := 0_1
+s0 := 2_2
+s0_next := 2_2
+s1 := 0_2
+s1_next := 0_2
+s2 := 1_2
+s2_next := 1_2
+s3 := 0_2
+s3_next := 0_2
+stage_tracker_ex_wb_iuv := 0_1
+stage_tracker_ex_wb_iuv1 := 0_1
+stage_tracker_ex_wb_iuv_prime := 0_1
+stage_tracker_id_ex_iuv := 0_1
+stage_tracker_id_ex_iuv_prime := 1_1
+stage_tracker_if_id_iuv := 1_1
+stage_tracker_if_id_iuv_prime := 0_1
+stage_tracker_wb_iuv := 0_1
+stage_tracker_wb_iuv_prime := 0_1
+v0 := 0_1
+v0_next := 0_1
+v1 := 1_1
+v1_next := 1_1
+v2 := 1_1
+v2_next := 1_1
+w1 := 1_1
+w1_next := 1_1
+w2 := 1_1
+w2_next := 1_1
+x0 := 8_8
+x1 := 4_8
+x2 := 8_8
+x3 := 0_8
+[(v0 = 0_1), (v1 = 1_1), (v2 = 1_1)]
+ppl_stage_id: 1
+0
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+1
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+2
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+3
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+4
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+5
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+6
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+7
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+8
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+9
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+10
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+11
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+12
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+13
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+14
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+15
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+16
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+17
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+18
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+19
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+20
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+21
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+22
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+23
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+24
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+25
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (! (... & ... & ...))) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+26
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (! (... & ... & ...))) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+27
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+28
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+29
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+30
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+31
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+32
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+33
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+34
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+35
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+36
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+37
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> True 
+
+38
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> True 
+
+39
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> True 
+
+40
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> True 
+
+41
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> True 
+
+42
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> True 
+
+43
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+44
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+45
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+46
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+47
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+48
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+49
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+50
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+51
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+52
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+53
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+54
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+[37, 38, 39, 40, 41, 42]
+0
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+1
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+2
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+3
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+4
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+5
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+6
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+7
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+8
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+9
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+10
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+11
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+12
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+13
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+14
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+15
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+16
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+17
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+18
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+19
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+20
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+21
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+22
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+23
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+24
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+25
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (! (... & ... & ...))) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+26
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (! (... & ... & ...))) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+27
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+28
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+29
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+30
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+31
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+32
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+33
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+34
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+35
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+36
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+37
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> True 
+
+38
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> True 
+
+39
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+40
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+41
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+42
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+43
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+44
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+45
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+46
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+47
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+48
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+49
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+50
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+51
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+52
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+53
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+54
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+[37, 38]
+
+
+inv_check: False
+counter example (inv check)
+ 'RTL_registers[0]' := 0_8
+'RTL_registers[0]_prime' := 0_8
+'RTL_registers[1]' := 0_8
+'RTL_registers[1]_prime' := 0_8
+'RTL_registers[2]' := 0_8
+'RTL_registers[2]_prime' := 0_8
+'RTL_registers[3]' := 0_8
+'RTL_registers[3]_prime' := 0_8
+'RTL_scoreboard[0]' := 0_2
+'RTL_scoreboard[0]_prime' := 0_2
+'RTL_scoreboard[1]' := 0_2
+'RTL_scoreboard[1]_prime' := 0_2
+'RTL_scoreboard[2]' := 0_2
+'RTL_scoreboard[2]_prime' := 2_2
+'RTL_scoreboard[3]' := 0_2
+'RTL_scoreboard[3]_prime' := 0_2
+ILA___COUNTER_start__n3 := 1_8
+ILA___COUNTER_start__n3_prime := 1_8
+ILA_r0 := 0_8
+ILA_r01 := 0_8
+ILA_r0_prime := 0_8
+ILA_r0_randinit := 128_8
+ILA_r1 := 0_8
+ILA_r11 := 0_8
+ILA_r1_prime := 0_8
+ILA_r1_randinit := 128_8
+ILA_r2 := 2_8
+ILA_r21 := 0_8
+ILA_r2_prime := 2_8
+ILA_r2_randinit := 0_8
+ILA_r3 := 0_8
+ILA_r31 := 0_8
+ILA_r3_prime := 0_8
+ILA_r3_randinit := 128_8
+RTL_ex_wb_rd := 3_2
+RTL_ex_wb_rd_prime := 3_2
+RTL_ex_wb_reg_wen := 1_1
+RTL_ex_wb_reg_wen_prime := 1_1
+RTL_ex_wb_val := 2_8
+RTL_ex_wb_val_prime := 2_8
+RTL_ex_wb_valid := 0_1
+RTL_ex_wb_valid_prime := 0_1
+RTL_id_ex_op := 2_2
+RTL_id_ex_op_prime := 2_2
+RTL_id_ex_operand1 := 2_8
+RTL_id_ex_operand1_prime := 2_8
+RTL_id_ex_operand2 := 2_8
+RTL_id_ex_operand2_prime := 0_8
+RTL_id_ex_rd := 2_2
+RTL_id_ex_rd_prime := 2_2
+RTL_id_ex_reg_wen := 1_1
+RTL_id_ex_reg_wen_prime := 1_1
+RTL_id_ex_valid := 0_1
+RTL_id_ex_valid_prime := 1_1
+RTL_if_id_inst := 138_8
+RTL_if_id_inst_prime := 138_8
+RTL_if_id_valid := 1_1
+RTL_if_id_valid_prime := 1_1
+__2ndENDED__ := 0_1
+__2ndENDED___prime := 0_1
+__CYCLE_CNT__ := 127_8
+__CYCLE_CNT___prime := 128_8
+__ENDED__ := 0_1
+__ENDED___prime := 0_1
+__ILA_I_inst := 138_8
+__ILA_I_inst_prime := 128_8
+__RESETED__ := 1_1
+__RESETED__1 := 1_1
+__RESETED___prime := 1_1
+__STARTED__ := 1_1
+__STARTED__1 := 0_1
+__STARTED___prime := 1_1
+__START__ := 0_1
+__START__1 := 1_1
+__START___prime := 0_1
+__VLG_I_inst := 138_8
+__VLG_I_inst_prime := 128_8
+__VLG_I_inst_valid := 1_1
+__VLG_I_inst_valid_prime := 1_1
+__VLG_I_stallex := 1_1
+__VLG_I_stallexX1 := 0_1
+__VLG_I_stallex_prime := 0_1
+__VLG_I_stallid := 0_1
+__VLG_I_stallidX1 := 0_1
+__VLG_I_stallid_prime := 0_1
+__VLG_I_stallwb := 0_1
+__VLG_I_stallwbX1 := 0_1
+__VLG_I_stallwb_prime := 1_1
+____auxvar0__recorder_init__ := 128_8
+____auxvar1__recorder_init__ := 128_8
+____auxvar2__recorder_init__ := 0_8
+____auxvar3__recorder_init__ := 128_8
+__auxvar0__recorder := 0_8
+__auxvar0__recorder1 := 0_8
+__auxvar0__recorder_prime := 0_8
+__auxvar0__recorder_sn_condmet := 0_1
+__auxvar0__recorder_sn_condmet1 := 0_1
+__auxvar0__recorder_sn_condmet_prime := 0_1
+__auxvar0__recorder_sn_vhold := 0_8
+__auxvar0__recorder_sn_vhold_prime := 0_8
+__auxvar1__recorder := 0_8
+__auxvar1__recorder1 := 0_8
+__auxvar1__recorder_prime := 0_8
+__auxvar1__recorder_sn_condmet := 0_1
+__auxvar1__recorder_sn_condmet1 := 0_1
+__auxvar1__recorder_sn_condmet_prime := 0_1
+__auxvar1__recorder_sn_vhold := 2_8
+__auxvar1__recorder_sn_vhold_prime := 2_8
+__auxvar2__recorder := 2_8
+__auxvar2__recorder1 := 0_8
+__auxvar2__recorder_prime := 2_8
+__auxvar2__recorder_sn_condmet := 0_1
+__auxvar2__recorder_sn_condmet1 := 0_1
+__auxvar2__recorder_sn_condmet_prime := 0_1
+__auxvar2__recorder_sn_vhold := 0_8
+__auxvar2__recorder_sn_vhold_prime := 0_8
+__auxvar3__recorder := 0_8
+__auxvar3__recorder1 := 0_8
+__auxvar3__recorder_prime := 0_8
+__auxvar3__recorder_sn_condmet := 0_1
+__auxvar3__recorder_sn_condmet1 := 0_1
+__auxvar3__recorder_sn_condmet_prime := 0_1
+__auxvar3__recorder_sn_vhold := 6_8
+__auxvar3__recorder_sn_vhold_prime := 6_8
+aux0 := 0_8
+aux1 := 0_8
+aux2 := 2_8
+aux3 := 0_8
+dummy_reset := 0_1
+dummy_resetX1 := 0_1
+dummy_reset_prime := 0_1
+ex_val := 2_8
+ex_val_next := 2_8
+ila_inst := 138_8
+ila_inst_next := 138_8
+inst := 138_8
+inst_id := 138_8
+inst_id_next := 138_8
+inst_next := 138_8
+inst_v := 1_1
+inst_v_next := 1_1
+op := 2_2
+op_next := 2_2
+oper1 := 2_8
+oper1_next := 2_8
+oper2 := 2_8
+oper2_next := 2_8
+rd1 := 2_2
+rd1_next := 2_2
+rd2 := 3_2
+rd2_next := 3_2
+reg0 := 0_8
+reg0_next := 0_8
+reg1 := 0_8
+reg1_next := 0_8
+reg2 := 0_8
+reg2_next := 0_8
+reg3 := 0_8
+reg3_next := 0_8
+rst := 0_1
+s0 := 0_2
+s0_next := 0_2
+s1 := 0_2
+s1_next := 0_2
+s2 := 2_2
+s2_next := 2_2
+s3 := 0_2
+s3_next := 0_2
+stage_tracker_ex_wb_iuv := 0_1
+stage_tracker_ex_wb_iuv1 := 0_1
+stage_tracker_ex_wb_iuv_prime := 0_1
+stage_tracker_id_ex_iuv := 0_1
+stage_tracker_id_ex_iuv_prime := 1_1
+stage_tracker_if_id_iuv := 1_1
+stage_tracker_if_id_iuv_prime := 0_1
+stage_tracker_wb_iuv := 0_1
+stage_tracker_wb_iuv_prime := 0_1
+v0 := 0_1
+v0_next := 0_1
+v1 := 1_1
+v1_next := 1_1
+v2 := 0_1
+v2_next := 0_1
+w1 := 1_1
+w1_next := 1_1
+w2 := 1_1
+w2_next := 1_1
+x0 := 0_8
+x1 := 0_8
+x2 := 2_8
+x3 := 0_8
+[(v0 = 0_1), (v1 = 1_1), (v2 = 0_1)]
+ppl_stage_id: 1
+0
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+1
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+2
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+3
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+4
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+5
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+6
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+7
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+8
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+9
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+10
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+11
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+12
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+13
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+14
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+15
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+16
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+17
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+18
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+19
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+20
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+21
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+22
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+23
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+24
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+25
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (! (... & ... & ...))) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> True 
+
+26
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (! (... & ... & ...))) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> True 
+
+27
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> True 
+
+28
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> True 
+
+29
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> True 
+
+30
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> True 
+
+31
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> True 
+
+32
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> True 
+
+33
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> True 
+
+34
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> True 
+
+35
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> True 
+
+36
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> True 
+
+37
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (! (... & ... & ...))) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> True 
+
+38
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (! (... & ... & ...))) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> True 
+
+39
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> True 
+
+40
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> True 
+
+41
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> True 
+
+42
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> True 
+
+43
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+44
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+45
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+46
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+47
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+48
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+49
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+50
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+51
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+52
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+53
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+54
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+[25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42]
+0
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+1
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+2
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+3
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+4
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+5
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+6
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+7
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+8
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+9
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+10
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+11
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+12
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+13
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+14
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+15
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+16
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+17
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+18
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+19
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+20
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+21
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+22
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+23
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+24
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = oper2)) & (RTL_id_ex_op = op)))
+---------> False 
+
+25
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (! (... & ... & ...))) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> True 
+
+26
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (! (... & ... & ...))) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> True 
+
+27
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> True 
+
+28
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> True 
+
+29
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+30
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+31
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+32
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+33
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+34
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+35
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+36
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+37
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (! (... & ... & ...))) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> True 
+
+38
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (! (... & ... & ...))) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> True 
+
+39
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+40
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+41
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+42
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_op = ...[6:7])) & (! ((... = ...) & (... = ...) & (... = ...)))))
+---------> False 
+
+43
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+44
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+45
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+46
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+47
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+48
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+49
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+50
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+51
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+52
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+53
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+54
+((stage_tracker_if_id_iuv = 1_1) -> ((((... & ...) & (... = ...)) & (RTL_id_ex_operand2 = (... ? ... : ...))) & (RTL_id_ex_op = inst_id[6:7])))
+---------> False 
+
+[25, 26, 27, 28, 37, 38]
+
+
+inv_check: True
+counter example (inv check)
+ None
+num of iteration: 7
+tag record list ['ppl_stage_id', 'ppl_stage_id', 'ppl_stage_id']
+
+
+
+
+--------------- CHECK RESULT ---------------
+
+
+init_check: True
+counter example (inv check)
+ None
+
+
+inv_check: True
+counter example (inv check)
+ None
+
+
+prop_check: True
+counter example (inv check)
+ None

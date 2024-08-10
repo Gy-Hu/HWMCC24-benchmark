@@ -1,0 +1,240 @@
+Step: wb-->finish
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1
+number of state (wb-finish): 1 --> 1
+[] ptr: 0New state!
+================================
+Finished!
+Get #state: 1

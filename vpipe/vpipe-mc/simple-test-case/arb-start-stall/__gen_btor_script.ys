@@ -1,0 +1,7 @@
+read_verilog -sv test.v
+prep -top test
+
+hierarchy -check
+setundef -undriven -init -expose
+sim -clock clk -reset rst -rstlen 1 -n 1 -w test
+write_btor  -s test.btor2

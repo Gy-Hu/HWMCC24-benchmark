@@ -1,0 +1,5 @@
+&r /data/wenjifang/vpipe-mc/ILA-pipeline/ilang_simple_pipe/stall_short_vrecorder/verify/NAND/problem.aig
+&put
+fold
+pdr -v
+

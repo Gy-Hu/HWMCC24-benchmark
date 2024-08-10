@@ -1,0 +1,562 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.12+36 (git sha1 7608985d2, gcc 9.3.0-17ubuntu1~20.04 -fPIC -Os)
+
+
+-- Executing script file `gen_btor.ys' --
+
+1. Executing Verilog-2005 frontend: wrapper.v
+Parsing SystemVerilog input from `wrapper.v' to AST representation.
+Generating RTLIL representation for module `\wrapper'.
+Generating RTLIL representation for module `\pipeline_v'.
+Warning: Replacing memory \scoreboard with list of registers. See wrapper.v:281
+Successfully finished Verilog frontend.
+
+2. Executing PREP pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1.1. Analyzing design hierarchy..
+Top module:  \wrapper
+Used module:     \pipeline_v
+
+2.1.2. Analyzing design hierarchy..
+Top module:  \wrapper
+Used module:     \pipeline_v
+Removed 0 unused modules.
+Module wrapper directly or indirectly contains formal properties -> setting "keep" attribute.
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 1 dead cases from process $proc$wrapper.v:0$143 in module pipeline_v.
+Marked 1 switch rules as full_case in process $proc$wrapper.v:0$143 in module pipeline_v.
+Removed 1 dead cases from process $proc$wrapper.v:0$140 in module pipeline_v.
+Marked 1 switch rules as full_case in process $proc$wrapper.v:0$140 in module pipeline_v.
+Marked 1 switch rules as full_case in process $proc$wrapper.v:427$98 in module pipeline_v.
+Marked 2 switch rules as full_case in process $proc$wrapper.v:396$93 in module pipeline_v.
+Marked 2 switch rules as full_case in process $proc$wrapper.v:349$75 in module pipeline_v.
+Marked 1 switch rules as full_case in process $proc$wrapper.v:299$49 in module pipeline_v.
+Marked 1 switch rules as full_case in process $proc$wrapper.v:279$43 in module pipeline_v.
+Removed a total of 2 dead cases.
+
+2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 4 redundant assignments.
+Promoted 13 assignments to connections.
+
+2.2.4. Executing PROC_INIT pass (extract init attributes).
+
+2.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.2.6. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\pipeline_v.$proc$wrapper.v:0$143'.
+     1/1: $1$mem2reg_rd$\scoreboard$wrapper.v:324$41_DATA[1:0]$145
+Creating decoders for process `\pipeline_v.$proc$wrapper.v:0$140'.
+     1/1: $1$mem2reg_rd$\scoreboard$wrapper.v:323$40_DATA[1:0]$142
+Creating decoders for process `\pipeline_v.$proc$wrapper.v:0$107'.
+Creating decoders for process `\pipeline_v.$proc$wrapper.v:427$98'.
+     1/3: $1$memwr$\registers$wrapper.v:429$42_EN[7:0]$105
+     2/3: $1$memwr$\registers$wrapper.v:429$42_DATA[7:0]$104
+     3/3: $1$memwr$\registers$wrapper.v:429$42_ADDR[1:0]$103
+Creating decoders for process `\pipeline_v.$proc$wrapper.v:396$93'.
+     1/5: $0\ex_wb_valid[0:0]
+     2/5: $0\ex_wb_reg_wen[0:0]
+     3/5: $0\ex_wb_rd[1:0]
+     4/5: $0\ex_wb_val[7:0]
+     5/5: $0\ex_wb_inst[7:0]
+Creating decoders for process `\pipeline_v.$proc$wrapper.v:349$75'.
+     1/7: $0\id_ex_valid[0:0]
+     2/7: $0\id_ex_reg_wen[0:0]
+     3/7: $0\id_ex_rd[1:0]
+     4/7: $0\id_ex_op[1:0]
+     5/7: $0\id_ex_operand2[7:0]
+     6/7: $0\id_ex_operand1[7:0]
+     7/7: $0\id_ex_inst[7:0]
+Creating decoders for process `\pipeline_v.$proc$wrapper.v:299$49'.
+     1/2: $0\if_id_valid[0:0]
+     2/2: $0\if_id_inst[7:0]
+Creating decoders for process `\pipeline_v.$proc$wrapper.v:279$43'.
+     1/4: $0\scoreboard[3][1:0]
+     2/4: $0\scoreboard[2][1:0]
+     3/4: $0\scoreboard[1][1:0]
+     4/4: $0\scoreboard[0][1:0]
+
+2.2.7. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\pipeline_v.$mem2reg_rd$\scoreboard$wrapper.v:324$41_DATA' from process `\pipeline_v.$proc$wrapper.v:0$143'.
+No latch inferred for signal `\pipeline_v.$mem2reg_rd$\scoreboard$wrapper.v:323$40_DATA' from process `\pipeline_v.$proc$wrapper.v:0$140'.
+No latch inferred for signal `\pipeline_v.\scoreboard_nxt[0]' from process `\pipeline_v.$proc$wrapper.v:0$107'.
+No latch inferred for signal `\pipeline_v.\scoreboard_nxt[1]' from process `\pipeline_v.$proc$wrapper.v:0$107'.
+No latch inferred for signal `\pipeline_v.\scoreboard_nxt[2]' from process `\pipeline_v.$proc$wrapper.v:0$107'.
+No latch inferred for signal `\pipeline_v.\scoreboard_nxt[3]' from process `\pipeline_v.$proc$wrapper.v:0$107'.
+
+2.2.8. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\pipeline_v.$memwr$\registers$wrapper.v:429$42_ADDR' using process `\pipeline_v.$proc$wrapper.v:427$98'.
+  created $dff cell `$procdff$263' with positive edge clock.
+Creating register for signal `\pipeline_v.$memwr$\registers$wrapper.v:429$42_DATA' using process `\pipeline_v.$proc$wrapper.v:427$98'.
+  created $dff cell `$procdff$264' with positive edge clock.
+Creating register for signal `\pipeline_v.$memwr$\registers$wrapper.v:429$42_EN' using process `\pipeline_v.$proc$wrapper.v:427$98'.
+  created $dff cell `$procdff$265' with positive edge clock.
+Creating register for signal `\pipeline_v.\ex_wb_inst' using process `\pipeline_v.$proc$wrapper.v:396$93'.
+  created $dff cell `$procdff$266' with positive edge clock.
+Creating register for signal `\pipeline_v.\ex_wb_val' using process `\pipeline_v.$proc$wrapper.v:396$93'.
+  created $dff cell `$procdff$267' with positive edge clock.
+Creating register for signal `\pipeline_v.\ex_wb_rd' using process `\pipeline_v.$proc$wrapper.v:396$93'.
+  created $dff cell `$procdff$268' with positive edge clock.
+Creating register for signal `\pipeline_v.\ex_wb_reg_wen' using process `\pipeline_v.$proc$wrapper.v:396$93'.
+  created $dff cell `$procdff$269' with positive edge clock.
+Creating register for signal `\pipeline_v.\ex_wb_valid' using process `\pipeline_v.$proc$wrapper.v:396$93'.
+  created $dff cell `$procdff$270' with positive edge clock.
+Creating register for signal `\pipeline_v.\id_ex_inst' using process `\pipeline_v.$proc$wrapper.v:349$75'.
+  created $dff cell `$procdff$271' with positive edge clock.
+Creating register for signal `\pipeline_v.\id_ex_operand1' using process `\pipeline_v.$proc$wrapper.v:349$75'.
+  created $dff cell `$procdff$272' with positive edge clock.
+Creating register for signal `\pipeline_v.\id_ex_operand2' using process `\pipeline_v.$proc$wrapper.v:349$75'.
+  created $dff cell `$procdff$273' with positive edge clock.
+Creating register for signal `\pipeline_v.\id_ex_op' using process `\pipeline_v.$proc$wrapper.v:349$75'.
+  created $dff cell `$procdff$274' with positive edge clock.
+Creating register for signal `\pipeline_v.\id_ex_rd' using process `\pipeline_v.$proc$wrapper.v:349$75'.
+  created $dff cell `$procdff$275' with positive edge clock.
+Creating register for signal `\pipeline_v.\id_ex_reg_wen' using process `\pipeline_v.$proc$wrapper.v:349$75'.
+  created $dff cell `$procdff$276' with positive edge clock.
+Creating register for signal `\pipeline_v.\id_ex_valid' using process `\pipeline_v.$proc$wrapper.v:349$75'.
+  created $dff cell `$procdff$277' with positive edge clock.
+Creating register for signal `\pipeline_v.\if_id_inst' using process `\pipeline_v.$proc$wrapper.v:299$49'.
+  created $dff cell `$procdff$278' with positive edge clock.
+Creating register for signal `\pipeline_v.\if_id_valid' using process `\pipeline_v.$proc$wrapper.v:299$49'.
+  created $dff cell `$procdff$279' with positive edge clock.
+Creating register for signal `\pipeline_v.\scoreboard[0]' using process `\pipeline_v.$proc$wrapper.v:279$43'.
+  created $dff cell `$procdff$280' with positive edge clock.
+Creating register for signal `\pipeline_v.\scoreboard[1]' using process `\pipeline_v.$proc$wrapper.v:279$43'.
+  created $dff cell `$procdff$281' with positive edge clock.
+Creating register for signal `\pipeline_v.\scoreboard[2]' using process `\pipeline_v.$proc$wrapper.v:279$43'.
+  created $dff cell `$procdff$282' with positive edge clock.
+Creating register for signal `\pipeline_v.\scoreboard[3]' using process `\pipeline_v.$proc$wrapper.v:279$43'.
+  created $dff cell `$procdff$283' with positive edge clock.
+
+2.2.9. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.2.10. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\pipeline_v.$proc$wrapper.v:0$143'.
+Removing empty process `pipeline_v.$proc$wrapper.v:0$143'.
+Found and cleaned up 1 empty switch in `\pipeline_v.$proc$wrapper.v:0$140'.
+Removing empty process `pipeline_v.$proc$wrapper.v:0$140'.
+Removing empty process `pipeline_v.$proc$wrapper.v:0$107'.
+Found and cleaned up 1 empty switch in `\pipeline_v.$proc$wrapper.v:427$98'.
+Removing empty process `pipeline_v.$proc$wrapper.v:427$98'.
+Found and cleaned up 3 empty switches in `\pipeline_v.$proc$wrapper.v:396$93'.
+Removing empty process `pipeline_v.$proc$wrapper.v:396$93'.
+Found and cleaned up 3 empty switches in `\pipeline_v.$proc$wrapper.v:349$75'.
+Removing empty process `pipeline_v.$proc$wrapper.v:349$75'.
+Found and cleaned up 3 empty switches in `\pipeline_v.$proc$wrapper.v:299$49'.
+Removing empty process `pipeline_v.$proc$wrapper.v:299$49'.
+Found and cleaned up 1 empty switch in `\pipeline_v.$proc$wrapper.v:279$43'.
+Removing empty process `pipeline_v.$proc$wrapper.v:279$43'.
+Cleaned up 13 empty switches.
+
+2.2.11. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pipeline_v.
+<suppressed ~14 debug messages>
+Optimizing module wrapper.
+<suppressed ~2 debug messages>
+
+2.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pipeline_v.
+Optimizing module wrapper.
+
+2.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pipeline_v..
+Finding unused cells or wires in module \wrapper..
+Removed 9 unused cells and 127 unused wires.
+<suppressed ~13 debug messages>
+
+2.5. Executing CHECK pass (checking for obvious problems).
+Checking module pipeline_v...
+Checking module wrapper...
+Warning: Wire wrapper.\__ILA_SO_r3 [7] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r3 [6] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r3 [5] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r3 [4] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r3 [3] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r3 [2] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r3 [1] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r3 [0] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r2 [7] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r2 [6] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r2 [5] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r2 [4] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r2 [3] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r2 [2] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r2 [1] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r2 [0] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r1 [7] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r1 [6] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r1 [5] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r1 [4] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r1 [3] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r1 [2] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r1 [1] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r1 [0] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r0 [7] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r0 [6] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r0 [5] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r0 [4] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r0 [3] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r0 [2] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r0 [1] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r0 [0] is used but has no driver.
+Found and reported 32 problems.
+
+2.6. Executing OPT pass (performing simple optimizations).
+
+2.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pipeline_v.
+Optimizing module wrapper.
+
+2.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\pipeline_v'.
+<suppressed ~6 debug messages>
+Finding identical cells in module `\wrapper'.
+<suppressed ~18 debug messages>
+Removed a total of 8 cells.
+
+2.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \pipeline_v..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wrapper..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~22 debug messages>
+
+2.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \pipeline_v.
+    Consolidated identical input bits for $mux cell $procmux$157:
+      Old ports: A=8'00000000, B=8'11111111, Y=$0$memwr$\registers$wrapper.v:429$42_EN[7:0]$101
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\registers$wrapper.v:429$42_EN[7:0]$101 [0]
+      New connections: $0$memwr$\registers$wrapper.v:429$42_EN[7:0]$101 [7:1] = { $0$memwr$\registers$wrapper.v:429$42_EN[7:0]$101 [0] $0$memwr$\registers$wrapper.v:429$42_EN[7:0]$101 [0] $0$memwr$\registers$wrapper.v:429$42_EN[7:0]$101 [0] $0$memwr$\registers$wrapper.v:429$42_EN[7:0]$101 [0] $0$memwr$\registers$wrapper.v:429$42_EN[7:0]$101 [0] $0$memwr$\registers$wrapper.v:429$42_EN[7:0]$101 [0] $0$memwr$\registers$wrapper.v:429$42_EN[7:0]$101 [0] }
+  Optimizing cells in module \pipeline_v.
+  Optimizing cells in module \wrapper.
+Performed a total of 1 changes.
+
+2.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\pipeline_v'.
+Finding identical cells in module `\wrapper'.
+Removed a total of 0 cells.
+
+2.6.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pipeline_v..
+Finding unused cells or wires in module \wrapper..
+Removed 0 unused cells and 8 unused wires.
+<suppressed ~2 debug messages>
+
+2.6.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pipeline_v.
+Optimizing module wrapper.
+
+2.6.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.6.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \pipeline_v..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wrapper..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~22 debug messages>
+
+2.6.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \pipeline_v.
+  Optimizing cells in module \wrapper.
+Performed a total of 0 changes.
+
+2.6.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\pipeline_v'.
+Finding identical cells in module `\wrapper'.
+Removed a total of 0 cells.
+
+2.6.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pipeline_v..
+Finding unused cells or wires in module \wrapper..
+
+2.6.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pipeline_v.
+Optimizing module wrapper.
+
+2.6.14. Finished OPT passes. (There is nothing left to do.)
+
+2.7. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 2) from port B of cell pipeline_v.$eq$wrapper.v:321$52 ($eq).
+Removed top 1 bits (of 2) from port B of cell pipeline_v.$eq$wrapper.v:329$60 ($eq).
+Removed top 1 bits (of 2) from port B of cell pipeline_v.$eq$wrapper.v:333$64 ($eq).
+Removed top 1 bits (of 2) from port B of cell pipeline_v.$eq$wrapper.v:375$78 ($eq).
+Removed top 1 bits (of 2) from port B of cell pipeline_v.$eq$wrapper.v:255$116 ($eq).
+Removed top 1 bits (of 2) from port B of cell pipeline_v.$eq$wrapper.v:259$120 ($eq).
+Removed top 1 bits (of 2) from port B of cell pipeline_v.$procmux$149_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell pipeline_v.$procmux$154_CMP0 ($eq).
+Removed top 4 bits (of 8) from wire pipeline_v.immd.
+Removed top 1 bits (of 2) from port B of cell wrapper.$eq$wrapper.v:117$10 ($eq).
+Removed top 1 bits (of 2) from port B of cell wrapper.$eq$wrapper.v:118$14 ($eq).
+
+2.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pipeline_v..
+Finding unused cells or wires in module \wrapper..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.9. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.10. Executing OPT pass (performing simple optimizations).
+
+2.10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pipeline_v.
+Optimizing module wrapper.
+
+2.10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\pipeline_v'.
+Finding identical cells in module `\wrapper'.
+Removed a total of 0 cells.
+
+2.10.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pipeline_v..
+Finding unused cells or wires in module \wrapper..
+
+2.10.4. Finished fast OPT passes.
+
+2.11. Printing statistics.
+
+=== pipeline_v ===
+
+   Number of wires:                159
+   Number of wire bits:            416
+   Number of public wires:          69
+   Number of public wire bits:     203
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                132
+     $add                            1
+     $and                            2
+     $dff                           16
+     $eq                            20
+     $logic_and                     16
+     $logic_not                     10
+     $logic_or                       5
+     $mem_v2                         1
+     $mux                           57
+     $not                            2
+     $pmux                           2
+
+=== wrapper ===
+
+   Number of wires:                 59
+   Number of wire bits:            115
+   Number of public wires:          35
+   Number of public wire bits:      91
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 35
+     $assert                         1
+     $eq                            14
+     $logic_and                     17
+     $logic_not                      2
+     pipeline_v                      1
+
+=== design hierarchy ===
+
+   wrapper                           1
+     pipeline_v                      1
+
+   Number of wires:                218
+   Number of wire bits:            531
+   Number of public wires:         104
+   Number of public wire bits:     294
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                166
+     $add                            1
+     $and                            2
+     $assert                         1
+     $dff                           16
+     $eq                            34
+     $logic_and                     33
+     $logic_not                     12
+     $logic_or                       5
+     $mem_v2                         1
+     $mux                           57
+     $not                            2
+     $pmux                           2
+
+2.12. Executing CHECK pass (checking for obvious problems).
+Checking module pipeline_v...
+Checking module wrapper...
+Warning: Wire wrapper.\__ILA_SO_r3 [7] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r3 [6] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r3 [5] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r3 [4] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r3 [3] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r3 [2] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r3 [1] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r3 [0] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r2 [7] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r2 [6] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r2 [5] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r2 [4] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r2 [3] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r2 [2] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r2 [1] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r2 [0] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r1 [7] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r1 [6] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r1 [5] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r1 [4] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r1 [3] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r1 [2] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r1 [1] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r1 [0] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r0 [7] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r0 [6] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r0 [5] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r0 [4] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r0 [3] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r0 [2] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r0 [1] is used but has no driver.
+Warning: Wire wrapper.\__ILA_SO_r0 [0] is used but has no driver.
+Found and reported 32 problems.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \wrapper
+Used module:     \pipeline_v
+
+3.2. Analyzing design hierarchy..
+Top module:  \wrapper
+Used module:     \pipeline_v
+Removed 0 unused modules.
+Module wrapper directly or indirectly contains formal properties -> setting "keep" attribute.
+
+4. Executing PROC pass (convert processes to netlists).
+
+4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+4.4. Executing PROC_INIT pass (extract init attributes).
+
+4.5. Executing PROC_ARST pass (detect async resets in processes).
+
+4.6. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+4.7. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+4.8. Executing PROC_DFF pass (convert process syncs to FFs).
+
+4.9. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.10. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.11. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pipeline_v.
+Optimizing module wrapper.
+
+5. Executing MEMORY pass.
+
+5.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+5.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+5.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+  Analyzing pipeline_v.registers write port 0.
+
+5.4. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `\registers'[0] in module `\pipeline_v': no output FF found.
+Checking read port `\registers'[1] in module `\pipeline_v': FF found, but with a mux select that doesn't seem to correspond to transparency logic.
+Checking read port `\registers'[2] in module `\pipeline_v': FF found, but with a mux select that doesn't seem to correspond to transparency logic.
+Checking read port address `\registers'[0] in module `\pipeline_v': no address FF found.
+Checking read port address `\registers'[1] in module `\pipeline_v': merged address FF to cell.
+Checking read port address `\registers'[2] in module `\pipeline_v': merged address FF to cell.
+
+5.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pipeline_v..
+Finding unused cells or wires in module \wrapper..
+
+5.6. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+Consolidating read ports of memory pipeline_v.registers by address:
+
+5.7. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+5.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pipeline_v..
+Finding unused cells or wires in module \wrapper..
+
+5.9. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+5.10. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory \registers in module \pipeline_v:
+  created 4 $dff cells and 0 static cells of width 8.
+Extracted addr FF from read port 1 of pipeline_v.registers: $\registers$rdreg[1]
+Extracted addr FF from read port 2 of pipeline_v.registers: $\registers$rdreg[2]
+  read interface: 2 $dff and 9 $mux cells.
+  write interface: 4 write mux blocks.
+
+6. Executing FLATTEN pass (flatten design).
+Deleting now unused module pipeline_v.
+<suppressed ~1 debug messages>
+
+7. Executing SETUNDEF pass (replace undef values with defined constants).
+Using default as -undef with -expose.
+Exposing undriven wire \__ILA_SO_r0 as input.
+Exposing undriven wire \__ILA_SO_r1 as input.
+Exposing undriven wire \__ILA_SO_r2 as input.
+Exposing undriven wire \__ILA_SO_r3 as input.
+
+8. Executing SIM pass (simulate the circuit).
+Simulating cycle 0.
+Warning: Assert wrapper.normalassert (wrapper.v:145.1-145.54) failed.
+Warning: Assert wrapper.normalassert (wrapper.v:145.1-145.54) failed.
+Simulating cycle 1.
+
+9. Executing BTOR backend.
+
+Warnings: 34 unique messages, 67 total
+End of script. Logfile hash: f66fc3ac25, CPU: user 0.06s system 0.00s, MEM: 13.32 MB peak
+Yosys 0.12+36 (git sha1 7608985d2, gcc 9.3.0-17ubuntu1~20.04 -fPIC -Os)
+Time spent: 22% 7x opt_clean (0 sec), 21% 7x opt_expr (0 sec), ...

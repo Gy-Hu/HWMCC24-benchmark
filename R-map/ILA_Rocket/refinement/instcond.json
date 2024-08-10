@@ -1,0 +1,156 @@
+{
+  "global invariants" : [],
+
+  "instructions": [
+    {
+      "instruction" : "ADD",
+      "ready signal" : "#before_next_inst_commit#"// "start condition" : ["$decode$", "RTL.ctrl.imemresp_val && RTL.ctrl.imemresp_rdy == 1"]
+    },
+    {
+      "instruction" : "AND",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "OR",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "XOR",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "SUB",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "SLL",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "SRL",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "SRA",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "SLT",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "SLTU",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "ADDI",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "SLTI",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "SLTIU",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "ANDI",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "ORI",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "XORI",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "SLLI",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "SRLI",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "SRAI",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "LUI",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "AUIPC",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "BEQ",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "BNE",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "BLT",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "BLTU",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "BGE",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "BGEU",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "JAL",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "JALR",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "LW",
+      "ready signal" : "#before_next_inst_commit#"// "start condition" : ["$decode$", "RTL.ctrl.imemresp_val && RTL.ctrl.imemresp_rdy == 1"]
+    },
+    {
+      "instruction" : "LH",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "LHU",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "LB",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "LBU",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "SW",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "SH",
+      "ready signal" : "#before_next_inst_commit#"
+    },
+    {
+      "instruction" : "SB",
+      "ready signal" : "#before_next_inst_commit#"
+    }
+
+  ]
+}
+

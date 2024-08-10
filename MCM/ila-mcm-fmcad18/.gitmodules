@@ -1,0 +1,4 @@
+[submodule "ILA-Tools"]
+	path = ILA-Tools
+	url = git@github.com:Bo-Yuan-Huang/ILA-Tools.git
+	branch = riscv

@@ -1,0 +1,7 @@
+read_verilog -sv ADD.v
+prep -top ADD
+
+hierarchy -check
+setundef -undriven -init -expose
+sim -w ADD
+write_btor  -s ADD.btor2

@@ -1,0 +1,242 @@
+{
+  "state mapping": { 
+    "pc"  : [["#decode#","RTL.ibuf_io_pc@(#decode#)"],["#commit#", "RTL.wb_reg_pc@(#before_next_inst_commit#)"]],
+
+    "x0"  : "ILA.x0 == 0"  ,
+    "x1"  : [["#decode#" , "RTL.x1  @ ( #before_commit#)"] , ["#commit#" , "RTL.x1  @ ( #check_point#)" ]]  ,
+    "x2"  : [["#decode#" , "RTL.x2  @ ( #before_commit#)"] , ["#commit#" , "RTL.x2  @ ( #check_point#)" ]]  ,
+    "x3"  : [["#decode#" , "RTL.x3  @ ( #before_commit#)"] , ["#commit#" , "RTL.x3  @ ( #check_point#)" ]]  ,
+    "x4"  : [["#decode#" , "RTL.x4  @ ( #before_commit#)"] , ["#commit#" , "RTL.x4  @ ( #check_point#)" ]]  ,
+    "x5"  : [["#decode#" , "RTL.x5  @ ( #before_commit#)"] , ["#commit#" , "RTL.x5  @ ( #check_point#)" ]]  ,
+    "x6"  : [["#decode#" , "RTL.x6  @ ( #before_commit#)"] , ["#commit#" , "RTL.x6  @ ( #check_point#)" ]]  ,
+    "x7"  : [["#decode#" , "RTL.x7  @ ( #before_commit#)"] , ["#commit#" , "RTL.x7  @ ( #check_point#)" ]]  ,
+    "x8"  : [["#decode#" , "RTL.x8  @ ( #before_commit#)"] , ["#commit#" , "RTL.x8  @ ( #check_point#)" ]]  ,
+    "x9"  : [["#decode#" , "RTL.x9  @ ( #before_commit#)"] , ["#commit#" , "RTL.x9  @ ( #check_point#)" ]]  ,
+    "x10" : [["#decode#" , "RTL.x10 @ ( #before_commit#)"] , ["#commit#" , "RTL.x10 @ ( #check_point#)"]] ,
+    "x11" : [["#decode#" , "RTL.x11 @ ( #before_commit#)"] , ["#commit#" , "RTL.x11 @ ( #check_point#)"]] ,
+    "x12" : [["#decode#" , "RTL.x12 @ ( #before_commit#)"] , ["#commit#" , "RTL.x12 @ ( #check_point#)"]] ,
+    "x13" : [["#decode#" , "RTL.x13 @ ( #before_commit#)"] , ["#commit#" , "RTL.x13 @ ( #check_point#)"]] ,
+    "x14" : [["#decode#" , "RTL.x14 @ ( #before_commit#)"] , ["#commit#" , "RTL.x14 @ ( #check_point#)"]] ,
+    "x15" : [["#decode#" , "RTL.x15 @ ( #before_commit#)"] , ["#commit#" , "RTL.x15 @ ( #check_point#)"]] ,
+    "x16" : [["#decode#" , "RTL.x16 @ ( #before_commit#)"] , ["#commit#" , "RTL.x16 @ ( #check_point#)"]] ,
+    "x17" : [["#decode#" , "RTL.x17 @ ( #before_commit#)"] , ["#commit#" , "RTL.x17 @ ( #check_point#)"]] ,
+    "x18" : [["#decode#" , "RTL.x18 @ ( #before_commit#)"] , ["#commit#" , "RTL.x18 @ ( #check_point#)"]] ,
+    "x19" : [["#decode#" , "RTL.x19 @ ( #before_commit#)"] , ["#commit#" , "RTL.x19 @ ( #check_point#)"]] ,
+    "x20" : [["#decode#" , "RTL.x20 @ ( #before_commit#)"] , ["#commit#" , "RTL.x20 @ ( #check_point#)"]] ,
+    "x21" : [["#decode#" , "RTL.x21 @ ( #before_commit#)"] , ["#commit#" , "RTL.x21 @ ( #check_point#)"]] ,
+    "x22" : [["#decode#" , "RTL.x22 @ ( #before_commit#)"] , ["#commit#" , "RTL.x22 @ ( #check_point#)"]] ,
+    "x23" : [["#decode#" , "RTL.x23 @ ( #before_commit#)"] , ["#commit#" , "RTL.x23 @ ( #check_point#)"]] ,
+    "x24" : [["#decode#" , "RTL.x24 @ ( #before_commit#)"] , ["#commit#" , "RTL.x24 @ ( #check_point#)"]] ,
+    "x25" : [["#decode#" , "RTL.x25 @ ( #before_commit#)"] , ["#commit#" , "RTL.x25 @ ( #check_point#)"]] ,
+    "x26" : [["#decode#" , "RTL.x26 @ ( #before_commit#)"] , ["#commit#" , "RTL.x26 @ ( #check_point#)"]] ,
+    "x27" : [["#decode#" , "RTL.x27 @ ( #before_commit#)"] , ["#commit#" , "RTL.x27 @ ( #check_point#)"]] ,
+    "x28" : [["#decode#" , "RTL.x28 @ ( #before_commit#)"] , ["#commit#" , "RTL.x28 @ ( #check_point#)"]] ,
+    "x29" : [["#decode#" , "RTL.x29 @ ( #before_commit#)"] , ["#commit#" , "RTL.x29 @ ( #check_point#)"]] ,
+    "x30" : [["#decode#" , "RTL.x30 @ ( #before_commit#)"] , ["#commit#" , "RTL.x30 @ ( #check_point#)"]] ,
+    "x31" : [["#decode#" , "RTL.x31 @ ( #before_commit#)"] , ["#commit#" , "RTL.x31 @ ( #check_point#)"]] ,
+
+    // will use customized mem eq module
+    "mem" : {
+      "ren"  : "#io_dmem_resp_valid# @ (#ex_monitor_1# ## 1)",
+      "raddr": "#io_dmem_resp_bits_addr# [31:2] @ (#ex_monitor_1# ## 1)",
+      "rdata": "#dmem_req_rdata# @ (#ex_monitor_1# ## 1)",
+      "wen"  : "( #io_dmem_resp_bits_cmd# == 1 && #dmem_req_valid# ) @ (#ex_monitor_1# ## 1)",
+      "waddr": "#io_dmem_resp_bits_addr# [31:2] @ (#ex_monitor_1# ## 1)",
+      "wdata": "( ( #aligned_data# & (~#Mask#) ) | ( #OffsetData# & #Mask# ) ) @ (#ex_monitor_1# ## 1)"
+    }
+  },
+
+  "input mapping" : {
+    "inst" : "RTL.ibuf_io_inst_0_bits_inst_bits@(#decode#)"
+  },
+
+  "rtl interface connection" : {
+    "CLOCK" : "clock",
+    "RESET" : "reset",
+    "INPUT" : {
+      "io_interrupts_mtip" : "1'b0",
+      "io_interrupts_msip" : "1'b0",
+      "io_interrupts_meip" : "1'b0",
+      "io_hartid" : "32'd0", "io_imem_resp_bits_mask" : "2'b11", "io_imem_resp_bits_xcpt_if": "1'b0",
+
+      "io_dmem_xcpt_ma_ld" : "1'b0", "io_dmem_xcpt_ma_st" : "1'b0", "io_dmem_xcpt_pf_ld" : "1'b0", "io_dmem_xcpt_pf_st" : "1'b0",
+
+      "io_rocc_fpu_resp_ready"                    : "1'b0",
+      "io_rocc_fpu_req_valid"                     : "1'b0",
+      "io_rocc_autl_grant_ready"                  : "1'b1",
+      "io_rocc_autl_acquire_bits_is_builtin_type" : "1'b1",
+      "io_rocc_autl_acquire_bits_client_xact_id"  : "1'b0",
+      "io_rocc_autl_acquire_valid"                : "1'b0",
+      "io_rocc_busy"                              : "1'b0",
+      "io_rocc_interrupt"                         : "1'b0",
+      "io_rocc_mem_invalidate_lr"                 : "1'b1",
+      "io_rocc_mem_s1_kill"                       : "1'b0",
+      "io_rocc_mem_req_valid"                     : "1'b0",
+      "io_rocc_resp_valid"                        : "1'b0",
+      "io_rocc_cmd_ready"                         : "1'b0",
+      "io_fpu_cp_resp_valid"                      : "1'b0",
+      "io_fpu_cp_resp_bits_data"                  : "33'd0",
+      "io_fpu_fcsr_rdy"                           : "1'b1",
+      "io_fpu_nack_mem"                           : "1'b0",
+      "io_fpu_illegal_rm"                         : "1'b0",
+      "io_fpu_fcsr_flags_valid"                   : "1'b0",
+      "io_fpu_fcsr_flags_bits"                    : "5'd0",
+      "io_fpu_toint_data"                         : "32'd0",
+
+      "rf_idx_i" : "#rf_idx_i#",
+
+      "io_dmem_resp_bits_addr"     : "#io_dmem_resp_bits_addr#",
+      "io_dmem_resp_bits_tag"      : "#io_dmem_resp_bits_tag#",
+      "io_dmem_resp_bits_cmd"      : "#io_dmem_resp_bits_cmd#",
+      "io_dmem_resp_bits_typ"      : "#io_dmem_resp_bits_typ#",
+      "io_dmem_resp_bits_data"     : "#io_dmem_resp_bits_data#",
+      "io_dmem_resp_bits_has_data" : "#io_dmem_resp_bits_has_data#",
+      "io_dmem_s2_nack"            : "#io_dmem_s2_nack#",
+      "io_dmem_replay_next"        : "#io_dmem_replay_next#",
+      "io_dmem_resp_valid"         : "#io_dmem_resp_valid#",
+      "io_dmem_resp_bits_replay"   : "#io_dmem_resp_bits_replay#",
+      "io_dmem_ordered"            : "#io_dmem_ordered#",
+      "io_imem_resp_bits_pc"       : "#io_imem_resp_bits_pc#",
+      "io_imem_resp_bits_data"     : "#io_imem_resp_bits_data#"
+
+    }
+  },
+
+
+  "assumptions" : [
+    "RTL.csr.reg_misa == 32'h40101105",
+    // disable MUL/DIV and ROCC
+    "RTL.div_io_req_valid == 1'b0",
+    "RTL.div_io_resp_valid == 1'b0",
+
+    "RTL.bpu_io_xcpt_if == 1'b0",
+    "RTL.bpu_io_xcpt_ld == 1'b0",
+    "RTL.bpu_io_xcpt_st == 1'b0",
+
+    "RTL.bpu_io_debug_if == 1'b0",
+    "RTL.bpu_io_debug_ld == 1'b0",
+    "RTL.bpu_io_debug_st == 1'b0",
+
+    // not having rvc
+    " (RTL.ibuf_io_pc[1] == 1'b1 && RTL.ibuf_io_inst_0_valid == 1'b1 ) |-> (RTL.ctrl_killd == 1'b1) ",
+    " ~(RTL.wb_valid && RTL.error) ",
+
+    // valid instruction assumptions:
+    "ILA.x0 == 0",
+    "ILA.pc[1:0] == 2'b00",
+
+    "RTL.wb_valid |-> ( #WBisJAL#    |-> (( RTL.wb_reg_pc + #WBimmJ# ) & 2'b11) == 2'b00 )",
+    "RTL.wb_valid |-> ( #WBisJALR#   |-> (( RTL.rf_idx_o + #WBimmI# ) & 2'b10) == 2'b00 ) ",
+    "RTL.wb_valid |-> ( #WBisBranch# |-> ((  RTL.wb_reg_pc + #WBimmB#) & 2'b11) == 2'b00 )",
+
+    "(RTL.wb_valid |-> (#WBisLH#  |-> (#loadAddr#[0] == 1'b0 ) ))",
+    "(RTL.wb_valid |-> (#WBisLHU# |-> (#loadAddr#[0] == 1'b0 ) ))",
+    "(RTL.wb_valid |-> (#WBisLW#  |-> (#loadAddr# == 2'b00 ) ))",
+//
+    "(RTL.wb_valid |-> (#WBisSH# |-> (#storeAddr#[0] == 1'b0 ) ))",
+    "(RTL.wb_valid |-> (#WBisSW# |-> (#storeAddr# == 2'b00 ) ))",
+
+    // limit 
+    " ( #decode# || #afterdecode# ) |-> ( RTL.io_interrupts_debug == 0)",
+    "RTL.ibuf_io_inst_0_valid |-> #DECODE_validInstructions#",
+    "RTL.wb_reg_valid |-> #WB_validInstructions#"
+
+
+  ],
+
+  "monitor" : {
+    "pipeline" : {
+      "template" : "phase tracker",
+      "event-alias" : {
+        "this_inst_finished"        : "#pipeline_inst_finished# & ~ #pipeline_second_finished#",
+        "before_next_inst_commit" : "#this_inst_finished# & RTL.wb_valid",
+        "justFinish"                : "#pipeline_inst_finished# && ~(#pipeline_inst_finished# ##1)", 
+        "before_commit"      : "#pipeline_mem_monitor# & RTL.wb_valid",
+        "check_point"               : "#justFinish#" // change this if it is not okay
+      },
+      "rules" : [
+        { "name"  : "dispatch", // inst_begin signal
+          "enter" : "#decode#",
+          "exit"  : "RTL.ex_reg_valid" // #pipeline_dispatch# & RTL.ex_reg_valid
+        },
+        { "name"  : "issue" ,
+          "enter" : "#pipeline_dispatch# & RTL.ex_reg_valid"
+        },
+        { "name"  : "ex_monitor" ,
+          "enter" : "#pipeline_dispatch# & RTL.ex_reg_valid & ~RTL.ctrl_killx",
+          "exit"  : "(#pipeline_ex_monitor# & RTL.mem_reg_valid) || RTL.ctrl_killx"
+        },
+        { "name"  : "mem_monitor" ,
+          "enter" : "#pipeline_ex_monitor# & RTL.mem_reg_valid & ~RTL.ctrl_killm",
+          "exit"  : "( #pipeline_mem_monitor# & RTL.wb_valid ) || RTL.ctrl_killm"
+        },
+        { "name"  : "inst_finished",
+          "enter" : "#pipeline_mem_monitor# & RTL.wb_valid"
+        },
+        { "name"  : "second_finished",
+          "enter" : "#before_next_inst_commit#"
+        }
+
+      ] // rules of pipeline monitor
+    }, // end of pipeline stage tracker
+    "memresp" : {
+      "template" : "phase tracker",
+      "event-alias" : {
+        "delay_check_point" : "#memresp_check_ready# && ~(#memresp_check_ready# ##1)",
+        "isInstLoad" : "#DECODE_isLoad# @ (#decode# ##1)"
+      },
+      "rules" : [
+        { "name" : "delay_check",
+          "enter": "#pipeline_mem_monitor# & RTL.wb_valid & #isInstLoad# & (#load_not_ack_yet# & ~ (RTL.io_dmem_resp_valid & RTL.io_dmem_resp_bits_has_data))",
+          "exit" : "RTL.io_dmem_resp_valid & RTL.io_dmem_resp_bits_has_data"
+        },
+        { "name" : "check_ready",
+          "enter": "#memresp_delay_check# & ( RTL.io_dmem_resp_valid & RTL.io_dmem_resp_bits_has_data )"
+        }
+      ]
+    }, // end of memresp
+
+    // tracking memory responses
+    "MEMRECORD" : {
+      "refs" : [ "RTL.io_imem_resp_bits_replay", "RTL.io_imem_resp_valid", "RTL.io_imem_req_valid", "RTL.io_imem_req_bits_pc", "RTL.io_imem_resp_ready", "RTL.io_dmem_req_ready", "RTL.io_dmem_s1_kill", "RTL.io_dmem_req_valid", "RTL.io_dmem_req_bits_addr", "RTL.io_dmem_req_bits_tag", "RTL.io_dmem_req_bits_cmd", "RTL.io_dmem_req_bits_typ", "RTL.io_dmem_req_bits_data", "RTL.io_dmem_s1_data", "#pipeline_ex_monitor#", "#decode#"],
+      "defs" : [
+        ["load_not_ack_yet", 1, "wire"], ["resp_a_non_monitored_req", 1, "wire"], ["io_imem_req_bits_pc_reg", 32, "reg"], ["io_imem_req_bits_pc_reg_1", 32, "wire"], ["io_imem_req_bits_pc_reg_2", 32, "wire"], ["io_imem_req_bits_pc_reg_3", 32, "wire"], ["io_imem_resp_bits_byte_0", 8, "wire"], ["io_imem_resp_bits_byte_1", 8, "wire"], ["io_imem_resp_bits_byte_2", 8, "wire"], ["io_imem_resp_bits_byte_3", 8, "wire"],
+        // and make it random
+        ["io_dmem_replay_next_rand", 1, "wire"] ,   // can be 1 at any time (but only once , at the output)
+        [ "io_dmem_ordered_0", 1, "reg" ],  [ "io_dmem_ordered_1", 1, "reg" ],  [ "dmem_req_valid_buf_0", 1, "reg" ],  [ "dmem_req_valid_buf_1", 1, "reg" ],  [ "dmem_req_valid", 1, "reg" ],  ["valid_buf0_input", 1, "wire"],  ["valid_buf1_input", 1, "wire"],  ["valid_buf__input", 1, "wire"],   [ "dmem_req_addr_0", 32, "reg"] ,
+        [ "dmem_req_tag_0", 7, "reg"] ,  [ "dmem_req_cmd_0", 5, "reg"] ,  [ "dmem_req_typ_0", 3, "reg"] ,  [ "dmem_req_data_0", 32, "reg"] ,   ["dmem_req_addr_1", 32, "reg"],
+        ["dmem_req_tag_1" , 7, "reg"], ["dmem_req_cmd_1" , 5, "reg"], ["dmem_req_typ_1" , 3, "reg"], ["dmem_req_data_1", 32, "reg"],  ["ex_monitor_1",   1, "reg"],
+        ["ex_monitor_eff", 1, "reg"],
+        ["dmem_req_addr", 32, "reg"], ["dmem_req_tag" , 7,  "reg"], ["dmem_req_cmd" , 5,  "reg"], ["dmem_req_typ" , 3,  "reg"], ["dmem_req_data", 32, "reg"],
+        ["dmem_req_addr0", 32, "wire"], ["dmem_req_addr1", 32, "wire"], ["dmem_req_addr2", 32, "wire"], ["dmem_req_addr3", 32, "wire"], ["dmem_req_rdata_byte_0", 8, "wire"], ["dmem_req_rdata_byte_1", 8, "wire"], ["dmem_req_rdata_byte_2", 8, "wire"], ["dmem_req_rdata_byte_3", 8, "wire"],
+        ["dmem_req_rdata", 32, "wire"], ["trans_dmem_req_rdata", 32, "wire"],
+        ["io_dmem_resp_bits_addr", 32, "wire" ],  ["io_dmem_resp_bits_tag", 7, "wire" ],  ["io_dmem_resp_bits_cmd", 5, "wire" ],  ["io_dmem_resp_bits_typ", 3, "wire" ],  ["io_dmem_resp_bits_data", 32, "wire" ],  ["io_dmem_resp_bits_has_data", 1, "wire" ],
+        ["io_dmem_s2_nack", 1, "wire"],  ["io_dmem_replay_next", 1, "wire"],  ["io_dmem_resp_valid" ,1, "reg"],  ["io_dmem_resp_bits_replay",1,"wire"],  ["io_dmem_ordered",1,"wire"],
+        ["io_imem_resp_bits_pc"  , 32, "wire"], ["io_imem_resp_bits_data", 32, "wire"],
+        ["offset_wr_addr", 2, "wire"],  ["aligned_wr_addr", 32, "wire"],  
+        ["aligned_wr_addr0", 32, "wire"], ["aligned_wr_addr1", 32, "wire"], ["aligned_wr_addr2", 32, "wire"], ["aligned_wr_addr3", 32, "wire"], 
+        ["aligned_byte_0", 8, "wire"], ["aligned_byte_1", 8, "wire"], ["aligned_byte_2", 8, "wire"], ["aligned_byte_3", 8, "wire"], ["aligned_data", 32, "wire"],  
+        ["Mask", 32, "reg"], ["OffsetData", 32, "reg"]
+           ], // end of defs
+      "verilog-from-file" : "../refinement/rfverilog/memrecord.v"
+    },
+
+    "DECODE" : {
+      "defs": [
+        [ "isLB", 1, "wire" ],[ "isLW", 1, "wire" ],[ "isLH", 1, "wire" ],[ "isLD", 1, "wire" ],[ "isLBU", 1, "wire" ],[ "isLHU", 1, "wire" ],[ "isLWU", 1, "wire" ],[ "isSB", 1, "wire" ],[ "isSH", 1, "wire" ],[ "isSW", 1, "wire" ],[ "isSD", 1, "wire" ],[ "isBEQ", 1, "wire" ],[ "isBNE", 1, "wire" ],[ "isBLT", 1, "wire" ],[ "isBGE", 1, "wire" ],[ "isBLTU", 1, "wire" ],[ "isBGEU", 1, "wire" ],[ "isJAL", 1, "wire" ],[ "isJALR", 1, "wire" ],[ "isLUI", 1, "wire" ],[ "isAUIPC", 1, "wire" ],[ "isADDI", 1, "wire" ],[ "isSLTI", 1, "wire" ],[ "isSLTIU", 1, "wire" ],[ "isXORI", 1, "wire" ],[ "isORI", 1, "wire" ],[ "isANDI", 1, "wire" ],[ "isSRLI", 1, "wire" ],[ "isSRAI", 1, "wire" ],[ "isSLLI", 1, "wire" ],[ "isADD", 1, "wire" ],[ "isSUB", 1, "wire" ],[ "isSLL", 1, "wire" ],[ "isSLT", 1, "wire" ],[ "isSLTU", 1, "wire" ],[ "isXOR", 1, "wire" ],[ "isSRL", 1, "wire" ],[ "isSRA", 1, "wire" ],[ "isOR", 1, "wire" ],[ "isAND", 1, "wire" ],[ "isCSRRW", 1, "wire" ],[ "isCSRRS", 1, "wire" ],[ "isCSRRC", 1, "wire" ],[ "isCSRRWI", 1, "wire" ],[ "isCSRRSI", 1, "wire" ],[ "isCSRRCI", 1, "wire" ],[ "isECALL", 1, "wire" ],[ "isEBREAK", 1, "wire" ],[ "isSRET", 1, "wire" ],[ "isMRET", 1, "wire" ],[ "isSFENCE_VM", 1, "wire" ],
+        [ "WBisLB", 1, "wire" ], [ "WBisLW", 1, "wire" ], ["WBisLH", 1, "wire" ], ["WBisLD", 1, "wire" ], ["WBisLBU", 1, "wire" ], ["WBisLHU", 1, "wire" ], ["WBisLWU", 1, "wire" ], ["WBisSB", 1, "wire" ], ["WBisSH", 1, "wire" ], ["WBisSW", 1, "wire" ], ["WBisSD", 1, "wire" ], ["WBisBEQ", 1, "wire" ], ["WBisBNE", 1, "wire" ], ["WBisBLT", 1, "wire" ], ["WBisBGE", 1, "wire" ], ["WBisBLTU", 1, "wire" ], ["WBisBGEU", 1, "wire" ], ["WBisJAL", 1, "wire" ], ["WBisJALR", 1, "wire" ], ["WBisLUI", 1, "wire" ], ["WBisAUIPC", 1, "wire" ], ["WBisADDI", 1, "wire" ], ["WBisSLTI", 1, "wire" ], ["WBisSLTIU", 1, "wire" ], ["WBisXORI", 1, "wire" ], ["WBisORI", 1, "wire" ], ["WBisANDI", 1, "wire" ], ["WBisSRLI", 1, "wire" ], ["WBisSRAI", 1, "wire" ], ["WBisSLLI", 1, "wire" ], ["WBisADD", 1, "wire" ], ["WBisSUB", 1, "wire" ], ["WBisSLL", 1, "wire" ], ["WBisSLT", 1, "wire" ], ["WBisSLTU", 1, "wire" ], ["WBisXOR", 1, "wire" ], ["WBisSRL", 1, "wire" ], ["WBisSRA", 1, "wire" ], ["WBisOR", 1, "wire" ], ["WBisAND", 1, "wire" ], ["WBisCSRRW", 1, "wire" ], ["WBisCSRRS", 1, "wire" ], ["WBisCSRRC", 1, "wire" ], ["WBisCSRRWI", 1, "wire" ], ["WBisCSRRSI", 1, "wire" ], ["WBisCSRRCI", 1, "wire" ], ["WBisECALL", 1, "wire" ], ["WBisEBREAK", 1, "wire" ], ["WBisSRET", 1, "wire" ], ["WBisMRET", 1, "wire" ], ["WBisSFENCE_VM", 1, "wire" ],
+        [ "DECODE_isLoad", 1 , "wire"], [ "WBisBranch", 1, "wire"], [ "DECODE_validInstructions", 1, "wire"], [ "WB_validInstructions", 1, "wire"],
+        [ "WBimmS", 32 , "wire"], ["WBimmI", 32, "wire"], [ "WBimmJ", 32 , "wire"], ["WBimmB", 32, "wire"], ["rf_idx_i", 4 , "wire"],
+        [ "loadAddr", 2, "wire"], ["storeAddr", 2, "wire"], 
+        [ "inst_decode_rd", 5, "reg"]
+      ],
+      "refs" : ["RTL.ibuf_io_inst_0_bits_inst_bits", "RTL.wb_reg_inst", "RTL.rf_idx_o" , "#decode#"],
+      "verilog-from-file" : "../refinement/rfverilog/DECODE.v"
+    }
+
+
+
+  } // end of all monitors
+
+}
+

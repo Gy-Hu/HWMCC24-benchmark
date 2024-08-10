@@ -1,0 +1,2 @@
+/data/wenjifang/vpipe-mc/codingcamp
+/home/codingcamp

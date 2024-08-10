@@ -1,0 +1,11 @@
+read_verilog -sv test.v
+prep -top test
+
+hierarchy -check
+setundef -undriven -init -expose
+sim -clock clk -reset rst -rstlen 1 -n 1 -w test
+delete -output
+techmap
+abc -fast -g AND
+write_aiger -zinit test.aig
+

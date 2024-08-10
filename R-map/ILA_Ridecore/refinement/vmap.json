@@ -1,0 +1,334 @@
+{
+  "state mapping": { 
+    "x0"        : "ILA.x0 == 0",
+    "x1"        : [ ["decode", "pre_r1" ],["commit", "post_r1" ]],
+    "x2"        : [ ["decode", "pre_r2" ],["commit", "post_r2" ]],
+    "x3"        : [ ["decode", "pre_r3" ],["commit", "post_r3" ]],
+    "x4"        : [ ["decode", "pre_r4" ],["commit", "post_r4" ]],
+    "x5"        : [ ["decode", "pre_r5" ],["commit", "post_r5" ]],
+    "x6"        : [ ["decode", "pre_r6" ],["commit", "post_r6" ]],
+    "x7"        : [ ["decode", "pre_r7" ],["commit", "post_r7" ]],
+    "x8"        : [ ["decode", "pre_r8" ],["commit", "post_r8" ]],
+    "x9"        : [ ["decode", "pre_r9" ],["commit", "post_r9" ]],
+    "x10"       : [ ["decode", "pre_r10"],["commit", "post_r10"]],
+    "x11"       : [ ["decode", "pre_r11"],["commit", "post_r11"]],
+    "x12"       : [ ["decode", "pre_r12"],["commit", "post_r12"]],
+    "x13"       : [ ["decode", "pre_r13"],["commit", "post_r13"]],
+    "x14"       : [ ["decode", "pre_r14"],["commit", "post_r14"]],
+    "x15"       : [ ["decode", "pre_r15"],["commit", "post_r15"]],
+    "x16"       : [ ["decode", "pre_r16"],["commit", "post_r16"]],
+    "x17"       : [ ["decode", "pre_r17"],["commit", "post_r17"]],
+    "x18"       : [ ["decode", "pre_r18"],["commit", "post_r18"]],
+    "x19"       : [ ["decode", "pre_r19"],["commit", "post_r19"]],
+    "x20"       : [ ["decode", "pre_r20"],["commit", "post_r20"]],
+    "x21"       : [ ["decode", "pre_r21"],["commit", "post_r21"]],
+    "x22"       : [ ["decode", "pre_r22"],["commit", "post_r22"]],
+    "x23"       : [ ["decode", "pre_r23"],["commit", "post_r23"]],
+    "x24"       : [ ["decode", "pre_r24"],["commit", "post_r24"]],
+    "x25"       : [ ["decode", "pre_r25"],["commit", "post_r25"]],
+    "x26"       : [ ["decode", "pre_r26"],["commit", "post_r26"]],
+    "x27"       : [ ["decode", "pre_r27"],["commit", "post_r27"]],
+    "x28"       : [ ["decode", "pre_r28"],["commit", "post_r28"]],
+    "x29"       : [ ["decode", "pre_r29"],["commit", "post_r29"]],
+    "x30"       : [ ["decode", "pre_r30"],["commit", "post_r30"]],
+    "x31"       : [ ["decode", "pre_r31"],["commit", "post_r31"]],
+
+    "pc"        : [[ "decode" , "#pc_pre#"], [ "commit" , "#pc_post#"  ]],
+    "mem"      : {
+      "ren"   : "mem_en && (RTL.memoccupy_ld @ ldst_ex)",
+      "raddr" : "RTL.ldaddr @ ldst_ex",
+      "rdata" : "RTL.dmem_data @ ldst_res_back",
+      "wen"   : "mem_en && (~RTL.memoccupy_ld @ ldst_ex)",
+      "waddr" : "RTL.seiryu.storeaddr @ ldst_ex",
+      "wdata" : "RTL.seiryu.storedata @ ldst_ex"
+    }
+  },
+
+  "rtl interface connection": {
+    "RESET" : "reset",
+    "CLOCK" : "clk"
+  },
+
+  "input mapping" : {
+    "inst" : "fetch_sel2 ? RTL.inst2 : RTL.inst1"
+  },
+
+
+  "additional mapping": [
+    // "start |-> ", IF always valid
+    "fetch_sel2 |-> (RTL.invalid2_pipe@decode == 1'b0)",
+    "fetch_sel2 |-> (RTL.inv2_if@stage_IF == 1'b0)",
+    "fetch_sel2 |-> (RTL.inv2_id@stage_ID == 1'b0)",
+    "( RTL.pc == RTL.pc##1 ) |-> ( RTL.idata == RTL.idata ## 1 )"
+
+  ],
+
+
+  "assumptions" :     [  "RTL.pc[1:0] == 0", 
+                         "(decode || afterdecode ) |->  (RTL.illegal_instruction_1 == 0)", 
+                         "(decode || afterdecode ) |->  (RTL.illegal_instruction_2 == 0)"
+                      ],
+
+  "monitors":
+  { 
+    "fetch_sel2":"fetch_arb@0", // a constant throughout a run
+    "rob_match2": "robcommit2 @ (robexit ## 1)", 
+
+    "stage" : {
+      "template" : "stage tracker",
+      "aux var"  : [
+        ["robptr", 6, "reg"], ["fetch_arb",1,"wire"], ["robcommit2", 1, "reg"],
+        ["ldstptr", 2, "reg"]
+      ],
+      "event alias" : {
+       "robexit" :"stage_ROB & ( ( robptr == RTL.rob.comptr && RTL.rob.commit1 )|| ( robptr == RTL.rob.comptr2 && RTL.rob.commit2) )",
+       "ldst_rs_exit" : "stage_LDST_RS && ( ldstptr == RTL.issueent_ldst) && RTL.issue_ldst",
+       "ldst_ex" : "ldst_rs_exit ##1",
+       "ldst_res_back" : "ldst_ex ## 1",
+       "mem_en" : " (fetch_sel2 ? RTL.reserv_ldst.we2 : RTL.reserv_ldst.we1) @ stage_ID",
+       "second_robexit" : "stage_ROB_exited & RTL.rob.commit1"
+      },
+      "rules" : [
+        { "name" : "IF", 
+          "enter": "#decode# & ~ RTL.stall_IF ",
+          "exit" : "RTL.reset | RTL.kill_IF | (stage_IF & ~ RTL.stall_DP)"
+        },
+        { "name" : "ID", 
+          "enter": "#stage_IF# & ~ RTL.stall_DP ",
+          "exit" : "RTL.reset | RTL.kill_ID | (#stage_ID# & ~#stage_IF# & ~ RTL.stall_DP)" 
+        },
+        { "name" : "ROB",
+          "enter": {"event"  : "fetch_sel2 ? stage_ID & RTL.rob.dp2 : stage_ID & RTL.rob.dp1",
+                    "action" : "robptr <= fetch_sel2 ? RTL.rob.dp2_addr : RTL.rob.dp1_addr"},
+          "exit" : {"event"  : "robexit",
+                    "action" : "robcommit2 <= (robptr == RTL.rob.comptr2 && RTL.rob.commit2)"}
+        },
+        { "name" : "ARF", // update aregfile
+          "enter" : "robexit", "exit" : "robexit ## 1"
+        },
+        { "name" : "LDST_RS", // from 
+          "enter": {
+              "event" : "fetch_sel2 ? stage_ID & RTL.reserv_ldst.we2 : stage_ID & RTL.reserv_ldst.we1",
+              "action" : "ldstptr <= fetch_sel2 ? RTL.reserv_ldst.waddr2 : RTL.reserv_ldst.waddr1"},
+          "exit" : {
+            "event" : "ldst_rs_exit"
+          }
+        },
+        { "name" : "ROB_exited",
+          "enter": "robexit", "exit" : "second_robexit"
+        }
+      ]      
+    }, // end of stage
+
+    "second_commit_pc" : "RTL.inst_pc1@second_robexit",
+    "pc_pre" : "rob_match2 ? (RTL.inst_pc2@robexit) : RTL.inst_pc1@robexit",
+    "pc_post": "(rob_match2 || !cmt2 )? second_commit_pc : RTL.inst_pc2@robexit",
+    
+    "cmt1" : "RTL.rob.commit1 @ robexit",
+    "wen1" : "RTL.aregfile.we1_0reg @ robexit",
+    "wrf1" : "RTL.aregfile.wreg1 @ robexit",
+    "wdata1" : "RTL.aregfile.wdata1 @ robexit",
+
+    "cmt2" : "RTL.rob.commit2 @ robexit",
+    "wen2" : "RTL.aregfile.we2_0reg @ robexit",
+    "wrf2" : "RTL.aregfile.wreg2 @ robexit",
+    "wdata2" : "RTL.aregfile.wdata2 @ robexit",
+
+    "s0_r0"  : "RTL.aregfile.regfile.mem[0] @ robexit",
+    "s1_r0"  : "(cmt1 && wen1 && (wrf1 == 0)) ? wdata1 : s0_r0",
+    "s2_r0"  : "(cmt2 && wen2 && (wrf2 == 0)) ? wdata2 : s1_r0",
+    "pre_r0"  : "rob_match2 ? s1_r0 : s0_r0",
+    "post_r0" : "rob_match2 ? s2_r0 : s1_r0",
+    // for r1 ... r31
+ 
+    "s0_r1"  : "RTL.aregfile.regfile.mem[1] @ robexit",
+    "s1_r1"  : "(#cmt1# && #wen1# && (#wrf1# == 1)) ? #wdata1# : #s0_r1#",
+    "s2_r1"  : "(#cmt2# && #wen2# && (#wrf2# == 1)) ? #wdata2# : #s1_r1#",
+    "pre_r1" : "rob_match2 ? s1_r1 : s0_r1",
+    "post_r1": "rob_match2 ? s2_r1 : s1_r1",
+
+    "s0_r2"  : "RTL.aregfile.regfile.mem[2] @ robexit",
+    "s1_r2"  : "(#cmt1# && #wen1# && (#wrf1# == 2)) ? #wdata1# : #s0_r2#",
+    "s2_r2"  : "(#cmt2# && #wen2# && (#wrf2# == 2)) ? #wdata2# : #s1_r2#",
+    "pre_r2" : "rob_match2 ? s1_r2 : s0_r2",
+    "post_r2": "rob_match2 ? s2_r2 : s1_r2",
+
+    "s0_r3"  : "RTL.aregfile.regfile.mem[3] @ robexit",
+    "s1_r3"  : "(#cmt1# && #wen1# && (#wrf1# == 3)) ? #wdata1# : #s0_r3#",
+    "s2_r3"  : "(#cmt2# && #wen2# && (#wrf2# == 3)) ? #wdata2# : #s1_r3#",
+    "pre_r3" : "rob_match2 ? s1_r3 : s0_r3",
+    "post_r3": "rob_match2 ? s2_r3 : s1_r3",
+
+    "s0_r4"  : "RTL.aregfile.regfile.mem[4] @ robexit",
+    "s1_r4"  : "(#cmt1# && #wen1# && (#wrf1# == 4)) ? #wdata1# : #s0_r4#",
+    "s2_r4"  : "(#cmt2# && #wen2# && (#wrf2# == 4)) ? #wdata2# : #s1_r4#",
+    "pre_r4" : "rob_match2 ? s1_r4 : s0_r4",
+    "post_r4": "rob_match2 ? s2_r4 : s1_r4",
+
+    "s0_r5"  : "RTL.aregfile.regfile.mem[5] @ robexit",
+    "s1_r5"  : "(#cmt1# && #wen1# && (#wrf1# == 5)) ? #wdata1# : #s0_r5#",
+    "s2_r5"  : "(#cmt2# && #wen2# && (#wrf2# == 5)) ? #wdata2# : #s1_r5#",
+    "pre_r5" : "rob_match2 ? s1_r5 : s0_r5",
+    "post_r5": "rob_match2 ? s2_r5 : s1_r5",
+
+    "s0_r6"  : "RTL.aregfile.regfile.mem[6] @ robexit",
+    "s1_r6"  : "(#cmt1# && #wen1# && (#wrf1# == 6)) ? #wdata1# : #s0_r6#",
+    "s2_r6"  : "(#cmt2# && #wen2# && (#wrf2# == 6)) ? #wdata2# : #s1_r6#",
+    "pre_r6" : "rob_match2 ? s1_r6 : s0_r6",
+    "post_r6": "rob_match2 ? s2_r6 : s1_r6",
+
+    "s0_r7"  : "RTL.aregfile.regfile.mem[7] @ robexit",
+    "s1_r7"  : "(#cmt1# && #wen1# && (#wrf1# == 7)) ? #wdata1# : #s0_r7#",
+    "s2_r7"  : "(#cmt2# && #wen2# && (#wrf2# == 7)) ? #wdata2# : #s1_r7#",
+    "pre_r7" : "rob_match2 ? s1_r7 : s0_r7",
+    "post_r7": "rob_match2 ? s2_r7 : s1_r7",
+
+    "s0_r8"  : "RTL.aregfile.regfile.mem[8] @ robexit",
+    "s1_r8"  : "(#cmt1# && #wen1# && (#wrf1# == 8)) ? #wdata1# : #s0_r8#",
+    "s2_r8"  : "(#cmt2# && #wen2# && (#wrf2# == 8)) ? #wdata2# : #s1_r8#",
+    "pre_r8" : "rob_match2 ? s1_r8 : s0_r8",
+    "post_r8": "rob_match2 ? s2_r8 : s1_r8",
+
+    "s0_r9"  : "RTL.aregfile.regfile.mem[9] @ robexit",
+    "s1_r9"  : "(#cmt1# && #wen1# && (#wrf1# == 9)) ? #wdata1# : #s0_r9#",
+    "s2_r9"  : "(#cmt2# && #wen2# && (#wrf2# == 9)) ? #wdata2# : #s1_r9#",
+    "pre_r9" : "rob_match2 ? s1_r9 : s0_r9",
+    "post_r9": "rob_match2 ? s2_r9 : s1_r9",
+
+    "s0_r10"  : "RTL.aregfile.regfile.mem[10] @ robexit",
+    "s1_r10"  : "(#cmt1# && #wen1# && (#wrf1# == 10)) ? #wdata1# : #s0_r10#",
+    "s2_r10"  : "(#cmt2# && #wen2# && (#wrf2# == 10)) ? #wdata2# : #s1_r10#",
+    "pre_r10" : "rob_match2 ? s1_r10 : s0_r10",
+    "post_r10": "rob_match2 ? s2_r10 : s1_r10",
+
+    "s0_r11"  : "RTL.aregfile.regfile.mem[11] @ robexit",
+    "s1_r11"  : "(#cmt1# && #wen1# && (#wrf1# == 11)) ? #wdata1# : #s0_r11#",
+    "s2_r11"  : "(#cmt2# && #wen2# && (#wrf2# == 11)) ? #wdata2# : #s1_r11#",
+    "pre_r11" : "rob_match2 ? s1_r11 : s0_r11",
+    "post_r11": "rob_match2 ? s2_r11 : s1_r11",
+
+    "s0_r12"  : "RTL.aregfile.regfile.mem[12] @ robexit",
+    "s1_r12"  : "(#cmt1# && #wen1# && (#wrf1# == 12)) ? #wdata1# : #s0_r12#",
+    "s2_r12"  : "(#cmt2# && #wen2# && (#wrf2# == 12)) ? #wdata2# : #s1_r12#",
+    "pre_r12" : "rob_match2 ? s1_r12 : s0_r12",
+    "post_r12": "rob_match2 ? s2_r12 : s1_r12",
+
+    "s0_r13"  : "RTL.aregfile.regfile.mem[13] @ robexit",
+    "s1_r13"  : "(#cmt1# && #wen1# && (#wrf1# == 13)) ? #wdata1# : #s0_r13#",
+    "s2_r13"  : "(#cmt2# && #wen2# && (#wrf2# == 13)) ? #wdata2# : #s1_r13#",
+    "pre_r13" : "rob_match2 ? s1_r13 : s0_r13",
+    "post_r13": "rob_match2 ? s2_r13 : s1_r13",
+
+    "s0_r14"  : "RTL.aregfile.regfile.mem[14] @ robexit",
+    "s1_r14"  : "(#cmt1# && #wen1# && (#wrf1# == 14)) ? #wdata1# : #s0_r14#",
+    "s2_r14"  : "(#cmt2# && #wen2# && (#wrf2# == 14)) ? #wdata2# : #s1_r14#",
+    "pre_r14" : "rob_match2 ? s1_r14 : s0_r14",
+    "post_r14": "rob_match2 ? s2_r14 : s1_r14",
+
+    "s0_r15"  : "RTL.aregfile.regfile.mem[15] @ robexit",
+    "s1_r15"  : "(#cmt1# && #wen1# && (#wrf1# == 15)) ? #wdata1# : #s0_r15#",
+    "s2_r15"  : "(#cmt2# && #wen2# && (#wrf2# == 15)) ? #wdata2# : #s1_r15#",
+    "pre_r15" : "rob_match2 ? s1_r15 : s0_r15",
+    "post_r15": "rob_match2 ? s2_r15 : s1_r15",
+
+    "s0_r16"  : "RTL.aregfile.regfile.mem[16] @ robexit",
+    "s1_r16"  : "(#cmt1# && #wen1# && (#wrf1# == 16)) ? #wdata1# : #s0_r16#",
+    "s2_r16"  : "(#cmt2# && #wen2# && (#wrf2# == 16)) ? #wdata2# : #s1_r16#",
+    "pre_r16" : "rob_match2 ? s1_r16 : s0_r16",
+    "post_r16": "rob_match2 ? s2_r16 : s1_r16",
+
+    "s0_r17"  : "RTL.aregfile.regfile.mem[17] @ robexit",
+    "s1_r17"  : "(#cmt1# && #wen1# && (#wrf1# == 17)) ? #wdata1# : #s0_r17#",
+    "s2_r17"  : "(#cmt2# && #wen2# && (#wrf2# == 17)) ? #wdata2# : #s1_r17#",
+    "pre_r17" : "rob_match2 ? s1_r17 : s0_r17",
+    "post_r17": "rob_match2 ? s2_r17 : s1_r17",
+
+    "s0_r18"  : "RTL.aregfile.regfile.mem[18] @ robexit",
+    "s1_r18"  : "(#cmt1# && #wen1# && (#wrf1# == 18)) ? #wdata1# : #s0_r18#",
+    "s2_r18"  : "(#cmt2# && #wen2# && (#wrf2# == 18)) ? #wdata2# : #s1_r18#",
+    "pre_r18" : "rob_match2 ? s1_r18 : s0_r18",
+    "post_r18": "rob_match2 ? s2_r18 : s1_r18",
+
+    "s0_r19"  : "RTL.aregfile.regfile.mem[19] @ robexit",
+    "s1_r19"  : "(#cmt1# && #wen1# && (#wrf1# == 19)) ? #wdata1# : #s0_r19#",
+    "s2_r19"  : "(#cmt2# && #wen2# && (#wrf2# == 19)) ? #wdata2# : #s1_r19#",
+    "pre_r19" : "rob_match2 ? s1_r19 : s0_r19",
+    "post_r19": "rob_match2 ? s2_r19 : s1_r19",
+
+    "s0_r20"  : "RTL.aregfile.regfile.mem[20] @ robexit",
+    "s1_r20"  : "(#cmt1# && #wen1# && (#wrf1# == 20)) ? #wdata1# : #s0_r20#",
+    "s2_r20"  : "(#cmt2# && #wen2# && (#wrf2# == 20)) ? #wdata2# : #s1_r20#",
+    "pre_r20" : "rob_match2 ? s1_r20 : s0_r20",
+    "post_r20": "rob_match2 ? s2_r20 : s1_r20",
+
+    "s0_r21"  : "RTL.aregfile.regfile.mem[21] @ robexit",
+    "s1_r21"  : "(#cmt1# && #wen1# && (#wrf1# == 21)) ? #wdata1# : #s0_r21#",
+    "s2_r21"  : "(#cmt2# && #wen2# && (#wrf2# == 21)) ? #wdata2# : #s1_r21#",
+    "pre_r21" : "rob_match2 ? s1_r21 : s0_r21",
+    "post_r21": "rob_match2 ? s2_r21 : s1_r21",
+
+    "s0_r22"  : "RTL.aregfile.regfile.mem[22] @ robexit",
+    "s1_r22"  : "(#cmt1# && #wen1# && (#wrf1# == 22)) ? #wdata1# : #s0_r22#",
+    "s2_r22"  : "(#cmt2# && #wen2# && (#wrf2# == 22)) ? #wdata2# : #s1_r22#",
+    "pre_r22" : "rob_match2 ? s1_r22 : s0_r22",
+    "post_r22": "rob_match2 ? s2_r22 : s1_r22",
+
+    "s0_r23"  : "RTL.aregfile.regfile.mem[23] @ robexit",
+    "s1_r23"  : "(#cmt1# && #wen1# && (#wrf1# == 23)) ? #wdata1# : #s0_r23#",
+    "s2_r23"  : "(#cmt2# && #wen2# && (#wrf2# == 23)) ? #wdata2# : #s1_r23#",
+    "pre_r23" : "rob_match2 ? s1_r23 : s0_r23",
+    "post_r23": "rob_match2 ? s2_r23 : s1_r23",
+
+    "s0_r24"  : "RTL.aregfile.regfile.mem[24] @ robexit",
+    "s1_r24"  : "(#cmt1# && #wen1# && (#wrf1# == 24)) ? #wdata1# : #s0_r24#",
+    "s2_r24"  : "(#cmt2# && #wen2# && (#wrf2# == 24)) ? #wdata2# : #s1_r24#",
+    "pre_r24" : "rob_match2 ? s1_r24 : s0_r24",
+    "post_r24": "rob_match2 ? s2_r24 : s1_r24",
+
+    "s0_r25"  : "RTL.aregfile.regfile.mem[25] @ robexit",
+    "s1_r25"  : "(#cmt1# && #wen1# && (#wrf1# == 25)) ? #wdata1# : #s0_r25#",
+    "s2_r25"  : "(#cmt2# && #wen2# && (#wrf2# == 25)) ? #wdata2# : #s1_r25#",
+    "pre_r25" : "rob_match2 ? s1_r25 : s0_r25",
+    "post_r25": "rob_match2 ? s2_r25 : s1_r25",
+
+    "s0_r26"  : "RTL.aregfile.regfile.mem[26] @ robexit",
+    "s1_r26"  : "(#cmt1# && #wen1# && (#wrf1# == 26)) ? #wdata1# : #s0_r26#",
+    "s2_r26"  : "(#cmt2# && #wen2# && (#wrf2# == 26)) ? #wdata2# : #s1_r26#",
+    "pre_r26" : "rob_match2 ? s1_r26 : s0_r26",
+    "post_r26": "rob_match2 ? s2_r26 : s1_r26",
+
+    "s0_r27"  : "RTL.aregfile.regfile.mem[27] @ robexit",
+    "s1_r27"  : "(#cmt1# && #wen1# && (#wrf1# == 27)) ? #wdata1# : #s0_r27#",
+    "s2_r27"  : "(#cmt2# && #wen2# && (#wrf2# == 27)) ? #wdata2# : #s1_r27#",
+    "pre_r27" : "rob_match2 ? s1_r27 : s0_r27",
+    "post_r27": "rob_match2 ? s2_r27 : s1_r27",
+
+    "s0_r28"  : "RTL.aregfile.regfile.mem[28] @ robexit",
+    "s1_r28"  : "(#cmt1# && #wen1# && (#wrf1# == 28)) ? #wdata1# : #s0_r28#",
+    "s2_r28"  : "(#cmt2# && #wen2# && (#wrf2# == 28)) ? #wdata2# : #s1_r28#",
+    "pre_r28" : "rob_match2 ? s1_r28 : s0_r28",
+    "post_r28": "rob_match2 ? s2_r28 : s1_r28",
+
+    "s0_r29"  : "RTL.aregfile.regfile.mem[29] @ robexit",
+    "s1_r29"  : "(#cmt1# && #wen1# && (#wrf1# == 29)) ? #wdata1# : #s0_r29#",
+    "s2_r29"  : "(#cmt2# && #wen2# && (#wrf2# == 29)) ? #wdata2# : #s1_r29#",
+    "pre_r29" : "rob_match2 ? s1_r29 : s0_r29",
+    "post_r29": "rob_match2 ? s2_r29 : s1_r29",
+
+    "s0_r30"  : "RTL.aregfile.regfile.mem[30] @ robexit",
+    "s1_r30"  : "(#cmt1# && #wen1# && (#wrf1# == 30)) ? #wdata1# : #s0_r30#",
+    "s2_r30"  : "(#cmt2# && #wen2# && (#wrf2# == 30)) ? #wdata2# : #s1_r30#",
+    "pre_r30" : "rob_match2 ? s1_r30 : s0_r30",
+    "post_r30": "rob_match2 ? s2_r30 : s1_r30",
+
+    "s0_r31"  : "RTL.aregfile.regfile.mem[31] @ robexit",
+    "s1_r31"  : "(#cmt1# && #wen1# && (#wrf1# == 31)) ? #wdata1# : #s0_r31#",
+    "s2_r31"  : "(#cmt2# && #wen2# && (#wrf2# == 31)) ? #wdata2# : #s1_r31#",
+    "pre_r31" : "rob_match2 ? s1_r31 : s0_r31",
+    "post_r31": "rob_match2 ? s2_r31 : s1_r31"
+  }, // end of monitor
+  "annotation" : {
+    "width" : {"RTL.aregfile.regfile.mem" : 32},
+    "range" : {"RTL.aregfile.regfile.mem" : 32}
+  }
+}

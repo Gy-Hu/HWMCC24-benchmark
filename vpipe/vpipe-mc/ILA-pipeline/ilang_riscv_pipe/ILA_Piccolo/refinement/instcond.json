@@ -1,0 +1,191 @@
+{
+  "global invariants" : [
+"! (RTL.csr_regfile.f_reset_rsps.empty_reg                 == 0 && RTL.csr_regfile.f_reset_rsps.full_reg ==                   0 )",
+"! (RTL.f_reset_reqs.empty_reg                             == 0 && RTL.f_reset_reqs.full_reg ==                               0 )",
+"! (RTL.f_reset_rsps.empty_reg                             == 0 && RTL.f_reset_rsps.full_reg ==                               0 )",
+"! ( RTL.gpr_regfile.f_reset_rsps.empty_reg                == 0 && RTL.gpr_regfile.f_reset_rsps.full_reg ==                   0 )",
+"! ( RTL.near_mem.dcache.f_fabric_write_reqs.empty_reg     == 0 && RTL.near_mem.dcache.f_fabric_write_reqs.full_reg ==        0 )",
+"! ( RTL.near_mem.dcache.f_reset_reqs.empty_reg            == 0 && RTL.near_mem.dcache.f_reset_reqs.full_reg ==               0 )",
+"! ( RTL.near_mem.dcache.f_reset_rsps.empty_reg            == 0 && RTL.near_mem.dcache.f_reset_rsps.full_reg ==               0 )",
+"! ( RTL.near_mem.dcache.master_xactor_f_rd_addr.empty_reg == 0 && RTL.near_mem.dcache.master_xactor_f_rd_addr.full_reg ==    0 )",
+"! ( RTL.near_mem.dcache.master_xactor_f_rd_data.empty_reg == 0 && RTL.near_mem.dcache.master_xactor_f_rd_data.full_reg ==    0 )",
+"! ( RTL.near_mem.dcache.master_xactor_f_wr_addr.empty_reg == 0 && RTL.near_mem.dcache.master_xactor_f_wr_addr.full_reg ==    0 )",
+"! ( RTL.near_mem.dcache.master_xactor_f_wr_data.empty_reg == 0 && RTL.near_mem.dcache.master_xactor_f_wr_data.full_reg ==    0 )",
+"! ( RTL.near_mem.dcache.master_xactor_f_wr_resp.empty_reg == 0 && RTL.near_mem.dcache.master_xactor_f_wr_resp.full_reg ==    0 )",
+"! ( RTL.near_mem.f_reset_rsps.empty_reg                   == 0 && RTL.near_mem.f_reset_rsps.full_reg ==                      0 )",
+"! ( RTL.near_mem.icache.f_fabric_write_reqs.empty_reg     == 0 && RTL.near_mem.icache.f_fabric_write_reqs.full_reg ==        0 )",
+"! ( RTL.near_mem.icache.f_reset_reqs.empty_reg            == 0 && RTL.near_mem.icache.f_reset_reqs.full_reg ==               0 )",
+"! ( RTL.near_mem.icache.f_reset_rsps.empty_reg            == 0 && RTL.near_mem.icache.f_reset_rsps.full_reg ==               0 )",
+"! ( RTL.near_mem.icache.master_xactor_f_rd_addr.full_reg  == 0 &&  RTL.near_mem.icache.master_xactor_f_rd_addr.empty_reg ==  0 )",
+"! ( RTL.near_mem.icache.master_xactor_f_rd_data.empty_reg == 0 && RTL.near_mem.icache.master_xactor_f_rd_data.full_reg  ==   0 )",
+"! ( RTL.near_mem.icache.master_xactor_f_wr_addr.empty_reg == 0 && RTL.near_mem.icache.master_xactor_f_wr_addr.full_reg ==    0 )",
+"! ( RTL.near_mem.icache.master_xactor_f_wr_data.empty_reg == 0 && RTL.near_mem.icache.master_xactor_f_wr_data.full_reg ==    0 )",
+"! ( RTL.near_mem.icache.master_xactor_f_wr_resp.empty_reg == 0 && RTL.near_mem.icache.master_xactor_f_wr_resp.full_reg ==    0 )",
+"! ( RTL.stage1_f_reset_reqs.empty_reg                     == 0 && RTL.stage1_f_reset_reqs.full_reg ==                        0 )",
+"! ( RTL.stage1_f_reset_rsps.empty_reg                     == 0 && RTL.stage1_f_reset_rsps.full_reg ==                        0 )",
+"! ( RTL.stage2_f_reset_reqs.empty_reg                     == 0 && RTL.stage2_f_reset_reqs.full_reg ==                        0 )",
+"! ( RTL.stage2_f_reset_rsps.empty_reg                     == 0 && RTL.stage2_f_reset_rsps.full_reg ==                        0 )",
+"! ( RTL.stage3_f_reset_reqs.empty_reg                     == 0 && RTL.stage3_f_reset_reqs.full_reg ==                        0 )",
+"! ( RTL.stage3_f_reset_rsps.empty_reg                     == 0 && RTL.stage3_f_reset_rsps.full_reg ==                        0 )",
+// for AUIPC
+"(((!((RTL.stage2_f_reset_reqs.empty_reg) == (1'b1))) ||(!((RTL.stage3_f_reset_reqs.empty_reg) == (1'b0))) ||(!((RTL.stage3_rg_full) == (1'b1)))) &&((!((RTL.stage2_rg_full) == (1'b1))) ||(!((RTL.stage2_f_reset_reqs.empty_reg) == (1'b1))) ||(!((RTL.f_reset_reqs.empty_reg) == (1'b0))) ||(!((RTL.f_reset_reqs.full_reg) == (1'b0)))) &&((!((RTL.stage2_f_reset_reqs.empty_reg) == (1'b1))) ||(!((RTL.stage3_f_reset_reqs.empty_reg) == (1'b0))) ||(!((RTL.stage2_rg_full) == (1'b1)))))",
+"(((!((RTL.csr_regfile.rg_state) == (1'b1))) ||(!((RTL.stage2_f_reset_reqs.empty_reg) == (1'b1)))) &&((RTL.stage2_f_reset_reqs.full_reg) == (1'b1)))",
+// additionally from ADD
+"(((!((RTL.stage3_f_reset_rsps.full_reg) == (1'b1))) ||(!((RTL.gpr_regfile.f_reset_rsps.full_reg) == (1'b0))) ||(!((RTL.csr_regfile.f_reset_rsps.empty_reg) == (1'b0)))) &&((!((RTL.stage3_f_reset_reqs.empty_reg) == (1'b1))) ||(!((RTL.stage3_f_reset_rsps.full_reg) == (1'b1))) ||(!((RTL.csr_regfile.f_reset_rsps.empty_reg) == (1'b0))) ||(!((RTL.stage3_f_reset_rsps.empty_reg) == (1'b0)))))",
+"(((!((RTL.stage2_rg_full) == (1'b1))) ||(!((RTL.csr_regfile.rg_state) == (1'b1))) ||(!((RTL.rg_run_on_reset) == (1'b1))) ||(!((RTL.stage3_f_reset_reqs.empty_reg) == (1'b1))) ||(!((RTL.stage3_f_reset_rsps.full_reg) == (1'b1))) ||(!(RTL.stage2_rg_stage2[101:101])) ||((RTL.near_mem.dcache.rg_addr[4:4]) == (1'b1)) ||(!((RTL.near_mem.dcache.rg_pa[4:4]) == (1'b1)))) &&(!((RTL.csr_regfile.rg_nmi) == (1'b1))) &&((!((RTL.rg_state[0:0]) == (1'b1))) ||(!((RTL.stage2_f_reset_reqs.empty_reg) == (1'b0))) ||(!((RTL.csr_regfile.rg_state) == (1'b0)))) &&(((RTL.stage3_f_reset_reqs.full_reg) == (1'b1)) ||(!(RTL.rg_trap_instr[22:22])) ||(!(RTL.rg_trap_instr[20:20])) ||(!(RTL.rg_trap_instr[26:26])) ||(!((RTL.stage2_f_reset_reqs.empty_reg) == (1'b0))) ||(!((RTL.csr_regfile.rg_state) == (1'b0)))) &&((!((RTL.stage2_rg_full) == (1'b1))) ||(!((RTL.rg_run_on_reset) == (1'b1))) ||(!((RTL.stage3_f_reset_reqs.empty_reg) == (1'b1))) ||(!((RTL.stage3_f_reset_rsps.full_reg) == (1'b1))) ||(!((RTL.stage3_f_reset_reqs.full_reg) == (1'b0)))))",
+"(((!((RTL.stage3_f_reset_rsps.empty_reg) == (1'b0))) ||(!((RTL.stage3_f_reset_reqs.empty_reg) == (1'b1))) ||(!((RTL.stage3_f_reset_rsps.full_reg) == (1'b1))) ||(!((RTL.stage3_f_reset_reqs.full_reg) == (1'b0)))) &&((!((RTL.stage2_f_reset_reqs.empty_reg) == (1'b0))) ||(!((RTL.rg_state[0:0]) == (1'b1))) ||(!((RTL.stage3_f_reset_reqs.empty_reg) == (1'b1))) ||(!((RTL.stage3_f_reset_rsps.full_reg) == (1'b1))) ||(RTL.rg_run_on_reset[0:0])) &&((!((RTL.stage2_rg_full) == (1'b1))) ||(!((RTL.stage2_f_reset_reqs.empty_reg) == (1'b0))) ||(!((RTL.rg_state[0:0]) == (1'b1))) ||(!((RTL.stage3_f_reset_reqs.empty_reg) == (1'b1))) ||(!((RTL.stage3_f_reset_rsps.full_reg) == (1'b1))) ||(RTL.stage2_rg_stage2[168:168]) ||(!(RTL.rg_cur_priv[1:1]))))"
+],
+
+  "instructions": [
+    {
+      "instruction" : "ADD",
+      "ready signal" : "#end_of_pipeline#"// "start condition" : ["$decode$", "RTL.ctrl.imemresp_val && RTL.ctrl.imemresp_rdy == 1"]
+    },
+    {
+      "instruction" : "AND",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "OR",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "XOR",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "SUB",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "SLL",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "SRL",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "SRA",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "SLT",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "SLTU",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "ADDI",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "SLTI",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "SLTIU",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "ANDI",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "ORI",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "XORI",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "SLLI",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "SRLI",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "SRAI",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "LUI",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "AUIPC",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "BEQ",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "BNE",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "BLT",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "BLTU",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "BGE",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "BGEU",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "JAL",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "JALR",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "LW",
+      "ready signal" : "#end_of_pipeline#"// "start condition" : ["$decode$", "RTL.ctrl.imemresp_val && RTL.ctrl.imemresp_rdy == 1"]
+    },
+    {
+      "instruction" : "LH",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "LHU",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "LB",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "LBU",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "SW",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "SH",
+      "ready signal" : "#end_of_pipeline#"
+    },
+    {
+      "instruction" : "SB",
+      "ready signal" : "#end_of_pipeline#"
+    }
+
+  ]
+}
+

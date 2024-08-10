@@ -1,0 +1,42 @@
+{//test
+    "state mapping": {  
+        "ciphertext":   [["ILA.round == 0" ,null ],
+                        ["ILA.round == 1" ,"RTL.s0" ],
+                        ["ILA.round == 2" ,"RTL.s1" ],
+                        ["ILA.round == 3" ,"RTL.s2" ],
+                        ["ILA.round == 4" ,"RTL.s3" ],
+                        ["ILA.round == 5" ,"RTL.s4" ],
+                        ["ILA.round == 6" ,"RTL.s5" ],
+                        ["ILA.round == 7" ,"RTL.s6" ],
+                        ["ILA.round == 8" ,"RTL.s7" ],
+                        ["ILA.round == 9" ,"RTL.s8" ],
+                        ["ILA.round == 10","RTL.s9" ],
+                        ["ILA.round == 11","RTL.out"] ],
+        "round_key":    [["ILA.round == 0" , null],
+                        ["ILA.round == 1" ,"RTL.k0" ],
+                        ["ILA.round == 2" ,"RTL.k1" ],
+                        ["ILA.round == 3" ,"RTL.k2" ],
+                        ["ILA.round == 4" ,"RTL.k3" ],
+                        ["ILA.round == 5" ,"RTL.k4" ],
+                        ["ILA.round == 6" ,"RTL.k5" ],
+                        ["ILA.round == 7" ,"RTL.k6" ],
+                        ["ILA.round == 8" ,"RTL.k7" ],
+                        ["ILA.round == 9" ,"RTL.k8" ],
+                        ["ILA.round == 10","RTL.k9" ],
+                        ["ILA.round == 11", null] ],
+        "round"     : null 
+
+    },
+  
+    "input mapping": {
+      "key_in" : "RTL.key",
+      "plaintext" : "RTL.state"
+    },
+  
+    "rtl interface-connection" : {
+      "CLOCK" : "clk",
+      "RESET" : "rst"  
+    }
+  
+}
+  

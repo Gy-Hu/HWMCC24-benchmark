@@ -1,0 +1,16 @@
+read_verilog -sv input_file_000
+prep -top top_name_000
+
+hierarchy -check
+proc
+chformal -assume -early;
+
+select top_name_000/sanitycheck
+chformal -remove
+select *
+
+memory ;
+flatten
+setundef -undriven -expose;
+sim -clock clk -reset rst -rstlen 1 -n 1 -w top_name_000
+write_btor  -s output_file_000

@@ -1,0 +1,26 @@
+{
+    "global invariants": [
+      "~(RTL.aes_step && RTL.aes_reg_state == 2) || ( RTL.byte_counter == 0 )",
+      "~(RTL.aes_reg_state != 0) || ((RTL.operated_bytes_count == RTL.block_counter))",
+      "~(RTL.aes_reg_state != 0) || (RTL.uaes_ctr == RTL.aes_reg_ctr + RTL.block_counter)",
+      "RTL.block_counter[3:0] == 4'd0",
+      "~(RTL.aes_reg_state == 2) || (RTL.aes_time_enough == 1)"
+    ],
+  
+    "instructions": [
+      {
+        "instruction" : "LOAD",
+        "ready signal": "RTL.xram_ack ## 1"
+      },
+      {
+        "instruction" : "OPERATE",
+        "ready bound" : 1
+      },
+      {
+        "instruction" : "STORE",
+        "ready signal": "RTL.xram_ack ## 1"
+      }
+    ]
+  }
+  
+  
