@@ -1,0 +1,31 @@
+{
+  "state mapping": {  
+    "mema":  {
+      "ren"  :  "1'b1" ,
+      "raddr" : "RTL.mem_a_raddr @ (RTL.state == 1)",
+      "rdata" : "RTL.mem_a_rdata @ (RTL.state == 1)",
+      "wen"   : "1'b1 "  ,
+      "waddr" : "RTL.mem_a_waddr @ (RTL.state == 2)",
+      "wdata" : "RTL.mem_a_wdata @ (RTL.state == 2)"
+    },
+    "memb":  {
+      "ren"  :  "1'b1" ,
+      "raddr" : "RTL.mem_b_raddr @ (RTL.state == 1)",
+      "rdata" : "RTL.mem_b_rdata @ (RTL.state == 1)",
+      "wen"   : "1'b1 "  ,
+      "waddr" : "RTL.mem_b_waddr @ (RTL.state == 2)",
+      "wdata" : "RTL.mem_b_wdata @ (RTL.state == 2)"
+    }
+  },
+
+  "input mapping": {
+     "addra":"RTL.addra",
+     "addrb":"RTL.addrb",
+     "start":"RTL.start"
+  },
+
+  "RTL interface connection" : {
+    "CLOCK" : "clk",
+    "RESET" : "rst"
+  }  
+}

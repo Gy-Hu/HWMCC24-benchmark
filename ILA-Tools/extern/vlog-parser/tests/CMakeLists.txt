@@ -1,0 +1,9 @@
+FILE(GLOB TEST_VLOG_SRCS *.v)
+
+foreach(VLOG_FILE ${TEST_VLOG_SRCS})
+  add_test(
+    NAME "test_${VLOG_FILE}"
+    COMMAND ${EXECUTABLE_NAME} ${VLOG_FILE}
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+  )
+endforeach()

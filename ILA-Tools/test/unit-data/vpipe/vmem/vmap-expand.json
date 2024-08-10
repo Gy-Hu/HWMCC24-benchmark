@@ -1,0 +1,16 @@
+{
+  "state mapping": {  
+    "mema":"RTL.mema",
+    "memb":"RTL.memb"},
+
+  "RTL interface connection" : {
+    "CLOCK" : "clk",
+    "RESET" : "rst"
+  },
+
+  "input mapping": {
+     "addra":"RTL.addra",
+     "addrb":"RTL.addrb",
+     "start":"RTL.start"
+  }
+}

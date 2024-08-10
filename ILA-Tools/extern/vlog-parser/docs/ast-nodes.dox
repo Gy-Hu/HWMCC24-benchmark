@@ -1,0 +1,13 @@
+/*!
+@defgroup ast-nodes AST Nodes
+@ingroup ast
+
+@brief Notes and todo list for the AST nodes.
+
+@section ast-todo AST Todo List
+
+- Proper number representation node.
+- Completely deprecate the @ref ast_node type.
+- Types and assertions for the @ref ast_list construct.
+
+*/

@@ -1,0 +1,11 @@
+{
+  "global invariants": ["RTL.v1 == ~RTL.v2"],
+
+  "instructions": [
+    {
+      "instruction": "inst",
+      "ready bound": 1
+    }
+  ]
+}
+

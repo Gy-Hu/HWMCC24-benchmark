@@ -1,0 +1,56 @@
+/*!
+@page project-organisation Project Organisation
+@subpage project-organisation-code
+
+@brief This page descibes how the project file tree and build system are
+organised.
+
+@tableofcontents
+
+@section source-tree Source Tree
+
+The source tree is split into four main sections: documentation tests, tools
+and source code.
+
+- All of the tests live in the `tests/` subfolder. These are tests which
+  have been added in order to highlight bugs, or otherwise make sure that
+  proper test coverage is hit.
+- Tools live in the `bin/` folder. These include project setup scripts, and
+  the script to download the main test source file suite.
+- Source code lives in the `src/` folder. This includes all header files,
+  source files, and flex/bison grammars and token descriptors.
+- Documentation lives in the `docs/` folder. Here is all of the plain text
+  documentation for the project, along with the Doxygen configuration file.
+
+@section build-system Build System
+
+The build system uses CMake, and is split into debug and release builds.
+These are setup by the `bin/project.sh` script, and are found in the
+`build/debug` or `build/release` directories.
+
+From either of those directories, we can run the following commands:
+
+- `make all`
+- `make parser` - Builds the library and a small tester app
+- `make test` - Runs the test suite against the most recent build.
+- `make coverage-report` - Runs the coverage suite against the most recent
+build, and puts the results in `./build/coverage/`
+
+@section memory-leaks Memory Leaks
+
+There is a tool script in `bin/` called `leakcheck-report.sh` which should be
+run from the project root directory.
+
+It runs a subset of the tests through the parser, assisted by valgrind. It
+checks for all memory leaks and their origins, putting the resulting log
+into the `build` folder.
+
+@section ci-tool Continuous Integration
+
+This project uses the Travis-CI tool for continuous integration. This is
+a service that plugs into github, meaning that every commit, fork and
+pull request automatically triggers a build. This build is configured using
+the `.travis.yml` file in the root of the project. As a minium, all builds
+must complete successfully, and all of the test should be run without errors.
+
+*/

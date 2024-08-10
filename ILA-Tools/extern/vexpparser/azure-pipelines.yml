@@ -1,0 +1,58 @@
+trigger:
+- main
+
+pr:
+- main
+
+# File: azure-pipelines.yml
+
+jobs:
+
+- job: macOS_Catalina_Debug
+  pool:
+    vmImage: 'macOS-10.15'
+  steps:
+  - script: |
+      brew update
+      brew install bison
+    displayName: 'package'
+  - script: |
+      export PATH="/usr/local/opt/bison/bin:$PATH"
+      export LDFLAGS="-L/usr/local/opt/bison/lib"
+      mkdir -p build 
+      cd build
+      cmake ..
+      cmake --build .
+    displayName: 'build'
+
+- job: Linux
+  pool:
+    vmImage: 'ubuntu-18.04'
+  steps:
+  - script: |
+      sudo apt-get update
+      sudo apt-get install bison
+      sudo apt-get install flex
+      sudo apt-get install libfl-dev
+    displayName: 'package'
+  - script: |
+      mkdir -p build 
+      cd build
+      cmake .. 
+      cmake --build .
+    displayName: 'build'
+
+- job: Windows
+  pool:
+    vmImage: 'windows-latest'
+  steps:
+  - script: |
+      choco install winflexbison3
+      dir %ProgramData%\\chocolatey\\lib\\winflexbison3\\tools
+    displayName: 'package'
+  - script: |
+      md build 
+      cd build
+      cmake .. -DFLEXLEXER_INCLUDE_PATH=c:\ProgramData\chocolatey\lib\winflexbison3\tools\
+      cmake --build .
+    displayName: 'build'
