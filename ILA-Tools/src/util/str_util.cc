@@ -63,8 +63,7 @@ long long StrToLong(const std::string& str, int base) {
   try {
     return std::stoll(str, NULL, base);
   } catch (const std::exception& e) {
-    ILA_ERROR << "Cannot converting value " << str << " to long int."
-              << " base : " << base;
+    ILA_ERROR << "Converting non-numeric value " << str << " to long int.";
     return 0;
   }
 }
@@ -73,8 +72,8 @@ unsigned long long StrToULongLong(const std::string& str, int base) {
   try {
     return std::stoull(str, NULL, base);
   } catch (const std::exception& e) {
-    ILA_ERROR << "Cannot converting value " << str << " to unsigned long long."
-              << " base : " << base;
+    ILA_ERROR << "Converting non-numeric value " << str
+              << " to unsigned long long";
     return 0;
   }
 }

@@ -1,4 +1,4 @@
-FROM ilangdockerhub/ilang:cosabase as builder
+FROM byhuang/ilang:cosabase as builder
 
 # var
 ENV VIRT_ENV ilang-env
@@ -41,7 +41,7 @@ RUN rm -rf template
 #
 # Deployment
 # 
-FROM ilangdockerhub/ilang:cosabase
+FROM byhuang/ilang:cosabase
 
 # var
 ENV VIRT_ENV ilang-env

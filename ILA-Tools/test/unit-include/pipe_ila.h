@@ -14,7 +14,6 @@ class SimplePipe {
 
 public:
   static Ila BuildModel();
-  static Ila BuildStallModel();
 
 }; // class SimplePipe
 

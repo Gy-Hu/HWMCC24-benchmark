@@ -18,7 +18,6 @@ public:
   static Ila BuildRfAsMemModelRegEntry6();
   static Ila BuildRdModel();
   static Ila BuildResetterTest();
-  static Ila BuildSimpleLargeArray();
 
 }; // class MemorySwap
 

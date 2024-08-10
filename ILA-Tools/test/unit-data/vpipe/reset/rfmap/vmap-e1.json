@@ -1,15 +1,24 @@
 {
+  "models": { "ILA":"m0" , "VERILOG": "m1" },
 
   "state mapping": {  
-    "v":"RTL.v"},
+    "v":"v"},
 
-  "RTL interface connection" : {
-    "CLOCK" : "clk",
-    "RESET" : "rst"
+  "interface mapping": {
+  	 "rst":"**RESET**", 
+  	 "clk":"**CLOCK**",
+     "v":"**SO**"
   },
 
   // "mapping control" : ["__MEM_mema_0_ren == ((m1.state == 1)?1'b1:1'b0)", "__MEM_memb_0_ren == ((m1.state == 1)?1'b1:1'b0)"],
 
-
+  "annotation": {
+    "reset" : {
+      "cycle": 0,
+      "no-reset-after": true,
+      "reset-state":[],
+      "reset-sequence":[]
+    }
+  },
   "assumptions":["1==1"]
 }
