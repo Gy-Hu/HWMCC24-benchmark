@@ -9,7 +9,7 @@
 using namespace ilang;
 
 #include "riscvIla.hpp"
-
+#include <iostream>
 #define CBYTE 0x0
 #define CHALF 0x1
 #define CWORD 0x2

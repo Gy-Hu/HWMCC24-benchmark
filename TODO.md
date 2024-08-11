@@ -1,0 +1,4 @@
+- [ ] Syguas benchmark from hongce?
+- [ ] Convert btor2 to aiger
+- [ ] Convert array btor to bv
+- [ ] Fix the case generation in `Piccolo` and `Ridecore`
