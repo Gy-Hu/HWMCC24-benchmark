@@ -11,8 +11,8 @@
 
 note: 
 * Here should add `export LD_LIBRARY_PATH=/xx/tmp/ILA-install/usr/local/lib:$LD_LIBRARY_PATH` to the `~/.bashrc` or `~/.zshrc` file
-* For Piccolo, use `c88eb9c9548223e3c89f809a06e7ecd8d9e32ffe` in refinement-upgrade branch
-* For Ridecore, use `76a99fa4300a2338feb208fa124443bef94eda87` (latest commit) in refinement-upgrade branch
+* For `Piccolo`, use `c88eb9c9548223e3c89f809a06e7ecd8d9e32ffe` in refinement-upgrade branch
+* For `Ridecore`, use `76a99fa4300a2338feb208fa124443bef94eda87` (latest commit) in refinement-upgrade branch
 
 ## Try starter
 
