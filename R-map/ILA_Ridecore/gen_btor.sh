@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Define the base directory
-base_dir="/data/guangyuh/coding_env/HWMCC24-benchmark/R-map/ILA_Ridecore/verification"
+# Define the base directory as the current working directory plus "verification"
+base_dir="$(pwd)/verification"
 
-# Iterate over each subdirectory
+# Iterate over each subdirectory within the base directory
 for dir in "$base_dir"/*/; do
   # Check if the directory contains the file gen_btor.ys
   if [[ -f "${dir}gen_btor.ys" ]]; then

@@ -1,4 +1,5 @@
-- [ ] Syguas benchmark from hongce?
+- [X] Syguas benchmark from hongce?
 - [ ] Convert btor2 to aiger
-- [ ] Convert array btor to bv
-- [ ] Fix the case generation in `Piccolo` and `Ridecore`
+- [x] Generate array btor from r-map
+- [ ] Convert array btor to bv (ongoing: Rocket)
+- [X] Fix the case generation in `Piccolo` and `Ridecore`

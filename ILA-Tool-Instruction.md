@@ -10,9 +10,9 @@
 6. `make install DESTDIR=xxx/HWMCC24-benchmark/tmp/ILA-install` - install the ILAng
 
 note: 
-* Here should add `export LD_LIBRARY_PATH=/xx/tmp/ILA-install/usr/local/lib:$LD_LIBRARY_PATH` to the `~/.bashrc` or `~/.zshrc` file
-* For `Piccolo`, use `c88eb9c9548223e3c89f809a06e7ecd8d9e32ffe` in refinement-upgrade branch
-* For `Ridecore`, use `76a99fa4300a2338feb208fa124443bef94eda87` (latest commit) in refinement-upgrade branch
+* Here should export library when running speific project `export LD_LIBRARY_PATH=/xx/tmp/ILA-install/usr/local/lib:$LD_LIBRARY_PATH`
+* For `Piccolo`, use `c88eb9c9548223e3c89f809a06e7ecd8d9e32ffe` in refinement-upgrade branch (export LD_LIBRARY_PATH=/xx/tmp/ILA-install-Piccolo/xxx)
+* For `Ridecore`, use `76a99fa4300a2338feb208fa124443bef94eda87` (latest commit) in refinement-upgrade branch (export LD_LIBRARY_PATH=/xx/tmp/ILA-install-Ridecore/xxx)
 
 ## Try starter
 
@@ -21,6 +21,9 @@ note:
 9. `cmake -DCMAKE_PREFIX_PATH=/xxx/tmp/ILA-install/usr/local ..` - set the ILAng path
 10. `make -j$(nproc)` - build the starter test
 11. `./starter` - run the starter test
+
+note: 
+* execute `source /opt/tabbycad/env.sh` to use tabby yosys before next step
 
 ## Try ILA_AES (Tabby Yosys required)
 
