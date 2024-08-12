@@ -96,7 +96,7 @@ module BRAM2(CLKA,
       DOA_R2 <= `BSV_ASSIGNMENT_DELAY DOA_R;
    end
 
-   always @(posedge CLKB) begin
+   always @(posedge CLKA) begin
       if (ENB) begin
          if (WEB) begin
             RAM[ADDRB] <= `BSV_ASSIGNMENT_DELAY DIB;
