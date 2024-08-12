@@ -2,7 +2,7 @@
 
 # Define the base directory as the current working directory plus "verification"
 base_dir="$(pwd)/verification"
-target_dir="$(pwd)/../../btor2_only/bv"  # Adjust this relative path as needed
+target_dir="$(pwd)/../../btor2_only/array"  # Adjust this relative path as needed
 
 # Get the current folder name (parent of the verification directory)
 folder_name=$(basename "$(pwd)")

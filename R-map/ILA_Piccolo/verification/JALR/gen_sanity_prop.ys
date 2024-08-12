@@ -9,7 +9,7 @@ select wrapper/normalassert
 chformal -remove
 select *
 
-memory;
+memory -nomap;
 flatten
 setundef -undriven -expose;
 sim -clock clk -reset rst -rstlen 1 -n 1 -w wrapper

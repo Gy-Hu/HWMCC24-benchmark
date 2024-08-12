@@ -1,10 +1,10 @@
 - [X] Syguas benchmark from hongce?
 - [ ] Convert btor2 to aiger
-- [x] Generate array btor from r-map
-- [x] Convert array btor to bv (ongoing: Rocket)
+- [X] Generate array btor from r-map
+- [X] Convert array btor to bv (ongoing: Rocket)
 - [X] Fix the case generation in `Piccolo` and `Ridecore`
-- [ ] Sanity check for bv btor in `ILA_Rocket`
-- [ ] Sanity check for array btor in `ILA_Flute`, 
-- [ ] Sanity check for array btor in `ILA_Piccolo`
-- [ ] Sanity check for array btor in `ILA_Ridecore`
+- [X] Sanity check for bv btor in `ILA_Rocket`
+- [X] Sanity check for array btor in `ILA_Flute`,
+- [X] Sanity check for array btor in `ILA_Piccolo`
+- [X] Sanity check for array btor in `ILA_Ridecore`
 - [ ] Sanity check for array btor in `ILA_Rocket`
