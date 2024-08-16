@@ -9,7 +9,9 @@
 - [X] Sanity check for array btor in `ILA_Ridecore`
 - [X] Sanity check for array btor in `ILA_Rocket`
 - [X] AIGER generation for AES
-- [ ] AIGER generation for Flute
-- [ ] AIGER generation for Piccolo
-- [ ] AIGER generation for Ridecore
+- [x] AIGER generation for Flute
+- [x] AIGER generation for Piccolo
+- [x] AIGER generation for Ridecore
 - [ ] AIGER generation for Rocket
+- [ ] AIGER generation for WASIM
+- [ ] AIGER generation for Xepic
