@@ -1,0 +1,10 @@
+read_verilog -formal wrapper.v
+prep -top wrapper
+flatten
+memory -nordff
+setundef -undriven -init -expose
+sim -clock clk -reset rst -rstlen 1 -n 1 -w wrapper
+delete -output
+techmap
+abc -fast -g AND
+write_aiger -zinit problem.aig

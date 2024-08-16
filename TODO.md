@@ -7,4 +7,9 @@
 - [X] Sanity check for array btor in `ILA_Flute`,
 - [X] Sanity check for array btor in `ILA_Piccolo`
 - [X] Sanity check for array btor in `ILA_Ridecore`
-- [ ] Sanity check for array btor in `ILA_Rocket`
+- [X] Sanity check for array btor in `ILA_Rocket`
+- [X] AIGER generation for AES
+- [ ] AIGER generation for Flute
+- [ ] AIGER generation for Piccolo
+- [ ] AIGER generation for Ridecore
+- [ ] AIGER generation for Rocket
