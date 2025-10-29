@@ -1,0 +1,27 @@
+File: ./a16b078.aig
+Command: ~/coding_env/rIC3/target/release/rIC3 ./a16b078.aig
+Started at: 2025年10月30日 星期四 03时36分42秒 HKT
+----------------------------------------
+[INFO ] the model to be checked: /Users/huguangyu/coding_env/HWMCC24-benchmark/X-epic/x-epic-2024/problem-split/a16b078.aig
+[INFO ] start engine: -e ic3 --rseed 1
+[INFO ] start engine: -e ic3 --ic3-ctg=false --frts=false --scorr=false --ic3-drop-po=false --rseed 2
+[INFO ] start engine: -e ic3 --ic3-drop-po=false --ic3-parent-lemma=false --rseed 3
+[INFO ] start engine: -e ic3 --ic3-abs-cst --rseed 4
+[INFO ] start engine: -e ic3 --ic3-abs-cst --ic3-abs-trans --rseed 5
+[INFO ] start engine: -e ic3 --ic3-abs-cst --ic3-abs-trans --ic3-dynamic --ic3-drop-po=false --rseed 6
+[INFO ] start engine: -e ic3 --ic3-ctg-max 5 --ic3-ctg-limit 15 --ic3-drop-po=false --rseed 7
+[INFO ] start engine: -e ic3 --ic3-inn --rseed 8
+[INFO ] start engine: -e ic3 --ic3-inn --ic3-ctp --rseed 9
+[INFO ] start engine: -e ic3 --ic3-inn --ic3-dynamic --ic3-drop-po=false --rseed 11
+[INFO ] start engine: -e bmc --step 1 --rseed 12
+[INFO ] start engine: -e bmc --bmc-kissat --step 10 --rseed 13
+[INFO ] start engine: -e bmc --bmc-kissat --step 65 --rseed 14
+[INFO ] start engine: -e ic3 --ic3-inn --ic3-ctg=false --rseed 10
+[INFO ] start engine: -e bmc --bmc-kissat --bmc-dyn-step --rseed 15
+[INFO ] start engine: -e kind --step 1 --rseed 16
+[INFO ] best configuration: -e ic3 --ic3-ctg=false --frts=false --scorr=false --ic3-drop-po=false --rseed 2
+RESULT: UNSAT
+----------------------------------------
+STATUS: COMPLETED
+Finished at: 2025年10月30日 星期四 03时36分42秒 HKT
+========================================
